@@ -9,8 +9,8 @@ Warunki mogą składać się z wielu pytań, a instrukcje `if` można konstruowa
 ## Instrukcje IF
 
 ```markdown
-wiek = 7
-if wiek >10:
+wiek = 23
+if wiek >20:
     print("Jesteś za stary!")
 ```
 
