@@ -33,14 +33,22 @@ Symbole używane w instrukcjach warunkowych:
 
 | Symbol        | Definicja         | 
 | ------------- |:-----------------:|
-|==      	    | równa się         | 
-|!=  		    | różny od          |  
+|==             | równa się         | 
+|!=  	        | różny od          |  
 |>              | większy niż       |
-|<				| mniejszy niż	    |
-|>=				| większy lub równy |
-|<=				| mniejszy lub równy|
+|<		| mniejszy niż	    |
+|>=		| większy lub równy |
+|<=		| mniejszy lub równy|
 
 Jeżeli na przykład masz 10 lat, warunek `wiek == 10 ` zwróci `True`. Jeśli jest inaczej zwróci `False`. Jeśli masz lat 13, warunek wiek > 10 zwróci `True`. 
 
+Wykonajmy kilka prostych przykładów. Ustawimy tutaj zmienną, następnie zapisujemy instrukcje warunkową, która wyświetla tekst "Jesteś za stary na breakdance!", jeśli zmienna wiek ma wartość większą niż 10: 
 
+```markdown
+wiek = 10
+if wiek >10:
+    print("Jesteś za stary na breakdance")
+```
+
+Co się stanie, gdy to wpiszemy i uruchomimy? Jest większa niż 10, Python nie uruchamia bloku `print`. Jeżeli zmienimy to ustawiając wartość wieku na 20, komunikat zostanie zwrócony.
 
