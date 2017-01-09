@@ -10,7 +10,7 @@ Należy zwrócić uwagę na jedno: na drugiej stronie instalatora nazwanej "Cust
 
 ![alt text][logo]
 
-[logo]: https://github.com/yorkshre/workshops/tree/master/0/img/1.png "zrzut ekranu"
+[logo]: https://github.com/plpug/Microbit/blob/master/0/img/1.png "zrzut ekranu"
 
 ##Linux
 Jest bardzo prawdopodobne, że masz już zainstalowanego Pythona wraz z systemem. Aby się upewnić (a także sprawdzić jego wersję) otwórz konsolę i wpisz następujące polecenie:
