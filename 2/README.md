@@ -47,8 +47,98 @@ Wykonajmy kilka prostych przykładów. Ustawimy tutaj zmienną, następnie zapis
 ```markdown
 wiek = 10
 if wiek >10:
-    print("Jesteś za stary na breakdance")
+    print("Jesteś za stary na moje żarty")
 ```
 
 Co się stanie, gdy to wpiszemy i uruchomimy? Jest większa niż 10, Python nie uruchamia bloku `print`. Jeżeli zmienimy to ustawiając wartość wieku na 20, komunikat zostanie zwrócony.
+
+Zmieńmy teraz powyższy przykład, aby użyć warunku "większy lub równy" (>=):
+```markdown
+wiek = 10
+if wiek >= 10:
+    print("Jesteś za stary na moje żarty")
+```
+Ponieważ nasza zmienna wiek ma wartość 10, na ekranie powinniśmy zobaczyć tekst "Jesteś za stary na moje żarty". Spróbujmy użyć teraz warunku "równa się" (==):
+
+```markdown
+wiek = 10
+if wiek == 10:
+    print("Jestes za stary na pieluchy")
+```
+
+Na ekranie powinien zostać wyświetlony tekst "Jesteś za stary na pieluchy".
+
+##Instrukcje IF-THEN-ELSE
+
+Instrukcji `if` możemy używać nie tylko do wykonywania kodu w przypadku spełnienia kryteriów warunku (`True`) ale również wtedy, gdy warunek nie jest zgodny z prawdą. Na przykład treść wyświetlanego komunikatu może zależeć od tego, czy zmienna `wiek` ma wartość 12 czy też jakąś inną (`False`). W przypadku tym używamy `if-then-else`, której sens można wyjaśnić tak: "Jeśli coś jest zgodne z prawdą, to zrób to, w przeciwnym przypadku, zrób tamto". 
+
+No to napiszmy sobie instrukcje `if-then-else`:
+
+```markdown
+>>> print ("Powiedzieć Ci coś śmiesznego")
+Powiedzieć Ci coś śmiesznego
+>>> wiek = 12
+>>> if wiek == 12:
+...     print("Coś śmiesznego")
+... else:
+...     print("Ciiiii nie bo ktoś usłyszy!")
+...
+Głupi kawał
+>>>
+```
+
+Ponieważ ustawiliśmy zmienną `wiek` na 12, a warunek sprawdza, czy wartość zmiennej `wiek` to 12, powinien się pojawić na ekranie pierwszy komunikat. Teraz zmieńmy wartość na jakąś inną:
+
+```markdown
+>>> print("Powiedzieć Ci coś śmiesznego")
+Powiedzieć Ci coś śmiesznego
+>>> wiek = 7
+>>> if wiek == 12:
+...     print("Coś śmiesznego")
+... else:
+...     print("Ciiiii nie bo ktoś usłyszy!")
+...
+Ciiiii nie bo ktoś usłyszy!
+>>>
+```
+
+Tym razem powinien być widoczny drugi komunikat. 
+
+##Instrukcje IF i ELSE
+
+Instrukcje `if` można rozbudować jeszcze za pomocą słowa kluczowego `elif` ( co jest skrótem od `else-if`). Możemy na przykład sprawdzać, czy osoba ma np. 10, 11, czy 12 lat i nakazać programowi zróżnicowane działania w zależności od odpowiedzi.  Instrukcje te różnią się od `if-then-else` tym, że jedna instrukcja może zawierać więcej niż jedno słowo kluczowe `elif`. 
+
+```markdown
+wiek = 12
+if wiek == 10:
+    print("Co robi worek, gdy jest zmęczony?")
+    print("Śpiwór!")
+
+elif wiek == 11:
+    print("Ile nóg ma koń?")
+    print("8! 2 z prawej, 2 z lewej, 2 z tyłu i 2 z przodu")
+
+elif wiek == 12:
+    print("Co mówi programista na łożu śmierci?")
+    print("Bye world")
+
+elif wiek == 13:
+    print("Co rośnie w sadzie programisty?")
+    print("Drzewo binarne")
+
+else:
+    print("Co?")
+```
+
+W tym przykładzie istrukcja `if` w drugim wierszu sprawdza czy wartość zmiennej `wiek` jest równa 10. Jeśli zmienna wiek ma wartość 10, wykonywana jest znajdująca się w kolejnym wierszu instrukcja `print`. Ponieważ jednak ustawiliśmy jednak wiek na 12, program przeskakuje do kolejnej instrukcji `if` i sprawdza, czy zmienna `wiek` ma wartość 11. Nie ma więc program przeskakuje do kolejnej instrukcji `if`, gdzie sprawdza, czy `wiek` równa się 12. Równa się, więc program instrukcje `print`.
+
+Na ekranie powinnien zostać wyświetlony tekst:
+
+```markdown
+Co mówi programista na łożu śmierci?
+    Bye world
+```
+
+
+##Podsumowanie
 
