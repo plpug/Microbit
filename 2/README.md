@@ -139,6 +139,27 @@ Co mówi programista na łożu śmierci?
     Bye world
 ```
 
+##Warunki łączone
+
+Warunki można łączyć za pomocą słów kluczowych and (i) i or (lub), a dzięki temu kod staje się krótszy i prostszy. Oto przykładowe użycie słowa kluczowego or:
+
+```markdown
+
+if wiek == 10 or wiek == 11 or wiek == 12 or wiek == 13:
+    print ("Mamo piszę do Ciebie wiersz")
+
+else:
+    print("Ale dlaczego?")
+```
+
+Widzimy w tym kodzie, że jeśli kiedykolwiek z warunków w pierwszym wierszu jest spełniony ( jeśli wiek yo 10,11,12 lub 13) wykonany zostanie blok kodu w kolejnym wierszu, zaczynający się od print. Jeżeli nie jest spełniony żaden z warunków podanych w wierszy pierwszym ( `else`), Python przechodzi do bloku w ostatnim wierszu, wyświetlając na ekranie `że co?`
+
+
+
 
 ##Podsumowanie
+
+
+W tym rozdziale dowiedzieliśmy się, jak za pomocą instrukcji tworzyć bloki kodu, które są wykonywane tylko po spełnieniu zdefiniowanych warunków. Wiemy, jak rozbudować instrukcje `if` za pomocą `elif`, aby różne fragmenty kodu były wykorzystywane w zależności od spełnienia różnych warunków, oraz jak wykorzystywać `else`, aby wykonywać kod, jeśli żaden z warunków nie zostanie spełniony. 
+
 
