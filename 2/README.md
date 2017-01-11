@@ -152,7 +152,7 @@ else:
     print("Ale dlaczego?")
 ```
 
-Widzimy w tym kodzie, że jeśli kiedykolwiek z warunków w pierwszym wierszu jest spełniony ( jeśli wiek yo 10,11,12 lub 13) wykonany zostanie blok kodu w kolejnym wierszu, zaczynający się od print. Jeżeli nie jest spełniony żaden z warunków podanych w wierszy pierwszym ( `else`), Python przechodzi do bloku w ostatnim wierszu, wyświetlając na ekranie `że co?`
+Widzimy w tym kodzie, że jeśli kiedykolwiek z warunków w pierwszym wierszu jest spełniony ( jeśli wiek yo 10,11,12 lub 13) wykonany zostanie blok kodu w kolejnym wierszu, zaczynający się od print. Jeżeli nie jest spełniony żaden z warunków podanych w wierszy pierwszym ( `else`), Python przechodzi do bloku w ostatnim wierszu, wyświetlając na ekranie `Ale dlaczego?`
 
 
 
