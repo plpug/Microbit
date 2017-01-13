@@ -31,5 +31,22 @@ Zwróćmy uwagę na pierwszą linie kodu:
 from microbit import*
 ```
 
-Po co nam ta linia? Czy jest bardzo potrzebna? Oh tak, jest potrzebna, a nawet bardzo potrzebna. Dzięki temu kawałkowi kodu 
+Po co nam ta linia? Czy jest bardzo potrzebna? Tak, nawet bardzo Wszystkie potrzebne rzeczy do naszej pracy znajdują się w module o nazwie microbit (moduł jest biliteką wcześniej istniejącego kodu). Tak więc ten fragment oznacza dosłownie "chcę móc korzystać z wszystkiego od kodu bilioteki microbit).
+
+Linia następna:
+
+```markdown
+display.scroll("Hello World")
+
+```
+
+Odpowiada za przewijanie ciągu znaków na wyświetlaczu. Aby móc zobaczyć jakieś znaki na naszym wyświeltaczu musimy wpisać co chcemy, musimy określić to w cudzysłowiu `(")` oraz nawiasie `()`. 
+Więc `display.scroll("Hello world")` dosłownie "Chce móc skorzystać z wyświetlacza aby móc przewinąć tekst "Hello world"". Skopiuj kod "Hello world" i wklej go w swoim edytorze i wgraj je do urządzenia.
+
+Chcesz zmienić tekst przewijania, tak aby urządzenie przywitało się z Tobą np. " Witaj Dominik"? Niech to będzie zadanie dla Ciebie, wykonaj je samodzielnie :) 
+
+
+
+
+
 
