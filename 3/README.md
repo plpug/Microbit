@@ -82,11 +82,40 @@ cześć 4
 ```
 W ten sposób użycie pętli uchroniło nas tak naprawdę przed pisaniem ośmiu dodatkowych wierszy kodu. Programiści nie cierpią się powtarzać, dlatego pętla for należy do najpopularniejszych instrukcji w językach programowania.
 
-##Skoro omawiamy pętle 
+##Skoro już omawiamy pętle 
 
+Pętla `for` nie jest jedyną pętlą dostępną w Pythonie, jest tu też `while`. Pętla `for` to pętla o określonej długości, natomiast pętli `while` używa się, gdy nie wiadomo zawczasu, kiedy trzeba będzie przestać wykonywać pętle. 
+
+Wyobraźcie sobie schody z 20 stopniami. Schody znajdują się wewnątrz budynku, Ty wiesz że na nie się wespniesz. Tak właśnie działa pętla for:
+```markdown
+>>> for stopien in range (0,20):
+...     print(stopien)
+```
+
+A teraz wyobraź sobie schody prowadzące zboczem jakiejś wielkiej góry, wiesz, że w trakcie wspinania się możesz opaść z sił lub pogoda się nagle popsuje. Tak właśnie wygląda pętla `while`.
+
+``` markdown
+stopień = 0
+while stopień <10000:
+    print(stopień)
+
+if zmęczenie == True:
+    break
+elif brzydkaPogoda == True:
+    break
+else:
+    stopień = stopień +1 
+```
+
+Jeśli przepiszesz i spróbujesz uruchomić ten kod, pojawi Ci się błąd. Wiesz dlaczego? Przyczyną jest to, że nie utworzyliśmy zmiennych zmęczenie i brzydkaPogoda. Ale pomimo braków w kodzie, uniemożliwiając jego wykonanie podstawowa zasada działania pętli while została zaprezentowana. 
+
+Zacznamy od stworzenia zmiennej `stopień`, za pomocą instrukcji `stopień = 0`. Następnie tworzymy pętle `while`, która sprawdza czy wartość zmiennej `stopień` jest mniejsza niż 10 000 ( `stopień < 10000`). 10 000 to całkowita liczba stopni od podnóża do wierzchołka góry. Python będzie wykonywać pozostałą część kodu tak długo, jak długo wartość zmiennej `stopień` będzie mniejsza niż 10 000. 
+
+Za pomocą instrukcji `print(stopień)` wyświetlamy wartość zmiennej, a następnie za pomocą `if zmęczenie == True` sprawdzamy czy wartość zmiennej zmęczenie to true. Jeśli tak, to używając słowa kluczowego `break`, wychodzimy z pętli. Słowo kluczowe `break` jest sposobem na natychmiastowe przerwanie pętli. 
 
 #Podsumowanie
 
+W tym rozdziale używaliśmy pętli, aby uniknąć znudzenia w trakci wykonywania monotonnych zadań: zapisaliśmy je w blokach i kazaliśmy Pythonowi je wykonywać wielokrotnie. Poznaliśmy dwa typy pętli `for` i `while`. Są one do siebie podobne, lecz można ich używać w różny sposób.
 
 
 
