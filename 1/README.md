@@ -240,7 +240,7 @@ Aby móc napisać taki program, musimy nauczyć się operowania funkcjami. Pierw
 >>> help
 Type help() for interactive help, or help(object) for help about object.
 ```
-:func:`help` jest bardzo przyjazną funkcją, bo sama nam mówi, jak powinniśmy jej używać. Pomaga też w zrozumieniu innych funkcji:
+`help` jest bardzo przyjazną funkcją, bo sama nam mówi, jak powinniśmy jej używać. Pomaga też w zrozumieniu innych funkcji:
 ```markdown
 >>> help(input)
 Help on function input in module builtins:
@@ -255,7 +255,7 @@ input(...)
 <BLANKLINE>
 
 ```
-Właśnie :func:`input` będziemy używać do wczytywania danych od użytkownika. Jak czytamy w opisie, wczytuje ona napis:
+Właśnie `input` będziemy używać do wczytywania danych od użytkownika. Jak czytamy w opisie, wczytuje ona napis:
 ```markdown
 >>> input()  # doctest: +SKIP
 ala ma kota
@@ -302,9 +302,9 @@ class float(object)
  |
  |  ...
  ```
-Funkcja :func:`help` nie omieszkała nas poinformować, iż w rzeczywistości `int` i `float` nie są funkcjami, lecz klasami (o czym będzie więcej później) - stąd też informacja na temat wszystkich innych rzeczy, do których można ich użyć. Nas na razie interesuje jedynie podstawowa funkcjonalność zamiany napisów na liczby odpowiedniego typu.
+Funkcja `help` nie omieszkała nas poinformować, iż w rzeczywistości `int` i `float` nie są funkcjami, lecz klasami (o czym będzie więcej później) - stąd też informacja na temat wszystkich innych rzeczy, do których można ich użyć. Nas na razie interesuje jedynie podstawowa funkcjonalność zamiany napisów na liczby odpowiedniego typu.
 
-Przetestujmy :func:`int` i :func:`float`:
+Przetestujmy `int` i `float`:
 ```markdown
 >>> int("0")
 0
@@ -333,7 +333,7 @@ Zanim skorzystamy z nowo poznanych funkcji w naszym programie, skonstruujmy ocze
 8. Wypisz obliczone BMI
 9. Nie powinno nas zaskoczyć, że te osiem punktów można wprost przełożyć na osiem linii naszego programu (nie licząc odstępów):
 
-Powyższy program możesz zapisać do pliku bmi.py i uruchomić python bmi.py. W efekcie powinniśmy dostać:
+Powyższy program możesz zapisać do pliku `bmi.py` i uruchomić python bmi.py. W efekcie powinniśmy dostać:
 ```markdown
 print("Podaj wzrost w metrach:")
 wzrost = input()
