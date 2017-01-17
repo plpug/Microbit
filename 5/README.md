@@ -46,6 +46,16 @@ Więc `display.scroll("Hello world")` dosłownie "Chce móc skorzystać z wyświ
 Chcesz zmienić tekst przewijania, tak aby urządzenie przywitało się z Tobą np. " Witaj Dominik"? Niech to będzie zadanie dla Ciebie, wykonaj je samodzielnie :) 
 
 
+##Obrazki
+
+MicroPython jest znakomity w sztuce, jeśli jedyne czego nam potrzeba to siatka 5x5 diod LED. MicroPython daje nam dużo kontroli nad wyświelaczem, dzięki czemu możemy tworzyć różnego rodzaju ciekawe efekty.  Na przykład, żeby wywołać radość w naszym urządzeniu należy wpisać:
+
+```markdown
+from microbit import *
+
+display.show(Image.HAPPY)
+```
+
 
 
 
