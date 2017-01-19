@@ -55,8 +55,78 @@ from microbit import *
 
 display.show(Image.HAPPY)
 ```
+Pewnie pamiętacie co oznacza pierwsza linijka kodu, tak więc nie będę drugi raz przypominać. Druga linia wykorzystuje obiekt do wyświeltenia wbudowanego obrazu. Obraz, który chcemy wyświetlać jest częścią obiektu obrazu o nazwie HAPPY. 
 
+Poniżej znajduje się lista wbudowanych obrazów:
 
+```markdown
+
+Image.HEART
+Image.HEART_SMALL
+Image.HAPPY
+Image.SMILE
+Image.SAD
+Image.CONFUSED
+Image.ANGRY
+Image.ASLEEP
+Image.SURPRISED
+Image.SILLY
+Image.FABULOUS
+Image.MEH
+Image.YES
+Image.NO
+Image.CLOCK12, Image.CLOCK11, Image.CLOCK10, Image.CLOCK9, Image.CLOCK8, Image.CLOCK7, Image.CLOCK6, Image.CLOCK5, Image.CLOCK4, Image.CLOCK3, Image.CLOCK2, Image.CLOCK1
+Image.ARROW_N, Image.ARROW_NE, Image.ARROW_E, Image.ARROW_SE, Image.ARROW_S, Image.ARROW_SW, Image.ARROW_W, Image.ARROW_NW
+Image.TRIANGLE
+Image.TRIANGLE_LEFT
+Image.CHESSBOARD
+Image.DIAMOND
+Image.DIAMOND_SMALL
+Image.SQUARE
+Image.SQUARE_SMALL
+Image.RABBIT
+Image.COW
+Image.MUSIC_CROTCHET
+Image.MUSIC_QUAVER
+Image.MUSIC_QUAVERS
+Image.PITCHFORK
+Image.XMAS
+Image.PACMAN
+Image.TARGET
+Image.TSHIRT
+Image.ROLLERSKATE
+Image.DUCK
+Image.HOUSE
+Image.TORTOISE
+Image.BUTTERFLY
+Image.STICKFIGURE
+Image.GHOST
+Image.SWORD
+Image.GIRAFFE
+Image.SKULL
+Image.UMBRELLA
+Image.SNAKE
+```
+###Zadanie
+
+Jak widzicie powyżej znajduje się lista wbudowanych obrazów, zadaniem dla Was jest uruchomić każdy z nich. Miłej zabawy :)
+
+##Obrazki DIY
+
+Oczywiście możesz również tworzyć własne obrazki i wyświetlać je na urządeniu. To proste.
+
+Każdy piksel diody wyświetlacza może być ustawiony na jedną z dziesiąciu wartości. Jeśli pixel jest ustawiony na 0, to jest wyłączony.
+```markdown
+from microbit import *
+
+boat = Image("05050:"
+             "05050:"
+             "05050:"
+             "99999:"
+             "09990")
+
+display.show(boat)
+```
 
 
 
