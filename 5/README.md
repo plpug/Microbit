@@ -150,7 +150,7 @@ zakupy = ["jajka", "bekon", "pomidory"]
 Prosto tworzymy listę nazywając ja `zakupy` oraz tworzymy jej trzy elementy. Python wie, że jest to lista ponieważ jest ona umieszczona w nawiasie kwadratowym `[]`. Elementy są oddzielone przecinkami `,`,a w tym przypadku elementy listy są trzema ciągami znaków: `jajka`, `bekon`, `pomidory`.
 Wiemy, że są to ciągi znaków ponieważ są one umieszczone w cudzysłowie `""`.
 
-Możemy nawet przechowywać w tej samej liście różne rodzaje rzeczy. Na szczeście mamy kilka list obrazków już wbudowanych są zwane `Image.ALL_CLOCKS` i image.ALL_ARROWS:
+Możemy nawet przechowywać w tej samej liście różne rodzaje rzeczy. Na szczeście mamy kilka list obrazków już wbudowanych są zwane `Image.ALL_CLOCKS` i `Image.ALL_ARROWS`:
 
 ```markdown
 
