@@ -19,4 +19,41 @@ Powyższy skrypt pokazuje: urządzenie jest uśpione przez dziesięć tysięcy s
 
 Choć jest dość bezużyteczny skrypt, wprowadza kilka ciekawych pomysłów:
 
-Funkcja `sleep` sprawia, że micro:bit jest uśpiony dla pewnej liczby milisekund. Jeśli chcesz pauze w swoim programie, właśnie w taki sposób się robi. Funkcja jest jak metoda, ale nie jest zamocowana do punktu obiektu. Jest to obiekt nazwany `button_a` i pozwala uzyskać ile razy został naciśnięty metodą `get_presses`.
+1. Funkcja `sleep` sprawia, że micro:bit jest uśpiony dla pewnej liczby milisekund. Jeśli chcesz pauze w swoim programie, właśnie w taki sposób się robi. Funkcja jest jak metoda, ale nie jest zamocowana do punktu obiektu. 
+2. Jest to obiekt nazwany `button_a` i pozwala uzyskać ile razy został naciśnięty metodą `get_presses`.
+
+Ponieważ `get_presses` daje wartość liczbową i `display.scroll` wyświetla tylko znaki, musimy przekonwertować wartość numeryczną na łańcuch znaków. Robimy to za pomocą funkcji str ( skrót od string ~ konwertuje rzeczy na ciągi znaków). 
+
+Jeśli spojrzysz na te zagnieżdzone nawiasy, zauważysz ze display.scroll zawiera obiekt typu str (tekst) który to zawiera button_a.get_presses.
+Python rozpoczyna od wykonywania najbardziej wewnętrznie zagnieżdżonej części, zanim jej wynik przekaże do kolejnej warstwy. Taki sposób programowania nazywa się zagnieżdżaniem - w programowaniu jest on odpowiednikiem rosyjskiej lalki Matrioszki.
+
+[logo]: https://github.com/plpug/Microbit/blob/master/6/img/1.png "matrioszka"
+
+Załóżmy, że masz wciśnięty przycisk 10 razy, oto jak Python działa. Co się dzieje w ostatnim wierszu kodu:
+
+Python widzi kompletną linie i pobiera wartość `get_presses`:
+
+```markdown
+display.scroll(str(button_a.get_presses()))
+```
+
+Teraz gdy wie ile razy został naciśnięty przycisk, to konwertuje wartość liczowąw w ciąg znaków:
+
+``` markdown 
+display.scroll(str(10))
+```
+Wreszcie Python wie co jest przewijane w wyświetlaczu:
+
+```markdown
+display.scroll("10")
+```
+
+##Pętle zdarzeń
+
+
+
+
+
+
+
+
