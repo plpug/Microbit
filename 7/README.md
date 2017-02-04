@@ -29,7 +29,7 @@ Najprostrzym przykładem użycia pinów jako wejść jest sprawdzanie czy
 są one dotykane.
 Tak więc możesz połaskotać płytkę by zaśmiała się w ten sposób:
 
-``markdown
+```markdown
 
 from microbit import *
 
