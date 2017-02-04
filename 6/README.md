@@ -28,7 +28,7 @@ Jeśli spojrzysz na te zagnieżdzone nawiasy, zauważysz ze display.scroll zawie
 Python rozpoczyna od wykonywania najbardziej wewnętrznie zagnieżdżonej części, zanim jej wynik przekaże do kolejnej warstwy. 
 Taki sposób programowania nazywa się zagnieżdżaniem - w programowaniu jest on odpowiednikiem rosyjskiej lalki Matrioszki.
 
-[logo]: https://github.com/plpug/Microbit/blob/master/6/img/1.png "matrioszka"
+[logo]: https://github.com/plpug/Microbit/blob/master/6/img/1.jpg "matrioszka"
 
 Załóżmy, że masz wciśnięty przycisk 10 razy, oto jak Python działa. Co się dzieje w ostatnim wierszu kodu:
 
