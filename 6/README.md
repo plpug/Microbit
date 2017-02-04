@@ -25,7 +25,8 @@ Choć jest dość bezużyteczny skrypt, wprowadza kilka ciekawych pomysłów:
 Ponieważ `get_presses` daje wartość liczbową i `display.scroll` wyświetla tylko znaki, musimy przekonwertować wartość numeryczną na łańcuch znaków. Robimy to za pomocą funkcji str ( skrót od string ~ konwertuje rzeczy na ciągi znaków). 
 
 Jeśli spojrzysz na te zagnieżdzone nawiasy, zauważysz ze display.scroll zawiera obiekt typu str (tekst) który to zawiera button_a.get_presses.
-Python rozpoczyna od wykonywania najbardziej wewnętrznie zagnieżdżonej części, zanim jej wynik przekaże do kolejnej warstwy. Taki sposób programowania nazywa się zagnieżdżaniem - w programowaniu jest on odpowiednikiem rosyjskiej lalki Matrioszki.
+Python rozpoczyna od wykonywania najbardziej wewnętrznie zagnieżdżonej części, zanim jej wynik przekaże do kolejnej warstwy. 
+Taki sposób programowania nazywa się zagnieżdżaniem - w programowaniu jest on odpowiednikiem rosyjskiej lalki Matrioszki.
 
 [logo]: https://github.com/plpug/Microbit/blob/master/6/img/1.png "matrioszka"
 
@@ -50,10 +51,6 @@ display.scroll("10")
 
 ##Pętle zdarzeń
 
-
-
-
-
-
-
-
+Często potrzebujesz by Twój program poczekał aż coś się wydarzy. Robi się to tworząc pętlę w koło kawałka kodu, który definiuje jak zareagować na różne spodziewane zdarzenia takie jak przyciśnięcie przycisku. 
+By stworzyć pętlę w Pythonie, użyj słowa kluczowego "while" (oznaczającego "do kiedy"). Sprawdza ono czy coś zwraca wartość True (prawdę). 
+Jeśli tak jest, wykonuje ono blok kodu zwany "ciałem pętli". Jeśli tak nie jest, przerywa ono pętlę (ignorując jej ciało) po czym przechodzi do kontynuacji wykonywania następującej po nim reszty programu.
