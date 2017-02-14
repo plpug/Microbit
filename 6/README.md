@@ -38,9 +38,9 @@ Python widzi kompletną linie i pobiera wartość `get_presses`:
 display.scroll(str(button_a.get_presses()))
 ```
 
-Teraz gdy wie ile razy został naciśnięty przycisk, to konwertuje wartość liczowąw w ciąg znaków:
+Teraz gdy wie ile razy został naciśnięty przycisk, to konwertuje wartość liczbową w ciąg znaków:
 
-``` markdown 
+``` markdown
 display.scroll(str(10))
 ```
 Wreszcie Python wie co jest przewijane w wyświetlaczu:
@@ -54,3 +54,32 @@ display.scroll("10")
 Często potrzebujesz by Twój program poczekał aż coś się wydarzy. Robi się to tworząc pętlę w koło kawałka kodu, który definiuje jak zareagować na różne spodziewane zdarzenia takie jak przyciśnięcie przycisku. 
 By stworzyć pętlę w Pythonie, użyj słowa kluczowego "while" (oznaczającego "do kiedy"). Sprawdza ono czy coś zwraca wartość True (prawdę). 
 Jeśli tak jest, wykonuje ono blok kodu zwany "ciałem pętli". Jeśli tak nie jest, przerywa ono pętlę (ignorując jej ciało) po czym przechodzi do kontynuacji wykonywania następującej po nim reszty programu.
+
+W Pythonie można prosto zdefiniować blok kodu. Powiedzmy, że mam do zrobienia rzeczy - zanotowałam to sobie na kartce papieru.Prawdopodobnie wygląda to tak:
+
+```markdown
+Zakupy
+Wyczyścić lodówkę
+Skosić trawnik
+```
+
+Jeżeli potrzebowałabym dokładniejszej listy, zrobiłabym tak:
+
+```markdown
+Zakupy
+	Jajka
+	Becon
+	Masło
+
+Wyczyścić lodówke
+	Znaleźć nową ścierkę
+	Wyciągnąć produkty 
+	Wyciągnąć szuflady
+	
+Skosić trawnik
+	Sprawdzić trawnik
+	Sprawdzić poziom oleju w kosiarce
+```
+
+Oczywiste jest, że główne zadania są podzielone na podzadania, które są wciętę pod głównym zadaniem, z którym są związane. Więc jajka, boczek oraz masło są związane z `zakupy`.
+	
