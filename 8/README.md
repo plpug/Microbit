@@ -1,104 +1,110 @@
 # Muzyka 
 
-MicroPython na p³ytce BBC micro:bit przychodzi z potê¿nym modu³em
-muzyczno-dŸwiêkowym.
-Umo¿liwia on w bardzo prosty sposób generowanie pisków i brzdêków z
-u¿¹dzenia, jeœli pod³¹czy
-siê pod nie g³oœnik. U¿yj krokodylków by podpi¹æ piny 0 i GND do wejœæ g³oœnika.
-Nie ma znaczenia kierunek w którym s¹ one pod³¹czone pod g³oœnik.
+MicroPython na pÅ‚ytce BBC micro:bit przychodzi z potÄ™Å¼nym moduÅ‚em
+muzyczno-dÅºwiÄ™kowym.
+UmoÅ¼liwia on w bardzo prosty sposÃ³b generowanie piskÃ³w i brzdÄ™kÃ³w z
+uÅ¼Ä…dzenia, jeÅ›li podÅ‚Ä…czy
+siÄ™ pod nie gÅ‚oÅ›nik. UÅ¼yj krokodylkÃ³w by podpiÄ…Ä‡ piny 0 i GND do wejÅ›Ä‡ gÅ‚oÅ›nika.
+Nie ma znaczenia kierunek w ktÃ³rym sÄ… one podÅ‚Ä…czone pod gÅ‚oÅ›nik.
 
-Uwaga: Nie próbuj tego z piezo elektrycznym brzêczykiem - takie
-brzêczyki s¹ przystosowane
-do grania jedynie pojedyñczego tonu.
+Uwaga: Nie prÃ³buj tego z piezo elektrycznym brzÄ™czykiem - takie
+brzÄ™czyki sÄ… przystosowane
+do grania jedynie pojedyÅ„czego tonu.
 
-Przyst¹pmy zatem do grania jakiejœ muzyki:
+PrzystÄ…pmy zatem do grania jakiejÅ› muzyki:
 ...
 
-Zauwa¿, ¿e zaimportowaliœmy modu³ "music". Zawiera on metody u¿yte do
-wytworzenia i kontrolowania dŸwiêku.
+ZauwaÅ¼, Å¼e zaimportowaliÅ›my moduÅ‚ "music". Zawiera on metody uÅ¼yte do
+wytworzenia i kontrolowania dÅºwiÄ™ku.
 
-MikroPython ma ca³kiem sporo wbudowanych melodii. Ich kompletna lista to:
+MikroPython ma caÅ‚kiem sporo wbudowanych melodii. Ich kompletna lista to:
 ...
 
-Teraz ponownie weŸ przyk³adowy kod i zmieñ w nim melodiê. Która z nich
-jest twoj¹ ulubion¹?
-W jaki sposób u¿y³ byœ takich melodyjek by coœ zasygnalizowaæ b¹dŸ wskazaæ?
+Teraz ponownie weÅº przykÅ‚adowy kod i zmieÅ„ w nim melodiÄ™. KtÃ³ra z nich
+jest twojÄ… ulubionÄ…?
+W jaki sposÃ³b uÅ¼yÅ‚ byÅ› takich melodyjek by coÅ› zasygnalizowaÄ‡ bÄ…dÅº wskazaÄ‡?
 
 
 Wolfgang Amadeusz Microbit
 
-Tworzenie w³asnych melodyjek jest proste!
+Tworzenie wÅ‚asnych melodyjek jest proste!
 
-Ka¿da nuta ma swoj¹ nazwê (jak C#, czy F), oktawê (mówi¹c¹ MicroPythonowi jak
-wysoko lub nisko powinien zagraæ t¹ nutê) i okres trwania (jak d³ugo powinna
-ona wybrzmiewaæ). Oktawy oznaczone s¹ liczbami - 0 jest najni¿sz¹ oktaw¹,
-zawiera œrodkowe C, a 8 jest najwy¿sz¹ jak¹ bêdziesz kiedykolwiek potrzebowaæ,
-chyba ¿e tworzysz muzykê dla psów. Okres trwania równie¿ wyra¿ony jest liczbami.
-Im wiêksza wartoœæ, tym d³u¿ej bêdzie on trwaæ. Wartoœci te odnosz¹
-siê do siebie,
-dla przyk³adu okres trwania o wartoœci 4 bêdzie trwaæ dwa razy d³u¿ej ni¿ okres
-o wartoœci 2 (i tak dalej...).
-Jeœli u¿yjesz nuty nazwanej "R", MicroPython przeczeka (tj. zamilknie) na zadany
+KaÅ¼da nuta ma swojÄ… nazwÄ™ (jak C#, czy F), oktawÄ™ (mÃ³wiÄ…cÄ… MicroPythonowi jak
+wysoko lub nisko powinien zagraÄ‡ tÄ… nutÄ™) i okres trwania (jak dÅ‚ugo powinna
+ona wybrzmiewaÄ‡). Oktawy oznaczone sÄ… liczbami - 0 jest najniÅ¼szÄ… oktawÄ…,
+zawiera Å›rodkowe C, a 8 jest najwyÅ¼szÄ… jakÄ… bÄ™dziesz kiedykolwiek potrzebowaÄ‡,
+chyba Å¼e tworzysz muzykÄ™ dla psÃ³w. Okres trwania rÃ³wnieÅ¼ wyraÅ¼ony jest liczbami.
+Im wiÄ™ksza wartoÅ›Ä‡, tym dÅ‚uÅ¼ej bÄ™dzie on trwaÄ‡. WartoÅ›ci te odnoszÄ…
+siÄ™ do siebie,
+dla przykÅ‚adu okres trwania o wartoÅ›ci 4 bÄ™dzie trwaÄ‡ dwa razy dÅ‚uÅ¼ej niÅ¼ okres
+o wartoÅ›ci 2 (i tak dalej...).
+JeÅ›li uÅ¼yjesz nuty nazwanej "R", MicroPython przeczeka (tj. zamilknie) na zadany
 okres trwania.
 
-Ka¿da nuta wyra¿ona jest jako ci¹g znaków jak ten:
+KaÅ¼da nuta wyraÅ¼ona jest jako ciÄ…g znakÃ³w jak ten:
 
 NUTA[oktawa][:okres trwania]
 
-Dla przyk³adu "A1:4" odnosi siê do nuty nazwanej A w oktawie o numerze 1, granej
-przez czas o d³ugoœci 4 jednostek.
+Dla przykÅ‚adu "A1:4" odnosi siÄ™ do nuty nazwanej A w oktawie o numerze 1, granej
+przez czas o dÅ‚ugoÅ›ci 4 jednostek.
 
-Zrób listê nut by zapisaæ melodiê (jest to odpowiednikiem tworzenia animacji
-z listy obrazków). Przyk³adowo, w ten sposób MicroPython mo¿e zagraæ
+ZrÃ³b listÄ™ nut by zapisaÄ‡ melodiÄ™ (jest to odpowiednikiem tworzenia animacji
+z listy obrazkÃ³w). PrzykÅ‚adowo, w ten sposÃ³b MicroPython moÅ¼e zagraÄ‡
 otwarcie "Frere Jaques":
+```markdown
+import music
+
+tune = ["C4:4", "D4:4", "E4:4", "C4:4", "C4:4", "D4:4", "E4:4", "C4:4",
+        "E4:4", "F4:4", "G4:8", "E4:4", "F4:4", "G4:8"]
+music.play(tune)
+```
+
+Uwaga: MicroPython umoÅ¼liwia uproszczenie takich melodii. ZapamiÄ™ta on oktawÄ™
+i okres trwania do pÃ³ki go nie zmienisz nastÄ™pnym razem. W wyniku powyÅ¼szy
+przykÅ‚ad moÅ¼e byÄ‡ przepisany tak:
+...
+ZauwaÅ¼ jak zmieniajÄ… siÄ™ wartoÅ›ci oktaw i okresÃ³w trwania jedynie gdy muszÄ….
+ZaoszczÄ™dza to sporo pisania jak i uÅ‚atwia czytanie.
+
+
+Efekty dÅºwiÄ™kowe
+
+MicroPython pozwala Ci wytwaÅ¼aÄ‡ tony ktÃ³ry nie sÄ… muzycznymi nutami.
+Dla przykÅ‚adu,
+w ten sposÃ³b moÅ¼esz wytworzyÄ‡ sygnaÅ‚ policyjnej syreny:
 ...
 
-Uwaga: MicroPython umo¿liwia uproszczenie takich melodii. Zapamiêta on oktawê
-i okres trwania do póki go nie zmienisz nastêpnym razem. W wyniku powy¿szy
-przyk³ad mo¿e byæ przepisany tak:
-...
-Zauwa¿ jak zmieniaj¹ siê wartoœci oktaw i okresów trwania jedynie gdy musz¹.
-Zaoszczêdza to sporo pisania jak i u³atwia czytanie.
+ZauwaÅ¼ jak w tym przykÅ‚adzie uÅ¼yta jest metoda "music.pitch". Oczekuje
+ona czÄ™stotliwoÅ›ci.
+Dla przykÅ‚adu, czÄ™stotliwoÅ›Ä‡ 440 jest takasama jak koncertowy ton A,
+uÅ¼ywany do "zgrania siÄ™"
+przez orkiestrÄ™ filharmonii.
 
-
-Efekty dŸwiêkowe
-
-MicroPython pozwala Ci wytwa¿aæ tony który nie s¹ muzycznymi nutami.
-Dla przyk³adu,
-w ten sposób mo¿esz wytworzyæ sygna³ policyjnej syreny:
-...
-
-Zauwa¿ jak w tym przyk³adzie u¿yta jest metoda "music.pitch". Oczekuje
-ona czêstotliwoœci.
-Dla przyk³adu, czêstotliwoœæ 440 jest takasama jak koncertowy ton A,
-u¿ywany do "zgrania siê"
-przez orkiestrê filharmonii.
-
-W powy¿szym przyk³adzie funkcja "range" u¿yta jest do wygenerowania przedzia³u
-wartoœci liczbowych. Te liczby u¿yte s¹ do zdefiniowania wysokoœci
+W powyÅ¼szym przykÅ‚adzie funkcja "range" uÅ¼yta jest do wygenerowania przedziaÅ‚u
+wartoÅ›ci liczbowych. Te liczby uÅ¼yte sÄ… do zdefiniowania wysokoÅ›ci
 tonu. Trzy argumenty
-funkcji "range" s¹: wartoœci¹ pocz¹tkow¹, koñcow¹ i wartoœci¹ kroku. W
-zwi¹zku z tym
-pierwsze u¿ycie "range" mówi, w jêzyku polskim: utwó¿ przedzia³
-wartoœci pomiêdzy 880 a 1760,
-dodaj¹c co krok 16. Trugie u¿ycie "range" mówi: utwó¿ przedzia³
-wartoœci pomiêdzy 1760 i 880,
-dodaj¹c co krok -16 (czyli odejmuj¹c 16). W ten sposób otrzymujemy
-przedzia³ czêstotliwoœci
-zmieniaj¹c wysokoœæ tonu tak jak syrena.
+funkcji "range" sÄ…: wartoÅ›ciÄ… poczÄ…tkowÄ…, koÅ„cowÄ… i wartoÅ›ciÄ… kroku. W
+zwiÄ…zku z tym
+pierwsze uÅ¼ycie "range" mÃ³wi, w jÄ™zyku polskim: utwÃ³Å¼ przedziaÅ‚
+wartoÅ›ci pomiÄ™dzy 880 a 1760,
+dodajÄ…c co krok 16. Trugie uÅ¼ycie "range" mÃ³wi: utwÃ³Å¼ przedziaÅ‚
+wartoÅ›ci pomiÄ™dzy 1760 i 880,
+dodajÄ…c co krok -16 (czyli odejmujÄ…c 16). W ten sposÃ³b otrzymujemy
+przedziaÅ‚ czÄ™stotliwoÅ›ci
+zmieniajÄ…c wysokoÅ›Ä‡ tonu tak jak syrena.
 
-Jako ¿e syrena powinna trwaæ bez koñca otacza j¹ nieskoñczona pêtla "while".
+Jako Å¼e syrena powinna trwaÄ‡ bez koÅ„ca otacza jÄ… nieskoÅ„czona pÄ™tla "while".
 
-Najwa¿niejsze w tym jest wprowadzenie nowego typu pêtli wewn¹trz pêtli
-"while" - pêtla "for".
-Po polsku powiedzielibyœmy "dla ka¿dego elementu w pewnej kolekcji,
-wykonaj z ni¹ pewne dzia³anie".
-Po angielsku (na którym bazuje jêzyk Python) brzmi to "for each item
+NajwaÅ¼niejsze w tym jest wprowadzenie nowego typu pÄ™tli wewnÄ…trz pÄ™tli
+"while" - pÄ™tla "for".
+Po polsku powiedzielibyÅ›my "dla kaÅ¼dego elementu w pewnej kolekcji,
+wykonaj z niÄ… pewne dziaÅ‚anie".
+Po angielsku (na ktÃ³rym bazuje jÄ™zyk Python) brzmi to "for each item
 in some collection, do some
-activity with it". St¹d mamy "for", "in". W naszym przyk³adzie to "dla
-ka¿dej czêstotliwoœci (freq)
-w przedziale (range) graj dziêk o tej czêstotliwoœci przez 6 milisekund".
-Zauwa¿ ¿e ka¿da akcja do wykonania w pêtli "for" ma wciêcie (zgodnie z
-tym o czym rozmawialiœmy
-wczeœniej) dziêki czemu Python wie dok³adnie jaki kod wykonaæ dla
-poszczególnych elementów kolekcji.
+activity with it". StÄ…d mamy "for", "in". W naszym przykÅ‚adzie to "dla
+kaÅ¼dej czÄ™stotliwoÅ›ci (freq)
+w przedziale (range) graj dziÄ™k o tej czÄ™stotliwoÅ›ci przez 6 milisekund".
+ZauwaÅ¼ Å¼e kaÅ¼da akcja do wykonania w pÄ™tli "for" ma wciÄ™cie (zgodnie z
+tym o czym rozmawialiÅ›my
+wczeÅ›niej) dziÄ™ki czemu Python wie dokÅ‚adnie jaki kod wykonaÄ‡ dla
+poszczegÃ³lnych elementÃ³w kolekcji.
