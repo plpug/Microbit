@@ -1,28 +1,28 @@
 #Mowa
 
-Komputer i roboty, które mówi¹ czuj¹ siê bardziej ludzkie. Sprawienie aby micro:bit mówi³ jest tzw. form¹ przekazywania informacji w formie zabawy, 
-w skuteczny i u¿yteczny sposób. W zwiazku z tym w urz¹dzeniu wbudowany jest syntezator mowy oparty na in¿ynierii wstecznej wersji syntezatora z 1980 roku.
+Komputer i roboty, ktÃ³re mÃ³wiÄ… czujÄ… siÄ™ bardziej ludzkie. Sprawienie aby micro:bit mÃ³wiÅ‚ jest tzw. formÄ… przekazywania informacji w formie zabawy, 
+w skuteczny i uÅ¼yteczny sposÃ³b. W zwiazku z tym w urzÄ…dzeniu wbudowany jest syntezator mowy oparty na inÅ¼ynierii wstecznej wersji syntezatora z 1980 roku.
 
-Brzmi to bardzo fajnie, maj¹c to na uwagê zamierzamy wykorzystaæ syntezator mowy do stworzenia...
+Brzmi to bardzo fajnie, majÄ…c to na uwagÄ™ zamierzamy wykorzystaÄ‡ syntezator mowy do stworzenia...
 
 ##Dalek Poetry
 
-![dalek][logo]
+![dalek][logo1]
 
-[logo]: https://github.com/plpug/Microbit/blob/master/10/img/dalek.jpg "robot dalek"
+[logo1]: https://github.com/plpug/Microbit/blob/master/10/img/dalek.jpg "robot dalek"
 
-To bardzo ma³o znany fakt, ¿e Dalekowie uwielbiaj¹ poezje - szczególnie limeryki. Kto by pomyœla³, ale fakt jest faktem. 
-W ka¿dym razie chcielibyœmy aby Dalek nam recytowa³ na ¿adanie.
+To bardzo maÅ‚o znany fakt, Å¼e Dalekowie uwielbiajÄ… poezje - szczegÃ³lnie limeryki. Kto by pomyÅ›laÅ‚, ale fakt jest faktem. 
+W kaÅ¼dym razie chcielibyÅ›my aby Dalek nam recytowaÅ‚ na Å¼adanie.
 
-##Powiedz coœ
+##Powiedz coÅ›
 
-Przed umo¿liwieniem mówienia urz¹dzeniu musimy pod³¹czyæ przewody, tak jak na obrazku poni¿ej:
+Przed umoÅ¼liwieniem mÃ³wienia urzÄ…dzeniu musimy podÅ‚Ä…czyÄ‡ przewody, tak jak na obrazku poniÅ¼ej:
 
-![plytka][logo]
+![plytka][logo2]
 
-[logo]: https://github.com/plpug/Microbit/blob/master/10/img/speech1.png "obraz plytki"
+[logo2]: https://github.com/plpug/Microbit/blob/master/10/img/speech1.png "obraz plytki"
 
-Najprostszym sposobem na uzyskanie mo¿liwoœci mówienia jest zaimportowanie `speech` czyli modu³u mowy. U¿yj tej funkcji np. tak:
+Najprostszym sposobem na uzyskanie moÅ¼liwoÅ›ci mÃ³wienia jest zaimportowanie `speech` czyli moduÅ‚u mowy. UÅ¼yj tej funkcji np. tak:
 
 ```markdown
 
@@ -31,18 +31,18 @@ import speech
 speech.say("Hello, World")
 ```
 
-Chocia¿ sprawiliœmy, ¿e nasze urz¹dzenie przemówi³o i jest to fajne, nie przypomina to robota Dalek. Wiêc musimy zmieniæ niektóre parametry.
-Aby przystosowaæ syntezator mowy dla naszych potrzeb, syntezator mowy jest bardzo mocny w tym zakresie, poniewa¿ mo¿emy zmieniaæ cztery parametry:
+ChociaÅ¼ sprawiliÅ›my, Å¼e nasze urzÄ…dzenie przemÃ³wiÅ‚o i jest to fajne, nie przypomina to robota Dalek. WiÄ™c musimy zmieniÄ‡ niektÃ³re parametry.
+Aby przystosowaÄ‡ syntezator mowy dla naszych potrzeb, syntezator mowy jest bardzo mocny w tym zakresie, poniewaÅ¼ moÅ¼emy zmieniaÄ‡ cztery parametry:
 
-*`pitch` - jak wysoki lub niski jest dŸwiêk g³osu (0 = wysoki, 255 = Barry White)
-*`speed` - jak szybka jest mowa urz¹dzenia (0 = niemo¿liwy, 255 = bajka na dobranoc)
-*`mouth` - jak wydawaæ dŸwiêki z zaciœniêtymi lub otwartymi ustami (0 = manekin brzuchomówcy, 255 = Foghorn Leghorn)
-*`throat` - jak zrelaksowany lub napiêty jest ton g³osu(0 = rozstrzêsiony , 255 = totalnie wyluzowany)
+*`pitch` - jak wysoki lub niski jest dÅºwiÄ™k gÅ‚osu (0 = wysoki, 255 = Barry White)
+*`speed` - jak szybka jest mowa urzÄ…dzenia (0 = niemoÅ¼liwy, 255 = bajka na dobranoc)
+*`mouth` - jak wydawaÄ‡ dÅºwiÄ™ki z zaciÅ›niÄ™tymi lub otwartymi ustami (0 = manekin brzuchomÃ³wcy, 255 = Foghorn Leghorn)
+*`throat` - jak zrelaksowany lub napiÄ™ty jest ton gÅ‚osu(0 = rozstrzÄ™siony , 255 = totalnie wyluzowany)
 
-£¹cznie, paramatry te kontroluj¹ jakoœæ dŸwiêku (barwa). Mówi¹c szczerze to najlepszy sposób, aby uzyskaæ ton idealny ton g³osu. Chcesz eksperytmentowaæ, 
-œmia³o dzia³aj z dŸwiêkiem i os¹dzaj jego jakoœæ. 
+ÅÄ…cznie, paramatry te kontrolujÄ… jakoÅ›Ä‡ dÅºwiÄ™ku (barwa). MÃ³wiÄ…c szczerze to najlepszy sposÃ³b, aby uzyskaÄ‡ ton idealny ton gÅ‚osu. Chcesz eksperytmentowaÄ‡, 
+Å›miaÅ‚o dziaÅ‚aj z dÅºwiÄ™kiem i osÄ…dzaj jego jakoÅ›Ä‡. 
 
-My równie¿ ekperymentowaliœmy, i oto nasz przyk³ad: 
+My rÃ³wnieÅ¼ ekperymentowaliÅ›my, i oto nasz przykÅ‚ad: 
 
 ```markdown
 speech.say(" I am a Dalek, I'm deadly", speed=120, pitch=150, throat=100, mouth=230)
@@ -50,7 +50,7 @@ speech.say(" I am a Dalek, I'm deadly", speed=120, pitch=150, throat=100, mouth=
 
 ##Poezja
 
-Mo¿na równie¿ kazaæ naszemu urz¹dzeniu aby mówi³ nam limeryki:
+MoÅ¼na rÃ³wnieÅ¼ kazaÄ‡ naszemu urzÄ…dzeniu aby mÃ³wiÅ‚ nam limeryki:
 
 ```markdown
 # DALEK poetry generator, by The Doctor
@@ -73,12 +73,13 @@ for line in poem:
 	
 ```
 
-Jak widaæ mamy ustawienia mowy 
+Python, dla kaÅ¼dego elementu listy wypeÅ‚nionej strofami poetÃ³w, wywoÅ‚uje w pÄ™tli â€œspeech.sayâ€ z ustawieniami gÅ‚osu robota DALEK, ktÃ³ry recytuje poemat. MiÄ™dzy kaÅ¼dÄ… liniÄ… wstawiona jest pauza pÃ³Å‚ sekundowa, bo nawet DALEK potrzebuje czasu by wziÄ…Ä‡ oddech.
 
-##Zaœpiewaj piosenke
 
-Zmieniaj¹c ustawienie `pitch` i wywo³anie funkcji `sing` sprawi, ¿e urz¹dzenie nam zaœpiewa (choæ pewnie nie wygra eurowizji ;))
-Mapowanie numerów skoku do nut znajduje siê poni¿ej:
+##ZaÅ›piewaj piosenke
+
+ZmieniajÄ…c ustawienie `pitch` i wywoÅ‚anie funkcji `sing` sprawi, Å¼e urzÄ…dzenie nam zaÅ›piewa (choÄ‡ pewnie nie wygra eurowizji ;))
+Mapowanie numerÃ³w tonu do nut znajduje siÄ™ poniÅ¼ej:
 
 ![nuty][logo]
 
@@ -87,6 +88,11 @@ Mapowanie numerów skoku do nut znajduje siê poni¿ej:
 ```markdown
 speech.sing("#115DOWWWW")
 ```
+
+ZauwaÅ¼ jak wysokoÅ›Ä‡ tonu odwzorowujÄ…cego Å›piew jest doÅ‚Ä…czana przed fonemem wraz ze znakiem â€œhashâ€ (#). WysokoÅ›Ä‡ tonu pozostanie taka sama dla nastÄ™pujÄ…cych fonemÃ³w dopÃ³ki nowa wysokoÅ›Ä‡ nie zostanie przypisana.
+
+PoniÅ¼szy przykÅ‚ad demonstruje jak wszystkie trzy funkcje generujÄ…ce (â€œsayâ€, â€œpronounceâ€ i â€œsingâ€) mogÄ… zostaÄ‡ uÅ¼yte by uzyskaÄ‡ w efekt zbliÅ¼ony do mowy:
+
 
 ```markdown
 import speech
