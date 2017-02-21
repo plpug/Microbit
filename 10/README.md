@@ -45,7 +45,7 @@ Aby przystosować syntezator mowy dla naszych potrzeb, syntezator mowy jest bard
 My również ekperymentowaliśmy, i oto nasz przykład: 
 
 ```markdown
-speech.say(" I am a Dalek, I'm deadly", speed=120, pitch=150, throat=100, mouth=230)
+speech.say(" I am a Dalek, I'm deadly", speed=120, pitch=100, throat=100, mouth=200)
 ```
 
 ##Poezja
