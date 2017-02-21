@@ -3,7 +3,7 @@
 MicroPython na płytce BBC micro:bit przychodzi z potężnym modułem
 muzyczno-dźwiękowym.
 Umożliwia on w bardzo prosty sposób generowanie pisków i brzdęków z
-użądzenia, jeśli podłączy
+urządzenia, jeśli podłączy
 się pod nie głośnik. Użyj krokodylków by podpiąć piny 0 i GND do wejść głośnika.
 Nie ma znaczenia kierunek w którym są one podłączone pod głośnik.
 
@@ -12,13 +12,40 @@ brzęczyki są przystosowane
 do grania jedynie pojedyńczego tonu.
 
 Przystąpmy zatem do grania jakiejś muzyki:
-...
+```markdown
+import music
+
+music.play(music.FUNK)
+```
+
 
 Zauważ, że zaimportowaliśmy moduł "music". Zawiera on metody użyte do
 wytworzenia i kontrolowania dźwięku.
 
 MikroPython ma całkiem sporo wbudowanych melodii. Ich kompletna lista to:
-...
+```markdown
+music.DADADADUM
+music.ENTERTAINER
+music.PRELUDE
+music.ODE
+music.NYAN
+music.RINGTONE
+music.FUNK
+music.BLUES
+music.BIRTHDAY
+music.WEDDING
+music.FUNERAL
+music.PUNCHLINE
+music.PYTHON
+music.BADDY
+music.CHASE
+music.BA_DING
+music.WAWAWAWAA
+music.JUMP_UP
+music.JUMP_DOWN
+music.POWER_UP
+music.POWER_DOWN
+```
 
 Teraz ponownie weź przykładowy kod i zmień w nim melodię. Która z nich
 jest twoją ulubioną?
@@ -45,7 +72,7 @@ Każda nuta wyrażona jest jako ciąg znaków jak ten:
 
 NUTA[oktawa][:okres trwania]
 
-Dla przykładu "A1:4" odnosi się do nuty nazwanej A w oktawie o numerze 1, granej
+Dla przykładu `A1:4` odnosi się do nuty nazwanej A w oktawie o numerze 1, granej
 przez czas o długości 4 jednostek.
 
 Zrób listę nut by zapisać melodię (jest to odpowiednikiem tworzenia animacji
@@ -72,7 +99,17 @@ Efekty dźwiękowe
 MicroPython pozwala Ci wytwarzać tony który nie są muzycznymi nutami.
 Dla przykładu,
 w ten sposób możesz wytworzyć sygnał policyjnej syreny:
-...
+
+```markdown
+import music
+
+while True:
+    for freq in range(880, 1760, 16):
+        music.pitch(freq, 6)
+    for freq in range(1760, 880, -16):
+        music.pitch(freq, 6)
+ ```
+ 
 
 Zauważ jak w tym przykładzie użyta jest metoda "music.pitch". Oczekuje
 ona częstotliwości.
@@ -80,31 +117,31 @@ Dla przykładu, częstotliwość 440 jest taka sama jak koncertowy ton A,
 używany do "zgrania się"
 przez orkiestrę filharmonii.
 
-W powyższym przykładzie funkcja "range" użyta jest do wygenerowania przedziału
+W powyższym przykładzie funkcja `range` użyta jest do wygenerowania przedziału
 wartości liczbowych. Te liczby użyte są do zdefiniowania wysokości
 tonu. Trzy argumenty
-funkcji "range" są: wartością początkową, końcową i wartością kroku. W
+funkcji `range` są: wartością początkową, końcową i wartością kroku. W
 związku z tym
-pierwsze użycie "range" mówi, w języku polskim: utwórz przedział
+pierwsze użycie `range` mówi, w języku polskim: utwórz przedział
 wartości pomiędzy 880 a 1760,
-dodając co krok 16. Trugie użycie "range" mówi: utwórz przedział
+dodając co krok 16. Trugie użycie `range` mówi: utwórz przedział
 wartości pomiędzy 1760 i 880,
 dodając co krok -16 (czyli odejmując 16). W ten sposób otrzymujemy
 przedział częstotliwości
 zmieniając wysokość tonu tak jak syrena.
 
-Jako że syrena powinna trwać bez końca otacza ją nieskończona pętla "while".
+Jako że syrena powinna trwać bez końca otacza ją nieskończona pętla `while`.
 
 Najważniejsze w tym jest wprowadzenie nowego typu pętli wewnątrz pętli
-"while" - pętla "for".
+`while` - pętla `for`.
 Po polsku powiedzielibyśmy "dla każdego elementu w pewnej kolekcji,
 wykonaj z nią pewne działanie".
 Po angielsku (na którym bazuje język Python) brzmi to "for each item
 in some collection, do some
-activity with it". Stąd mamy "for", "in". W naszym przykładzie to "dla
-każdej częstotliwości (freq)
-w przedziale (range) graj dźwięk o tej częstotliwości przez 6 milisekund".
-Zauważ że każda akcja do wykonania w pętli "for" ma wcięcie (zgodnie z
+activity with it". Stąd mamy `for`,`in`. W naszym przykładzie to "dla
+każdej częstotliwości `freq`
+w przedziale `range` graj dźwięk o tej częstotliwości przez 6 milisekund".
+Zauważ że każda akcja do wykonania w pętli `for` ma wcięcie (zgodnie z
 tym o czym rozmawialiśmy
 wcześniej) dzięki czemu Python wie dokładnie jaki kod wykonać dla
 poszczególnych elementów kolekcji.
