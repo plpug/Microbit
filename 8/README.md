@@ -69,14 +69,14 @@ Zaoszczędza to sporo pisania jak i ułatwia czytanie.
 
 Efekty dźwiękowe
 
-MicroPython pozwala Ci wytważać tony który nie są muzycznymi nutami.
+MicroPython pozwala Ci wytwarzać tony który nie są muzycznymi nutami.
 Dla przykładu,
 w ten sposób możesz wytworzyć sygnał policyjnej syreny:
 ...
 
 Zauważ jak w tym przykładzie użyta jest metoda "music.pitch". Oczekuje
 ona częstotliwości.
-Dla przykładu, częstotliwość 440 jest takasama jak koncertowy ton A,
+Dla przykładu, częstotliwość 440 jest taka sama jak koncertowy ton A,
 używany do "zgrania się"
 przez orkiestrę filharmonii.
 
@@ -85,9 +85,9 @@ wartości liczbowych. Te liczby użyte są do zdefiniowania wysokości
 tonu. Trzy argumenty
 funkcji "range" są: wartością początkową, końcową i wartością kroku. W
 związku z tym
-pierwsze użycie "range" mówi, w języku polskim: utwóż przedział
+pierwsze użycie "range" mówi, w języku polskim: utwórz przedział
 wartości pomiędzy 880 a 1760,
-dodając co krok 16. Trugie użycie "range" mówi: utwóż przedział
+dodając co krok 16. Trugie użycie "range" mówi: utwórz przedział
 wartości pomiędzy 1760 i 880,
 dodając co krok -16 (czyli odejmując 16). W ten sposób otrzymujemy
 przedział częstotliwości
@@ -103,7 +103,7 @@ Po angielsku (na którym bazuje język Python) brzmi to "for each item
 in some collection, do some
 activity with it". Stąd mamy "for", "in". W naszym przykładzie to "dla
 każdej częstotliwości (freq)
-w przedziale (range) graj dzięk o tej częstotliwości przez 6 milisekund".
+w przedziale (range) graj dźwięk o tej częstotliwości przez 6 milisekund".
 Zauważ że każda akcja do wykonania w pętli "for" ma wcięcie (zgodnie z
 tym o czym rozmawialiśmy
 wcześniej) dzięki czemu Python wie dokładnie jaki kod wykonać dla
