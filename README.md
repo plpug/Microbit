@@ -13,7 +13,7 @@ Inspiracji szukaliśmy również w literaturze, a mianowicie: [Python for kids](
 W przeprowadzania ćwiczeń nauczysz się podstaw programowania w języku Python oraz poznasz urządzenie Micro:bit. 
 
 ## Materiały
-* [Instalacja](0/README.md)
+* [Instalacja](0/)
 * [Wprowadzenie do Pythona](1/README.md)
 * [Instrukcje warunkowe](2/README.md)
 * [Pętle](3/README.md)
