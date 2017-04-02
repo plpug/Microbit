@@ -70,7 +70,7 @@ Jeżeli potrzebowałabym dokładniejszej listy, zrobiłabym tak:
 ```markdown
 Zakupy
 	Jajka
-	Becon
+	Bekon
 	Masło
 
 Wyczyścić lodówke
@@ -83,7 +83,7 @@ Skosić trawnik
 	Sprawdzić poziom oleju w kosiarce
 ```
 
-Oczywiste jest, że główne zadania są podzielone na podzadania, które są wciętę pod głównym zadaniem, z którym są związane. Więc jajka, boczek oraz masło są związane z `zakupy`.
+Oczywiste jest, że główne zadania są podzielone na podzadania, które są wciętę pod głównym zadaniem, z którym są związane. Więc jajka, bekon oraz masło są związane z `zakupy`.
 
 Przez wcięcia widać, że zadania są ze sobą powiązane. Nazywa się to zagnieżdżeniem, użyjemy go do zdefiniowania bloku kodu, jak w przykładzie poniżej:
 
