@@ -1,56 +1,57 @@
-# Æwiczenia
+# Ä†wiczenia
 
-W trakcie trwania warsztatów poznawa³eœ ró¿ne funkcjonalnoœci urz¹dzenia. Wyœwietla³eœ obrazki, animacje, dŸwiêki, a nawet komunikowa³eœ siê z koleg¹ za pomoc¹
-modu³u radia. Nadszed³ czas na to, abyœ móg³ ³¹czyæ to czego do tej pory siê nauczy³eœ, aby stworzyæ coœ nowego.
+W trakcie trwania warsztatÃ³w poznawaÅ‚eÅ› rÃ³Å¼ne funkcjonalnoÅ›ci urzÄ…dzenia. WyÅ›wietlaÅ‚eÅ› obrazki, animacje, dÅºwiÄ™ki, a nawet komunikowaÅ‚eÅ› siÄ™ z kolegÄ… za pomocÄ…
+moduÅ‚u radia. NadszedÅ‚ czas na to, abyÅ› mÃ³gÅ‚ Å‚Ä…czyÄ‡ to czego do tej pory siÄ™ nauczyÅ‚eÅ›, aby stworzyÄ‡ coÅ› nowego.
 
 No to zaczynamy!
 
 
-## Æwiczenie 1 - Wyœwietl negatyw serduszka
+## Ä†wiczenie 1 - WyÅ›wietl negatyw serduszka
 
-Tworzyliœmy na zajêciach ju¿ swoje obrazki w tym, tworzyliœmy ju¿ swoje serduczka. A co by siê sta³o gdybyœmy zrobili odwrótnoœæ takiego serduszka?
-Wyszed³ by nam ciekawy negatyw. I to jest Waszym celem :)
+TworzyliÅ›my na zajÄ™ciach juÅ¼ swoje obrazki w tym, swoje serduszka. A co by siÄ™ staÅ‚o gdybyÅ›my zrobili odwrÃ³tnoÅ›Ä‡ takiego serduszka?
+WyszedÅ‚ by nam ciekawy negatyw. I to jest Waszym celem :)
 
-PodwiedŸ:
-* Pamiêtaj, aby u¿yæ Image()
-* Rozpisz sobie wszystko na kartce (bêdzie Ci proœciej)
+PodwiedÅº:
+* PamiÄ™taj, aby uÅ¼yÄ‡ Image()
+* Rozpisz sobie wszystko na kartce (bÄ™dzie Ci proÅ›ciej)
 
-## Æwiczenie 2 - Wyœwietl zaj¹ca
+## Ä†wiczenie 2 - WyÅ›wietl zajÄ…ca
 
-Zbli¿aj¹ siê œwiêta wielkanocne, ka¿dy z nas lubi czekoladowe zaj¹ce. Spróbujemy stworzyæ sobie zaj¹ca i wyœwietliæ go na Micro:bicie. Co wiêcej spróbujmy sprawiæ aby nasz zaj¹c siê rusza³!
+ZbliÅ¼ajÄ… siÄ™ Å›wiÄ™ta wielkanocne, kaÅ¼dy z nas lubi czekoladowe zajÄ…ce. SprÃ³bujemy stworzyÄ‡ sobie zajÄ…ca i wyÅ›wietliÄ‡ go na Micro:bicie. Co wiÄ™cej sprÃ³bujmy sprawiÄ‡ aby nasz zajÄ…c siÄ™ ruszaÅ‚!
 
-PodpowiedŸ:
+PodpowiedÅº:
 
-* Pamiêtaj, aby u¿yæ Image()
-* Zerknij sobie do rozdzia³u (chapter05) do opisu obrazków DIY.
+* PamiÄ™taj, aby uÅ¼yÄ‡ Image()
+* Zerknij sobie do rozdziaÅ‚u (chapter05) do opisu obrazkÃ³w DIY.
 
-## Æwiczenie 3
+## Ä†wiczenie 3
 
-Spróbuj napisaæ program, który pozwoli nam pokazaæ jaki przycisk naciskasz.
+SprÃ³buj napisaÄ‡ program, ktÃ³ry pozwoli nam pokazaÄ‡ jaki przycisk naciskasz.
 
-*Masz tylko 2 przycisku A i B
-*spróbuj u¿yæ "if"
-*u¿yj "is_pressed()""
+* Masz tylko 2 przycisku A i B
+* sprÃ³buj uÅ¼yÄ‡ "if"
+* uÅ¼yj "is_pressed()""
 
-## Æwiczenie 4 - symulacja bicia serca
+## Ä†wiczenie 4 - symulacja bicia serca
 
-Ka¿dy z nas pewnie le¿a³ kiedyœ w szpitalu lub ogl¹da³ serial o chirurgach. Napiszcie program, który bêdzie symulowa³ rytm serca.
+KaÅ¼dy z nas pewnie leÅ¼aÅ‚ kiedyÅ› w szpitalu lub oglÄ…daÅ‚ serial o chirurgach. Napiszcie program, ktÃ³ry bÄ™dzie symulowaÅ‚ rytm serca.
 
 
-## Æwiczenie 5 - wstrz¹œni i poka¿ s³owo
+## Ä†wiczenie 5 - wstrzÄ…Å›ni i pokaÅ¼ sÅ‚owo
 
-Celem tego æwiczenia jest napisanie programu, który wyœwietla jakieœ s³owo po wstrz¹œniêciu swojego urz¹dzenia.
+Celem tego Ä‡wiczenia jest napisanie programu, ktÃ³ry wyÅ›wietla jakieÅ› sÅ‚owo po wstrzÄ…Å›niÄ™ciu swojego urzÄ…dzenia.
 
-PodpowiedŸ:
+PodpowiedÅº:
 
-*umieœæ swóje s³owa wewn¹trz listy(stworzyæ listê s³ów)
-*u¿yj `accelerometer.was_gesture("shake")`
-*wybierz przypadkow¹ wiadomoœæ za pomoc¹ komendy random.choice(messages)
+* umieÅ›Ä‡ swoje sÅ‚owa wewnÄ…trz listy(stworzyÄ‡ listÄ™ sÅ‚Ã³w)
+* uÅ¼yj `accelerometer.was_gesture("shake")`
+* wybierz przypadkowÄ… wiadomoÅ›Ä‡ za pomocÄ… komendy random.choice(messages)
 
-## Æwiczenie 6 - u¿yj radia
+## Ä†wiczenie 6 - uÅ¼yj radia
 
-Pobawimy siê teraz w wysy³anie microbitowych smsów ;). Wybierz wiadomoœæ i wyœlij j¹ za ka¿dym razem, kiedy naciœniesz przycisk (A lub B).
+Pobawimy siÄ™ teraz w wysyÅ‚anie microbitowych smsÃ³w ;). Wybierz wiadomoÅ›Ä‡ i wyÅ›lij jÄ… za kaÅ¼dym razem, kiedy naciÅ›niesz przycisk (A lub B).
 
-Pamiêtaj, ¿eby wywo³aæ radio: radio.on()
-Wyœwietl na ekranie wiadomoœæ, któr¹ otrzymasz.
-Upraszczaj¹c za³ó¿my, ¿e tylko jeden Micro:bit naraz bêdzie wysy³a³ wiadomoœæ
+PodpowiedÅº:
+* PamiÄ™taj, Å¼eby wywoÅ‚aÄ‡ radio: radio.on()
+* WyÅ›wietl na ekranie wiadomoÅ›Ä‡, ktÃ³rÄ… otrzymasz.
+* UpraszczajÄ…c zaÅ‚Ã³Å¼my, Å¼e tylko jeden Micro:bit naraz bÄ™dzie wysyÅ‚aÅ‚ wiadomoÅ›Ä‡
