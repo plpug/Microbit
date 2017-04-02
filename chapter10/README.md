@@ -7,9 +7,9 @@ Brzmi to bardzo fajnie, mając to na uwagę zamierzamy wykorzystać syntezator m
 
 ## Dalek Poetry
 
-![dalek][logo1]
+![robot dalek][dalek]
 
-[logo1]: https://github.com/plpug/Microbit/blob/master/10/img/dalek.jpg "robot dalek"
+[dalek]: https://github.com/plpug/Microbit/raw/master/chapter10/img/dalek.jpg "robot dalek"
 
 To bardzo mało znany fakt, że Dalekowie uwielbiają poezje - szczególnie limeryki. Kto by pomyślał, ale fakt jest faktem.
 W każdym razie chcielibyśmy aby Dalek nam recytował na żadanie.
@@ -18,9 +18,9 @@ W każdym razie chcielibyśmy aby Dalek nam recytował na żadanie.
 
 Przed umożliwieniem mówienia urządzeniu musimy podłączyć przewody, tak jak na obrazku poniżej:
 
-![plytka][logo2]
+![plytka][plytka]
 
-[logo2]: https://github.com/plpug/Microbit/blob/master/10/img/speech1.png "obraz plytki"
+[plytka]: https://github.com/plpug/Microbit/raw/master/chapter10/img/speech1.png "obraz plytki"
 
 Najprostszym sposobem na uzyskanie możliwości mówienia jest zaimportowanie `speech` czyli modułu mowy. Użyj tej funkcji np. tak:
 
@@ -106,9 +106,9 @@ while True:
 Zmieniając ustawienie `pitch` i wywołanie funkcji `sing` sprawi, że urządzenie nam zaśpiewa (choć pewnie nie wygra eurowizji ;))
 Mapowanie numerów tonu do nut znajduje się poniżej:
 
-![nuty][logo]
+![nuty][nuty]
 
-[logo]: https://github.com/plpug/Microbit/blob/master/10/img/speech.png "obraz nut"
+[nuty]: https://github.com/plpug/Microbit/raw/master/chapter10/img/speech.png "obraz nut"
 
 ```markdown
 speech.sing("#115DOWWWW")

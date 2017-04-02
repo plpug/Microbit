@@ -7,9 +7,9 @@ urządzenia, jeśli podłączy
 się pod nie głośnik. Użyj krokodylków by podpiąć piny 0 i GND do wejść głośnika.
 Nie ma znaczenia kierunek w którym są one podłączone pod głośnik.
 
-![microbit][logo]
+![microbit][microbit]
 
-[logo]: https://github.com/plpug/Microbit/blob/master/8/img/pin0-gnd.png "zrzut ekranu"
+[microbit]: https://github.com/plpug/Microbit/raw/master/chapter08/img/pin0-gnd.png "microbit"
 
 Uwaga: Nie próbuj tego z piezo elektrycznym brzęczykiem - takie
 brzęczyki są przystosowane
