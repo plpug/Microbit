@@ -1,26 +1,26 @@
+# Radio
 
-#Radio
+WewnÄ…trz kaÅ¼dego Micro:bita znajduje siÄ™ bardzo przydatna funkcjonalnoÅ›ci, a mianowicie Radio. DziÄ™ki tej funkcjonalnoÅ›ci moÅ¼emy przesyÅ‚aÄ‡ i odbieraÄ‡ wiadomoÅ›ci.
+W kaÅ¼dym Micro:bicie znajduje siÄ™ ciekawa oraz przydatna funkcjonalnoÅ›Ä‡, a mianowicie `Radio`. ModuÅ‚ radio pozwala nam
+na przesyÅ‚anie oraz odbieranie wiadomoÅ›ci.
 
-Wewn¹trz ka¿dego Micro:bita znajduje siê bardzo przydatna funkcjonalnoœci, a mianowicie Radio. Dziêki tej funkcjonalnoœci mo¿emy przesy³aæ i odbieraæ wiadomoœci.
-W ka¿dym Micro:bicie znajduje siê ciekawa oraz przydatna funkcjonalnoœæ, a mianowicie `Radio`. Modu³ radio pozwala nam
-na przesy³anie oraz odbieranie wiadomoœci.
+Po pierwsze musimy zaimportowaÄ‡ moduÅ‚ radia `import radio`, aby udostÄ™pniÄ‡ funkcje naszemu programowi. NastÄ™pnie musimy uruchomiÄ‡ radio, za pomocÄ… `radio.on()`.
 
-Po pierwsze musimy zaimportowaæ modu³ radia 'import radio`, aby udostêpniæ funkcje naszemu programowi. Nastêpnie musimy uruchomiæ radio, za pomoc¹ `radio.on()`.
+W tym momencie moduÅ‚ radiowy jest skonfigurowany do rozsÄ…dnych wartoÅ›Ä‡ domyÅ›lnych, sprawiajÄ… one Å¼e jest kompatybilny z innymi platformami, ktÃ³re sÄ… zgodne z BBC micro:bit.
+MoÅ¼liwe jest sterowanie z omÃ³wionymi powyÅ¼ej funkcjami, jak rÃ³wnieÅ¼ iloÅ›Ä‡ wykorzystywana transmijsi wiadomoÅ›ci i iloÅ›ci pamiÄ™ci RAM. ZakÅ‚adajÄ…c, Å¼e jesteÅ›my zadowoleni z ustawieÅ„
+domyÅ›lnych, najprostszy sposÃ³b wysyÅ‚ania wiadomoÅ›ci jest nastÄ™pujÄ…cy:
 
-W tym momencie modu³ radiowy jest skonfigurowany do rozs¹dnych wartoœæ domyœlnych, sprawiaj¹ one ¿e jest kompatybilny z innymi platformami, które s¹ zgodne z BBC micro:bit.
-Mo¿liwe jest sterowanie z omówionymi powy¿ej funkcjami, jak równie¿ iloœæ wykorzystywana transmijsi wiadomoœci i iloœci pamiêci RAM. Zak³adaj¹c, ¿e jesteœmy zadowoleni z ustawieñ
-domyœlnych, najprostszy sposób wysy³ania wiadomoœci jest nastêpuj¹cy:
+`radio.send("wiadomoÅ›Ä‡")`
 
-`radio.send("wiadomoœæ")`
-
-W przyk³adzie u¿yliœmy funkcji wysy³ania, aby po prostu nadaæ ci¹g znaków "wiadomoœæ". Otrzymywanie wiadomoœci jest jeszcze prostsze:
+W przykÅ‚adzie uÅ¼yliÅ›my funkcji wysyÅ‚ania, aby po prostu nadaÄ‡ ciÄ…g znakÃ³w "wiadomoÅ›Ä‡". Otrzymywanie wiadomoÅ›ci jest jeszcze prostsze:
 
 ```markdown
 new_message = radio.receive()
 ```
-Po otrzymaniu wiadomoœci s¹ one umieszczane w kolejce wiadomoœci. Funkcja `receive` (odbierania) zwraca najstarsz¹ wiadomoœæ z kolejki jako ci¹g znaków, co umo¿liwia utworzenie nowej wiadomoœci przychodz¹cej. Jeœli wype³ni siê kolejka komunikatów, nowe przychodz¹ce wiadomoœci s¹ ignorowane.
 
-Posiadaj¹c tak¹ wiedzê, mo¿emy stworzyæ swój pierwszy projekt:
+Po otrzymaniu wiadomoÅ›ci sÄ… one umieszczane w kolejce wiadomoÅ›ci. Funkcja `receive` (odbierania) zwraca najstarszÄ… wiadomoÅ›Ä‡ z kolejki jako ciÄ…g znakÃ³w, co umoÅ¼liwia utworzenie nowej wiadomoÅ›ci przychodzÄ…cej. JeÅ›li wypeÅ‚ni siÄ™ kolejka komunikatÃ³w, nowe przychodzÄ…ce wiadomoÅ›ci sÄ… ignorowane.
+
+PosiadajÄ…c takÄ… wiedzÄ™, moÅ¼emy stworzyÄ‡ swÃ³j pierwszy projekt:
 
 ```markdown
 from microbit import display, button_a, Image
@@ -36,20 +36,14 @@ while True:
 
 ```
 
-Kluczowa czêœæ zawiera siê w pêtli zdarzeñ. Po pierwsze, sprawdza ona czy przycisk A zosta³ wciœniêty, i jeœli tak - u¿ywa radia by by wys³aæ wiadomoœæ "hello" (ang. czeœæ). Nastêpnie czyta wszelkie wiadomoœci z kolejki wiadomoœci z u¿yciem radio.receive(). Po czym u¿ywa display.show() by pokazaæ obrazek kaczki.
+Kluczowa czÄ™Å›Ä‡ zawiera siÄ™ w pÄ™tli zdarzeÅ„. Po pierwsze, sprawdza ona czy przycisk A zostaÅ‚ wciÅ›niÄ™ty, i jeÅ›li tak - uÅ¼ywa radia by by wysÅ‚aÄ‡ wiadomoÅ›Ä‡ "hello" (ang. czeÅ›Ä‡). NastÄ™pnie czyta wszelkie wiadomoÅ›ci z kolejki wiadomoÅ›ci z uÅ¼yciem radio.receive(). Po czym uÅ¼ywa display.show() by pokazaÄ‡ obrazek kaczki.
 
-##Æwiczenie
+## Ä†wiczenie
 
-Dobieramy siê w dwu osobowe zespo³y. Staramy siê przeæwiczyæ w parach dzia³anie powy¿szego przyk³adu. Po przeæwiczeniu, zadaniem Waszym jest
-na podstawie przyk³adu stworzyæ w³asny program. Program musi dzia³aæ, zgodnie z poni¿szymi instrukcjami:
+Dobieramy siÄ™ w dwu osobowe zespoÅ‚y. Staramy siÄ™ przeÄ‡wiczyÄ‡ w parach dziaÅ‚anie powyÅ¼szego przykÅ‚adu. Po przeÄ‡wiczeniu, zadaniem Waszym jest
+na podstawie przykÅ‚adu stworzyÄ‡ wÅ‚asny program. Program musi dziaÅ‚aÄ‡, zgodnie z poniÅ¼szymi instrukcjami:
 
-*Zaimportowaæ modu³ radio
-*W³¹czyæ radio
-*Wysy³aæ albo otrzymywaæ wiadomoœci
-*Wyœwietliæ animacje
-
-
-
-
-
-
+* ZaimportowaÄ‡ moduÅ‚ radio
+* WÅ‚Ä…czyÄ‡ radio
+* WysyÅ‚aÄ‡ albo otrzymywaÄ‡ wiadomoÅ›ci
+* WyÅ›wietliÄ‡ animacje

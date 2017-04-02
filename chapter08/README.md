@@ -7,9 +7,9 @@ urządzenia, jeśli podłączy
 się pod nie głośnik. Użyj krokodylków by podpiąć piny 0 i GND do wejść głośnika.
 Nie ma znaczenia kierunek w którym są one podłączone pod głośnik.
 
-![microbit][logo]
+![microbit][microbit]
 
-[logo]: https://github.com/plpug/Microbit/blob/master/8/img/pin0-gnd.png "zrzut ekranu"
+[microbit]: https://github.com/plpug/Microbit/raw/master/chapter08/img/pin0-gnd.png "microbit"
 
 Uwaga: Nie próbuj tego z piezo elektrycznym brzęczykiem - takie
 brzęczyki są przystosowane
@@ -21,7 +21,6 @@ import music
 
 music.play(music.FUNK)
 ```
-
 
 Zauważ, że zaimportowaliśmy moduł "music". Zawiera on metody użyte do
 wytworzenia i kontrolowania dźwięku.
@@ -55,8 +54,7 @@ Teraz ponownie weź przykładowy kod i zmień w nim melodię. Która z nich
 jest twoją ulubioną?
 W jaki sposób użył byś takich melodyjek by coś zasygnalizować bądź wskazać?
 
-
-Wolfgang Amadeusz Microbit
+## Wolfgang Amadeusz Microbit
 
 Tworzenie własnych melodyjek jest proste!
 
@@ -97,13 +95,11 @@ przykład może być przepisany tak:
 Zauważ jak zmieniają się wartości oktaw i okresów trwania jedynie gdy muszą.
 Zaoszczędza to sporo pisania jak i ułatwia czytanie.
 
-
-Efekty dźwiękowe
+## Efekty dźwiękowe
 
 MicroPython pozwala Ci wytwarzać tony który nie są muzycznymi nutami.
 Dla przykładu,
 w ten sposób możesz wytworzyć sygnał policyjnej syreny:
-
 ```markdown
 import music
 
@@ -112,8 +108,7 @@ while True:
         music.pitch(freq, 6)
     for freq in range(1760, 880, -16):
         music.pitch(freq, 6)
- ```
-
+```
 
 Zauważ jak w tym przykładzie użyta jest metoda "music.pitch". Oczekuje
 ona częstotliwości.

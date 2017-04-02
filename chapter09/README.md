@@ -1,20 +1,20 @@
-#Gesty
+# Gesty
 
-Interesuj¹cym efektem ubocznym posiadania akcelerometru jest detekcja gestów.
-Jeœli bêdziesz ruszaæ swoj¹ p³ytkê BBC micro:bit w okreœlony sposób,
-MicroPython bêdzie je móg³ rozpoznawaæ.
+InteresujÄ…cym efektem ubocznym posiadania akcelerometru jest detekcja gestÃ³w.
+JeÅ›li bÄ™dziesz ruszaÄ‡ swojÄ… pÅ‚ytkÄ™ BBC micro:bit w okreÅ›lony sposÃ³b,
+MicroPython bÄ™dzie je mÃ³gÅ‚ rozpoznawaÄ‡.
 
-MicroPython jest zdolny do rozpoznawania nastêpuj¹cych gestów: `up` (do góry),
-`down` (do do³u), `left` (w lewo), `right` (w prawo), `face up` (wierzchem do góry),
-`face down` (wierzchem do do³u), `freefall` (swobodny spadek), `3g`, `6g`, `8g`.
-O ile wiêkszoœæ nazw powinna byæ oczywista, `3g`, `6g` i `8g` maj¹ miejsce gdy
-urz¹dzenie spotykaj¹ te poziomy przeci¹¿enia (jak astronaute wysy³anego
+MicroPython jest zdolny do rozpoznawania nastÄ™pujÄ…cych gestÃ³w: `up` (do gÃ³ry),
+`down` (do doÅ‚u), `left` (w lewo), `right` (w prawo), `face up` (wierzchem do gÃ³ry),
+`face down` (wierzchem do doÅ‚u), `freefall` (swobodny spadek), `3g`, `6g`, `8g`.
+O ile wiÄ™kszoÅ›Ä‡ nazw powinna byÄ‡ oczywista, `3g`, `6g` i `8g` majÄ… miejsce gdy
+urzÄ…dzenie spotykajÄ… te poziomy przeciÄ…Å¼enia (jak astronaute wysyÅ‚anego
 w kosmos).
 
-By odczytaæ aktualny gest u¿yj metody `accelerometer.current_gesture`. Jej
-wynikiem bêdzie nazwa jednego z wy¿ej wymienionych gestów. Przyk³adowo, ten
-program bêdzie czyni³ twoj¹ p³ytkê szczêœliw¹ jedynie gdy zwrócona bêdzie ona
-wierzchem do góry.
+By odczytaÄ‡ aktualny gest uÅ¼yj metody `accelerometer.current_gesture`. Jej
+wynikiem bÄ™dzie nazwa jednego z wyÅ¼ej wymienionych gestÃ³w. PrzykÅ‚adowo, ten
+program bÄ™dzie czyniÅ‚ twojÄ… pÅ‚ytkÄ™ szczÄ™Å›liwÄ… jedynie gdy zwrÃ³cona bÄ™dzie ona
+wierzchem do gÃ³ry.
 
 ```markdown
 from microbit import *
@@ -27,20 +27,19 @@ while True:
         display.show(Image.ANGRY)
 ```
 
-Ponownie, poniewa¿ chcemy by p³ytka reagowa³a na zmieniaj¹ce siê okolicznoœci
-u¿yjemy pêtli `while` W jej ciele odczytywany jest aktualny gest, po czym
-przypisywany jest pod nazw¹ "gesture". Warunek `if` sprawdza czy `gesture`
-to `face up` (Python u¿ywa `==` do sprawdzenia zgodnoœci, a pojedyñczy znak
-`=` u¿yty jest do przypisywania - tak jak przypisaliœmy odczytany gest do
-nazwy `gesture`). Jeœli gest to `face up`, wtedy u¿yj wyœwietlacza by pokazaæ
-uœmiechniêt¹ buziê. W przeciwnym wypadku urz¹dzenie przybiera groŸny wygl¹d!
+Ponownie, poniewaÅ¼ chcemy by pÅ‚ytka reagowaÅ‚a na zmieniajÄ…ce siÄ™ okolicznoÅ›ci
+uÅ¼yjemy pÄ™tli `while` W jej ciele odczytywany jest aktualny gest, po czym
+przypisywany jest pod nazwÄ… "gesture". Warunek `if` sprawdza czy `gesture`
+to `face up` (Python uÅ¼ywa `==` do sprawdzenia zgodnoÅ›ci, a pojedyÅ„czy znak
+`=` uÅ¼yty jest do przypisywania - tak jak przypisaliÅ›my odczytany gest do
+nazwy `gesture`). JeÅ›li gest to `face up`, wtedy uÅ¼yj wyÅ›wietlacza by pokazaÄ‡
+uÅ›miechniÄ™tÄ… buziÄ™. W przeciwnym wypadku urzÄ…dzenie przybiera groÅºny wyglÄ…d!
 
+## Magiczna 8
 
-##Magiczna 8
-
-Kula magiczna ósemka to zabawka wynaleziona w latach 50tych XX wieku. Idea
-polega na tym by zadaæ pytanie na które mo¿na odpowiedzieæ tak/nie, potrz¹sn¹æ
-ni¹ i poczekaæ a¿ ujawni siê prawda. To raczej proste przekszta³ciæ j¹
+Kula magiczna Ã³semka to zabawka wynaleziona w latach 50tych XX wieku. Idea
+polega na tym by zadaÄ‡ pytanie na ktÃ³re moÅ¼na odpowiedzieÄ‡ tak/nie, potrzÄ…snÄ…Ä‡
+niÄ… i poczekaÄ‡ aÅ¼ ujawni siÄ™ prawda. To raczej proste przeksztaÅ‚ciÄ‡ jÄ…
 w program:
 
 ```markdown
@@ -52,17 +51,17 @@ answers = [
     "Zdecydowanie tak",
     "Pewnie tak",
     "Tak, definitywnie",
-    "Mozesz polegaæ na tym",
+    "Mozesz polegaÄ‡ na tym",
     "Tak, nawet to widze",
     "Chyba tak",
     "Perspektywy dobre",
     "TAK",
-    "Objawy wskazuj¹ na tak",
+    "Objawy wskazujÄ… na tak",
     "Nie wiem, sprobuj ponownie",
     "Zapytaj potem",
     "Nie chce odpowiadac teraz",
     "Nie mozna przewidziec",
-    "Skoncentruj siê i zapytaj raz jeszcze",
+    "Skoncentruj siÄ™ i zapytaj raz jeszcze",
     "Nie licz na to"
     "Nie",
     "Moje dowody mowia nie",
@@ -79,18 +78,18 @@ while True:
 
 ```
 
-Wiêkszoœæ programu to lista nazwana "answers" (odpowiedzi). W³aœciwa gra zawiera
-siê w pêtli `while` na koñcu.
+WiÄ™kszoÅ›Ä‡ programu to lista nazwana "answers" (odpowiedzi). WÅ‚aÅ›ciwa gra zawiera
+siÄ™ w pÄ™tli `while` na koÅ„cu.
 
-Domyœlnym stanem gry jest pokazywanie cyfry `8`. Jednak¿e program musi wykrywaæ
-¿e urz¹dzenie¹dzenie jest potrz¹sane. Metoda `was_gesture` u¿ywa swojego
-argumentu (w tym
-wypadk napisu `shake` (potrz¹saæ) poniewa¿ chcemy wykryæ potrz¹sanie) by zwróciæ
-`True`/`False` (prawda/fa³sz) w odpowiedzi. Jeœli u¿¹dzenie by³o potrz¹sane,
-warunkowy "if" wykona blok kodu który wyczyœci ekran, poczeka sekundê (dziêki
-czemu bêdzie wygl¹da³o jakby u¿¹dzenie myœla³o nad odpowiedzi¹ na twoje pytanie)
-po czym wyœwietli przypadkowo wybran¹ (ang. `random choice`) odpowiedŸ.
+DomyÅ›lnym stanem gry jest pokazywanie cyfry `8`. JednakÅ¼e program musi wykrywaÄ‡
+Å¼e urzÄ…dzenieÄ…dzenie jest potrzÄ…sane. Metoda `was_gesture` uÅ¼ywa swojego
+argumentu (w tym wypadku napisu `shake` (potrzÄ…saÄ‡) poniewaÅ¼ chcemy wykryÄ‡
+potrzÄ…sanie) by zwrÃ³ciÄ‡
+`True`/`False` (prawda/faÅ‚sz) w odpowiedzi. JeÅ›li uÅ¼Ä…dzenie byÅ‚o potrzÄ…sane,
+warunkowy "if" wykona blok kodu ktÃ³ry wyczyÅ›ci ekran, poczeka sekundÄ™ (dziÄ™ki
+czemu bÄ™dzie wyglÄ…daÅ‚o jakby uÅ¼Ä…dzenie myÅ›laÅ‚o nad odpowiedziÄ… na twoje pytanie)
+po czym wyÅ›wietli przypadkowo wybranÄ… (ang. `random choice`) odpowiedÅº.
 
-Dlaczego by nie zapytaæ urz¹dzenie czy to nie najwspanialszy program kiedykolwiek
-napisany? Co mo¿esz zrobiæ by `oszukiwaæ` i uzyskiwaæ zawsze odpowiedŸ pozytywn¹
-lub negatywn¹? (PodpowiedŸ: u¿yj przycisków).
+Dlaczego by nie zapytaÄ‡ urzÄ…dzenie czy to nie najwspanialszy program kiedykolwiek
+napisany? Co moÅ¼esz zrobiÄ‡ by `oszukiwaÄ‡` i uzyskiwaÄ‡ zawsze odpowiedÅº pozytywnÄ…
+lub negatywnÄ…? (PodpowiedÅº: uÅ¼yj przyciskÃ³w).

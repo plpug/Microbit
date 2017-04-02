@@ -1,4 +1,4 @@
-#Wejście/Wyjście
+# Wejście/Wyjście
 
 Na dole płytki BBC micro:bit znajdują się metalowe paski, dzięki
 którym urządzenie wygląda jakby miało zęby.
@@ -22,15 +22,13 @@ Proste!
 Te obiekty mają wiele powiązanych z nimi metod, w zależności od
 możliwości danego pina.
 
-
-##Łaskotliwy Python
+## Łaskotliwy Python
 
 Najprostrzym przykładem użycia pinów jako wejść jest sprawdzanie czy
 są one dotykane.
 Tak więc możesz połaskotać płytkę by zaśmiała się w ten sposób:
 
 ```markdown
-
 from microbit import *
 
 while True:
@@ -39,6 +37,7 @@ while True:
     else:
         display.show(Image.SAD)
 ```
+
 Jedną ręką przytrzymaj płytkę za pin GND. Następnie, drugą rękął
 dotknij (lub połaskocz) pin 0.
 Powinieneś zobaczyć że wyświetlana mina zmienia się z nieszczęśliwej na radosną.
@@ -47,8 +46,7 @@ To jest forma bardzo prostego sprawdzania wejścia, ale zabawa zaczyna
 się dopiero przy podłączaniu
 do płytki innych układów z użyciem pinów.
 
-
-##Brzdęk i Brzdąk
+## Brzdęk i Brzdąk
 
 Najprostrzym elementem jakie możemy podpiąć pod płytkę jest piezo
 elektryczny brzęczyk.  Użyjemy go jako wyjście.
@@ -67,13 +65,11 @@ brzęczyka, a przewód od GND - do złącza oznaczonego minusem.
 
 Poniższy program spowoduje że brzęczyk wydobędzie z siebie dźwięk:
 
-
 ```markdown
 from microbit import *
 
 pin0.write_digital(1)
 ```
-
 
 To jest zabawne przez około 5 sekund, po których chcesz by ten
 przeraźliwy pisk zakończył się.
