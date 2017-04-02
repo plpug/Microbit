@@ -1,4 +1,4 @@
-#Wprowadzenie do micro:bit
+# Wprowadzenie do micro:bit
 
 BBC Micro:bit to małe, wszechstronne urządzenie, które ma dużą ilość sensorów, wejścia i wyjścia oraz co ciekawe ekranem LED 5x5 i można je programować w Pythonie!
 Jak widzicie na poniższym obrazku wygląda bardzo przyjaźnie :)
@@ -16,7 +16,7 @@ Co nam będzie potrzebne:
 
 No to zaczynamy!
 
-##Przywitaj się z urządzeniem
+## Przywitaj się z urządzeniem
 
 Zgodnie z tradycją w trakcie startu z nowym językiem programowania, najprotszą instrukcją jest wyświetlenie na ekranie komputera napisu "hello world". Zrób to na naszym urządzeniu, w MicroPythonie na pewno będzie to proste:
 
@@ -46,7 +46,7 @@ Więc `display.scroll("Hello world")` dosłownie "Chce móc skorzystać z wyświ
 Chcesz zmienić tekst przewijania, tak aby urządzenie przywitało się z Tobą np. " Witaj Dominik"? Niech to będzie zadanie dla Ciebie, wykonaj je samodzielnie :)
 
 
-##Obrazki
+## Obrazki
 
 MicroPython jest znakomity w sztuce, jeśli jedyne czego nam potrzeba to siatka 5x5 diod LED. MicroPython daje nam dużo kontroli nad wyświelaczem, dzięki czemu możemy tworzyć różnego rodzaju ciekawe efekty.  Na przykład, żeby wywołać radość w naszym urządzeniu należy wpisać:
 
@@ -107,11 +107,11 @@ Image.SKULL
 Image.UMBRELLA
 Image.SNAKE
 ```
-###Zadanie
+### Zadanie
 
 Jak widzicie powyżej znajduje się lista wbudowanych obrazów, zadaniem dla Was jest uruchomić każdy z nich. Miłej zabawy :)
 
-##Obrazki DIY
+## Obrazki DIY
 
 Oczywiście możesz również tworzyć własne obrazki i wyświetlać je na urządeniu. To proste.
 
@@ -131,7 +131,7 @@ boat = Image("05050:"
 display.show(boat)
 ```
 
-#Animacje
+# Animacje
 
 Takie obrazki są zabawne, ale jeszcze więcej zabawy mamy gdy chcemy aby się przesuwały. Jest to proste w MicroPythonie, po prostu musimy użyć listy obrazków. Tutaj jest lista zakupów:
 

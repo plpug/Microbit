@@ -1,4 +1,4 @@
-#Pobawmy się przyciskami
+# Pobawmy się przyciskami
 
 Do tej pory stworzylismy kod powodujacy ze urzadzenie robi "coś". To coś - nazywamy "wyjściem" (efektem). Jednakze nasze urzadzenie powinno reagowac na "coś". Tym razem "coś" - nazywamy "wejściem".
 
@@ -50,7 +50,7 @@ Wreszcie Python wie co jest przewijane w wyświetlaczu:
 display.scroll("10")
 ```
 
-##Pętle zdarzeń
+## Pętle zdarzeń
 
 Często potrzebujesz by Twój program poczekał aż coś się wydarzy. Robi się to tworząc pętlę w koło kawałka kodu, który definiuje jak zareagować na różne spodziewane zdarzenia takie jak przyciśnięcie przycisku.
 By stworzyć pętlę w Pythonie, użyj słowa kluczowego "while" (oznaczającego "do kiedy"). Sprawdza ono czy coś zwraca wartość True (prawdę).
@@ -101,7 +101,7 @@ i program będzie kontynuowany po bloku kodu pętli `while`. Wygląda na to, że
 
 Spróbuj!
 
-##Obsługa zdarzeń
+## Obsługa zdarzeń
 
 Jeśli chcemy aby MicroPython reagował na zdarzenia związane z naciśnięciem przycisku, powinniśmy umieścić kod w pętli `while` (pętla nieskończona) i sprawdzić
 czy przycisk jest naciskany.

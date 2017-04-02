@@ -1,4 +1,4 @@
-#Funkcje i modu³y
+# Funkcje i modu³y
 
 Zastanów siê, ile rzeczy wyrzucasz ka¿dego dnia: butelki po wodzie, torebki po chipsach, pude³ka po lodach, gazety itd. A teraz wyobraŸ sobie, co by siê sta³o, gdyby wszystkie te œmieci l¹dowa³y
 po prostu na stosie na podjeŸdzie do Twojego domu, bez segregowania papieru, plastiku i aluminiowych puszek.
@@ -11,7 +11,7 @@ Oczywiœcie programy nie znikaj¹ pod gór¹ œmieci, ale jeœli nie bêdziemy w jakimœ
 przepisywania kodu zatrzemy sobie palce. Powtórne wykorzystanie kodu to równie¿ krótsze i ³atwiejsze do czytania programy. Jeœli siê wkrótce przekonasz w Pythonie jest kilka sposobów tworzenia kodu
 wielokrotnego u¿ytku.
 
-##U¿ywanie funkcji
+## U¿ywanie funkcji
 
 Jeden ze sposobów na wielokrone u¿ywanie kody Pythona ju¿ znamy. W poprzednim rozdziale u¿yliœmy funkcji `range` i `list`, aby nakazaæ Pythonowi liczenie:
 
@@ -50,7 +50,7 @@ Poni¿ej generujemy listê liczb za pomoc¹ funkcji `list` i `range`:
 Funkcje to fragmenty kodu, które nakazuj¹ Pythonowi wykonaæ jakieœ zadanie. Jest to jeden ze sposobów na wielokrotne wykorzystywanie kodu - funkcji mo¿na wielkrotnie u¿ywaæ w ró¿nych programach.
 Przydatnoœæ funkcji widaæ ju¿ przy pisaniu prostych programów. Gdy zaczniesz pisaæ d³ugie pisaæ d³ugie, bardziej skomplikowane aplikacje, takie jak gry, przekonasz siê funkcje s¹ niezast¹opione.
 
-##Budowa funkcji
+## Budowa funkcji
 
 Funkcja sk³ada siê trzech czêœci: nazwy, parametrów i treœci. Oto przyk³ad prostej funkcji:
 
@@ -77,7 +77,7 @@ Mo¿emy te¿ najpierw utworzyæ kilka zmiennych, a nastêpnie wywo³aæ funkcje, podaj
 Witaj Robin Hood
 ```
 
-##Zmienne i ich zasiêg
+## Zmienne i ich zasiêg
 
 Zmienna, która znajduje siê w treœci funkcji, wystêpuje tylko w tej funkcji i nie mo¿e zostaæ u¿yta po zakoñczeniu wykonywania funkcji.
 W œwiecie programowania regu³ê tak¹ nazywamy zasiêgiem. Spójrzmy na funkcje, która nie ma ¿adnych parametrów, ale u¿ywa kilku zmiennych:
@@ -118,7 +118,7 @@ na wewn¹trz funkcji. Oto wynik dzia³ania tej funkcji:
 ```
 
 
-##U¿ywanie modu³ów
+## U¿ywanie modu³ów
 
 Modu³y s³u¿¹ do organizowania funkcji, zmiennych i innych elementów kodu w wiêksze programy, które daj¹ wiêcej mo¿liwoœci. Niektóre z nich s¹ wbudowane w Pythona, inne z kolei s¹
 niezale¿ne i mo¿na je pobraæ. Istniej¹ modu³y pomagaj¹ce w pisaniu gier (np. zewn¹trzny PyGdame), modu³y u³atwiaj¹ce obróbkê obrazków( np. PIL czyli Python Imaging Library) i do rysowania trójwymiarowej grafiki (np. Panda3D).
@@ -140,9 +140,9 @@ Fri Mar  3 17:00:45 2017
 Funkcja `asctime` jest czêœci¹ modu³u `time` i zwraca bie¿¹c¹ date i czas pod postaci¹ ³añcuchu znaków.
 
 
-##Podsumowanie
+## Podsumowanie
 
-W tym rozdziale dowiedzieliœmy siê, jak tworzyæ w Pythonie bloki kodu wielokrotnego u¿ytku zwane funkcjami. WIesz, ¿e od zasiêgu zmiennych zale¿y to, czy mo¿na ich u¿ywaæ wewn¹trz funkcji czy na zewn¹trz i potrafisz tworzyæ funkcje od s³owa kluczowego `def`. Umiesz te¿ importowaæ modu³y, aby wykorzystywaæ to co siê w nich znajduje.
+W tym rozdziale dowiedzieliœmy siê, jak tworzyæ w Pythonie bloki kodu wielokrotnego u¿ytku zwane funkcjami. Wiesz, ¿e od zasiêgu zmiennych zale¿y to, czy mo¿na ich u¿ywaæ wewn¹trz funkcji czy na zewn¹trz i potrafisz tworzyæ funkcje od s³owa kluczowego `def`. Umiesz te¿ importowaæ modu³y, aby wykorzystywaæ to co siê w nich znajduje.
 
 
 
