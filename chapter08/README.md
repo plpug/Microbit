@@ -22,7 +22,6 @@ import music
 music.play(music.FUNK)
 ```
 
-
 Zauważ, że zaimportowaliśmy moduł "music". Zawiera on metody użyte do
 wytworzenia i kontrolowania dźwięku.
 
@@ -55,8 +54,7 @@ Teraz ponownie weź przykładowy kod i zmień w nim melodię. Która z nich
 jest twoją ulubioną?
 W jaki sposób użył byś takich melodyjek by coś zasygnalizować bądź wskazać?
 
-
-Wolfgang Amadeusz Microbit
+## Wolfgang Amadeusz Microbit
 
 Tworzenie własnych melodyjek jest proste!
 
@@ -97,13 +95,11 @@ przykład może być przepisany tak:
 Zauważ jak zmieniają się wartości oktaw i okresów trwania jedynie gdy muszą.
 Zaoszczędza to sporo pisania jak i ułatwia czytanie.
 
-
-Efekty dźwiękowe
+## Efekty dźwiękowe
 
 MicroPython pozwala Ci wytwarzać tony który nie są muzycznymi nutami.
 Dla przykładu,
 w ten sposób możesz wytworzyć sygnał policyjnej syreny:
-
 ```markdown
 import music
 
@@ -112,8 +108,7 @@ while True:
         music.pitch(freq, 6)
     for freq in range(1760, 880, -16):
         music.pitch(freq, 6)
- ```
-
+```
 
 Zauważ jak w tym przykładzie użyta jest metoda "music.pitch". Oczekuje
 ona częstotliwości.

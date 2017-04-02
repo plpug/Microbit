@@ -1,11 +1,11 @@
-#Mowa
+# Mowa
 
 Komputer i roboty, które mówią czują się bardziej ludzkie. Sprawienie aby micro:bit mówił jest tzw. formą przekazywania informacji w formie zabawy,
 w skuteczny i użyteczny sposób. W zwiazku z tym w urządzeniu wbudowany jest syntezator mowy oparty na inżynierii wstecznej wersji syntezatora z 1980 roku.
 
 Brzmi to bardzo fajnie, mając to na uwagę zamierzamy wykorzystać syntezator mowy do stworzenia...
 
-##Dalek Poetry
+## Dalek Poetry
 
 ![dalek][logo1]
 
@@ -14,7 +14,7 @@ Brzmi to bardzo fajnie, mając to na uwagę zamierzamy wykorzystać syntezator m
 To bardzo mało znany fakt, że Dalekowie uwielbiają poezje - szczególnie limeryki. Kto by pomyślał, ale fakt jest faktem.
 W każdym razie chcielibyśmy aby Dalek nam recytował na żadanie.
 
-##Powiedz coś
+## Powiedz coś
 
 Przed umożliwieniem mówienia urządzeniu musimy podłączyć przewody, tak jak na obrazku poniżej:
 
@@ -34,10 +34,10 @@ speech.say("Hello, World")
 Chociaż sprawiliśmy, że nasze urządzenie przemówiło i jest to fajne, nie przypomina to robota Dalek. Więc musimy zmienić niektóre parametry.
 Aby przystosować syntezator mowy dla naszych potrzeb, syntezator mowy jest bardzo mocny w tym zakresie, ponieważ możemy zmieniać cztery parametry:
 
-*`pitch` - jak wysoki lub niski jest dźwięk głosu (0 = wysoki, 255 = Barry White)
-*`speed` - jak szybka jest mowa urządzenia (0 = niemożliwy, 255 = bajka na dobranoc)
-*`mouth` - jak wydawać dźwięki z zaciśniętymi lub otwartymi ustami (0 = manekin brzuchomówcy, 255 = Foghorn Leghorn)
-*`throat` - jak zrelaksowany lub napięty jest ton głosu(0 = rozstrzęsiony , 255 = totalnie wyluzowany)
+* `pitch` - jak wysoki lub niski jest dźwięk głosu (0 = wysoki, 255 = Barry White)
+* `speed` - jak szybka jest mowa urządzenia (0 = niemożliwy, 255 = bajka na dobranoc)
+* `mouth` - jak wydawać dźwięki z zaciśniętymi lub otwartymi ustami (0 = manekin brzuchomówcy, 255 = Foghorn Leghorn)
+* `throat` - jak zrelaksowany lub napięty jest ton głosu(0 = rozstrzęsiony , 255 = totalnie wyluzowany)
 
 Łącznie, paramatry te kontrolują jakość dźwięku (barwa). Mówiąc szczerze to najlepszy sposób, aby uzyskać ton idealny ton głosu. Chcesz eksperytmentować,
 śmiało działaj z dźwiękiem i osądzaj jego jakość.
@@ -45,10 +45,10 @@ Aby przystosować syntezator mowy dla naszych potrzeb, syntezator mowy jest bard
 My również ekperymentowaliśmy, i oto nasz przykład:
 
 ```markdown
-speech.say(" I am a Dalek, I'm deadly", speed=120, pitch=100, throat=100, mouth=200)
+speech.say("I am a Dalek, I'm deadly", speed=120, pitch=100, throat=100, mouth=200)
 ```
 
-##Poezja
+## Poezja
 
 Można również kazać naszemu urządzeniu aby mówił nam limeryki:
 
@@ -101,8 +101,7 @@ while True:
 
 ```
 
-
-##Zaśpiewaj piosenke
+## Zaśpiewaj piosenke
 
 Zmieniając ustawienie `pitch` i wywołanie funkcji `sing` sprawi, że urządzenie nam zaśpiewa (choć pewnie nie wygra eurowizji ;))
 Mapowanie numerów tonu do nut znajduje się poniżej:
@@ -118,7 +117,6 @@ speech.sing("#115DOWWWW")
 Zauważ jak wysokość tonu odwzorowującego śpiew jest dołączana przed fonemem wraz ze znakiem “hash” (#). Wysokość tonu pozostanie taka sama dla następujących fonemów dopóki nowa wysokość nie zostanie przypisana.
 
 Poniższy przykład demonstruje jak wszystkie trzy funkcje generujące (“say”, “pronounce” i “sing”) mogą zostać użyte by uzyskać w efekt zbliżony do mowy:
-
 
 ```markdown
 import speech
@@ -158,15 +156,3 @@ Jak widzimy nasz DALEK jest bardzo uzdolniony, potrafi recytować oraz śpiewać
 Chce abyście stworzyli swój limeryk i kazali dalkowi go przeczytać. Nie zapominajcie o tym,
 że dalek ma to robić z uśmiechem. Pamiętamy chyba jak wywołać uśmiech na urządzeniu :)
 Przed zakończeniem swojej pracy DALEK ma nam zaśpiewać na pożegnanie.
-
-
-
-
-
-
-
-
-
-
-
-

@@ -1,4 +1,4 @@
-#Gesty
+# Gesty
 
 Interesującym efektem ubocznym posiadania akcelerometru jest detekcja gestów.
 Jeśli będziesz ruszać swoją płytkę BBC micro:bit w określony sposób,
@@ -35,8 +35,7 @@ to `face up` (Python używa `==` do sprawdzenia zgodności, a pojedyńczy znak
 nazwy `gesture`). Jeśli gest to `face up`, wtedy użyj wyświetlacza by pokazać
 uśmiechniętą buzię. W przeciwnym wypadku urządzenie przybiera groźny wygląd!
 
-
-##Magiczna 8
+## Magiczna 8
 
 Kula magiczna ósemka to zabawka wynaleziona w latach 50tych XX wieku. Idea
 polega na tym by zadać pytanie na które można odpowiedzieć tak/nie, potrząsnąć
@@ -84,8 +83,8 @@ się w pętli `while` na końcu.
 
 Domyślnym stanem gry jest pokazywanie cyfry `8`. Jednakże program musi wykrywać
 że urządzenieądzenie jest potrząsane. Metoda `was_gesture` używa swojego
-argumentu (w tym
-wypadk napisu `shake` (potrząsać) ponieważ chcemy wykryć potrząsanie) by zwrócić
+argumentu (w tym wypadku napisu `shake` (potrząsać) ponieważ chcemy wykryć
+potrząsanie) by zwrócić
 `True`/`False` (prawda/fałsz) w odpowiedzi. Jeśli użądzenie było potrząsane,
 warunkowy "if" wykona blok kodu który wyczyści ekran, poczeka sekundę (dzięki
 czemu będzie wyglądało jakby użądzenie myślało nad odpowiedzią na twoje pytanie)

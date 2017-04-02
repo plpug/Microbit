@@ -12,7 +12,7 @@ Tworzyliśmy na zajęciach już swoje obrazki w tym, swoje serduszka. A co by si
 Wyszedł by nam ciekawy negatyw. I to jest Waszym celem :)
 
 Podwiedź:
-* Pamiętaj, aby użyć Image()
+* Pamiętaj, aby użyć `Image()`
 * Rozpisz sobie wszystko na kartce (będzie Ci prościej)
 
 ## Ćwiczenie 2 - Wyświetl zająca
@@ -21,16 +21,16 @@ Zbliżają się święta wielkanocne, każdy z nas lubi czekoladowe zające. Spr
 
 Podpowiedź:
 
-* Pamiętaj, aby użyć Image()
-* Zerknij sobie do rozdziału (chapter05) do opisu obrazków DIY.
+* Pamiętaj, aby użyć `Image()`
+* Zerknij sobie do rozdziału [piątego](../chapter05) do opisu obrazków DIY.
 
 ## Ćwiczenie 3
 
 Spróbuj napisać program, który pozwoli nam pokazać jaki przycisk naciskasz.
 
 * Masz tylko 2 przycisku A i B
-* spróbuj użyć "if"
-* użyj "is_pressed()""
+* spróbuj użyć `if`
+* użyj `is_pressed()`
 
 ## Ćwiczenie 4 - symulacja bicia serca
 
@@ -52,6 +52,6 @@ Podpowiedź:
 Pobawimy się teraz w wysyłanie microbitowych smsów ;). Wybierz wiadomość i wyślij ją za każdym razem, kiedy naciśniesz przycisk (A lub B).
 
 Podpowiedź:
-* Pamiętaj, żeby wywołać radio: radio.on()
+* Pamiętaj, żeby wywołać radio: `radio.on()`
 * Wyświetl na ekranie wiadomość, którą otrzymasz.
 * Upraszczając załóżmy, że tylko jeden Micro:bit naraz będzie wysyłał wiadomość

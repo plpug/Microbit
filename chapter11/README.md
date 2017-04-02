@@ -1,11 +1,10 @@
-
-#Radio
+# Radio
 
 Wewnątrz każdego Micro:bita znajduje się bardzo przydatna funkcjonalności, a mianowicie Radio. Dzięki tej funkcjonalności możemy przesyłać i odbierać wiadomości.
 W każdym Micro:bicie znajduje się ciekawa oraz przydatna funkcjonalność, a mianowicie `Radio`. Moduł radio pozwala nam
 na przesyłanie oraz odbieranie wiadomości.
 
-Po pierwsze musimy zaimportować moduł radia 'import radio`, aby udostępnić funkcje naszemu programowi. Następnie musimy uruchomić radio, za pomocą `radio.on()`.
+Po pierwsze musimy zaimportować moduł radia `import radio`, aby udostępnić funkcje naszemu programowi. Następnie musimy uruchomić radio, za pomocą `radio.on()`.
 
 W tym momencie moduł radiowy jest skonfigurowany do rozsądnych wartość domyślnych, sprawiają one że jest kompatybilny z innymi platformami, które są zgodne z BBC micro:bit.
 Możliwe jest sterowanie z omówionymi powyżej funkcjami, jak również ilość wykorzystywana transmijsi wiadomości i ilości pamięci RAM. Zakładając, że jesteśmy zadowoleni z ustawień
@@ -18,6 +17,7 @@ W przykładzie użyliśmy funkcji wysyłania, aby po prostu nadać ciąg znaków
 ```markdown
 new_message = radio.receive()
 ```
+
 Po otrzymaniu wiadomości są one umieszczane w kolejce wiadomości. Funkcja `receive` (odbierania) zwraca najstarszą wiadomość z kolejki jako ciąg znaków, co umożliwia utworzenie nowej wiadomości przychodzącej. Jeśli wypełni się kolejka komunikatów, nowe przychodzące wiadomości są ignorowane.
 
 Posiadając taką wiedzę, możemy stworzyć swój pierwszy projekt:
@@ -38,18 +38,12 @@ while True:
 
 Kluczowa część zawiera się w pętli zdarzeń. Po pierwsze, sprawdza ona czy przycisk A został wciśnięty, i jeśli tak - używa radia by by wysłać wiadomość "hello" (ang. cześć). Następnie czyta wszelkie wiadomości z kolejki wiadomości z użyciem radio.receive(). Po czym używa display.show() by pokazać obrazek kaczki.
 
-##Ćwiczenie
+## Ćwiczenie
 
 Dobieramy się w dwu osobowe zespoły. Staramy się przećwiczyć w parach działanie powyższego przykładu. Po przećwiczeniu, zadaniem Waszym jest
 na podstawie przykładu stworzyć własny program. Program musi działać, zgodnie z poniższymi instrukcjami:
 
-*Zaimportować moduł radio
-*Włączyć radio
-*Wysyłać albo otrzymywać wiadomości
-*Wyświetlić animacje
-
-
-
-
-
-
+* Zaimportować moduł radio
+* Włączyć radio
+* Wysyłać albo otrzymywać wiadomości
+* Wyświetlić animacje

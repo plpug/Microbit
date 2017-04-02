@@ -1,4 +1,4 @@
-#Pętle
+# Pętle
 
 Nie ma nic gorszego niż konieczność wielokrotnego wykonywania tej samej czynności. Pewnie dlatego prawdopodobnie wiele osób mając problem z zaśnięciem liczy barany. Nie ma to nic wspólnego z cudownymi właściwościami usapiającymi tych uroczych ssaków - powodem jest to, że ciągłe powatarzanie czegoś jest nużące, a umysłowi łatwiej się wyłączyć, jeśli tylko nie jest skupiony na czymś interesującym.
 
@@ -6,7 +6,7 @@ Ci programiści, którzy nie mają problemów z zaśnieciem również nieszczeg�
 
 W tym rozdziale przyjrzymy się pętlom for, jak również innemu typowi pętli dostępnemu w języku Python: pętli while.
 
-##Używanie pętli for
+## Używanie pętli for
 
 Aby pięciokrotnie wyświetlić słowo cześć w Pythonie, możemy napisać:
 
@@ -82,7 +82,7 @@ cześć 4
 ```
 W ten sposób użycie pętli uchroniło nas tak naprawdę przed pisaniem ośmiu dodatkowych wierszy kodu. Programiści nie cierpią się powtarzać, dlatego pętla for należy do najpopularniejszych instrukcji w językach programowania.
 
-##Skoro już omawiamy pętle
+## Skoro już omawiamy pętle
 
 Pętla `for` nie jest jedyną pętlą dostępną w Pythonie, jest tu też `while`. Pętla `for` to pętla o określonej długości, natomiast pętli `while` używa się, gdy nie wiadomo zawczasu, kiedy trzeba będzie przestać wykonywać pętle.
 
@@ -113,9 +113,6 @@ Zacznamy od stworzenia zmiennej `stopień`, za pomocą instrukcji `stopień = 0`
 
 Za pomocą instrukcji `print(stopień)` wyświetlamy wartość zmiennej, a następnie za pomocą `if zmęczenie == True` sprawdzamy czy wartość zmiennej zmęczenie to true. Jeśli tak, to używając słowa kluczowego `break`, wychodzimy z pętli. Słowo kluczowe `break` jest sposobem na natychmiastowe przerwanie pętli.
 
-#Podsumowanie
+# Podsumowanie
 
 W tym rozdziale używaliśmy pętli, aby uniknąć znudzenia w trakci wykonywania monotonnych zadań: zapisaliśmy je w blokach i kazaliśmy Pythonowi je wykonywać wielokrotnie. Poznaliśmy dwa typy pętli `for` i `while`. Są one do siebie podobne, lecz można ich używać w różny sposób.
-
-
-

@@ -117,7 +117,6 @@ na wewnątrz funkcji. Oto wynik działania tej funkcji:
 2000
 ```
 
-
 ## Używanie modułów
 
 Moduły służą do organizowania funkcji, zmiennych i innych elementów kodu w większe programy, które dają więcej możliwości. Niektóre z nich są wbudowane w Pythona, inne z kolei są
@@ -139,12 +138,6 @@ Fri Mar  3 17:00:45 2017
 
 Funkcja `asctime` jest częścią modułu `time` i zwraca bieżącą date i czas pod postacią łańcuchu znaków.
 
-
 ## Podsumowanie
 
 W tym rozdziale dowiedzieliśmy się, jak tworzyć w Pythonie bloki kodu wielokrotnego użytku zwane funkcjami. Wiesz, że od zasięgu zmiennych zależy to, czy można ich używać wewnątrz funkcji czy na zewnątrz i potrafisz tworzyć funkcje od słowa kluczowego `def`. Umiesz też importować moduły, aby wykorzystywać to co się w nich znajduje.
-
-
-
-
-
