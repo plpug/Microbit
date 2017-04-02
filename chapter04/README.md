@@ -6,9 +6,9 @@ po prostu na stosie na podjeŸdzie do Twojego domu, bez segregowania papieru, pla
 Jestem pewna, ¿e w miare mo¿liwoœci segregujesz odpady i to siê chwali, poniewa¿ nikt nie lubi w drodze do szko³y przedzieradŸ siê przez górê œmieci. Znacznie lepiej jest, jeœli te wszystkie
 niepotrzebne, szklane pojemniki zostan¹ przetopione na nowe s³oiki czy butelki, jeœli makulatora zostanie przemielona na papier makulatorowy, a plastik na przerobiony na inne wyroby plastikowe.
 
-W ten sposób ponownie wykorzystujemy ró¿ne rzeczy, które w przeciwnym razie l¹dowa³yby na coraz wy¿szym poziomie œmieci. W œwiecie programowania zada powtórnego wykorzystywania jest równie wa¿na. 
-Oczywiœcie programy nie znikaj¹ pod gór¹ œmieci, ale jeœli nie bêdziemy w jakimœ stopniu wielokrotnie wykorzystywaæ tego, co ju¿ mamy, to od ci¹g³ego 
-przepisywania kodu zatrzemy sobie palce. Powtórne wykorzystanie kodu to równie¿ krótsze i ³atwiejsze do czytania programy. Jeœli siê wkrótce przekonasz w Pythonie jest kilka sposobów tworzenia kodu 
+W ten sposób ponownie wykorzystujemy ró¿ne rzeczy, które w przeciwnym razie l¹dowa³yby na coraz wy¿szym poziomie œmieci. W œwiecie programowania zada powtórnego wykorzystywania jest równie wa¿na.
+Oczywiœcie programy nie znikaj¹ pod gór¹ œmieci, ale jeœli nie bêdziemy w jakimœ stopniu wielokrotnie wykorzystywaæ tego, co ju¿ mamy, to od ci¹g³ego
+przepisywania kodu zatrzemy sobie palce. Powtórne wykorzystanie kodu to równie¿ krótsze i ³atwiejsze do czytania programy. Jeœli siê wkrótce przekonasz w Pythonie jest kilka sposobów tworzenia kodu
 wielokrotnego u¿ytku.
 
 ##U¿ywanie funkcji
@@ -21,8 +21,8 @@ Jeden ze sposobów na wielokrone u¿ywanie kody Pythona ju¿ znamy. W poprzednim ro
 >>>
 ```
 
-Ka¿dy, kto potrafi liczyæ, poradzi sobie z napisaniem listy zawieraj¹cej kolejne liczby, po prostu je wypisuj¹c, ale im d³u¿sza lista, tym wiêcej pisaniny. Dziêki funkcjom utworzenie 
-lisy zawieraj¹cej tysi¹ce pozycji nie jest niczym trudnym. 
+Ka¿dy, kto potrafi liczyæ, poradzi sobie z napisaniem listy zawieraj¹cej kolejne liczby, po prostu je wypisuj¹c, ale im d³u¿sza lista, tym wiêcej pisaniny. Dziêki funkcjom utworzenie
+lisy zawieraj¹cej tysi¹ce pozycji nie jest niczym trudnym.
 Poni¿ej generujemy listê liczb za pomoc¹ funkcji `list` i `range`:
 
 ```markdown
@@ -50,7 +50,7 @@ Poni¿ej generujemy listê liczb za pomoc¹ funkcji `list` i `range`:
 Funkcje to fragmenty kodu, które nakazuj¹ Pythonowi wykonaæ jakieœ zadanie. Jest to jeden ze sposobów na wielokrotne wykorzystywanie kodu - funkcji mo¿na wielkrotnie u¿ywaæ w ró¿nych programach.
 Przydatnoœæ funkcji widaæ ju¿ przy pisaniu prostych programów. Gdy zaczniesz pisaæ d³ugie pisaæ d³ugie, bardziej skomplikowane aplikacje, takie jak gry, przekonasz siê funkcje s¹ niezast¹opione.
 
-##Budowa funkcji 
+##Budowa funkcji
 
 Funkcja sk³ada siê trzech czêœci: nazwy, parametrów i treœci. Oto przyk³ad prostej funkcji:
 
@@ -70,8 +70,79 @@ Witaj Marta
 
 Mo¿emy te¿ najpierw utworzyæ kilka zmiennych, a nastêpnie wywo³aæ funkcje, podaj¹c ich nazwy jako parametry:
 
+```markdown
+>>> imie = "Robin"
+>>> nazwisko= "Hood"
+>>> funkcjaTestowa(imie, nazwisko)
+Witaj Robin Hood
+```
+
+##Zmienne i ich zasiêg
+
+Zmienna, która znajduje siê w treœci funkcji, wystêpuje tylko w tej funkcji i nie mo¿e zostaæ u¿yta po zakoñczeniu wykonywania funkcji.
+W œwiecie programowania regu³ê tak¹ nazywamy zasiêgiem. Spójrzmy na funkcje, która nie ma ¿adnych parametrów, ale u¿ywa kilku zmiennych:
+
+```markdown
+def testuj_zmienne():
+    zmienna_pierwsza = 10
+    zmienna_druga = 21
+    return zmienna_pierwsza * zmienna_druga
+```
+
+W przyk³adzie tym tworzymy funkcje `testuj_zmienne`, która mno¿y dwie zmienne ( zmienna_pierwsza i zmienna_druga) i zwraca wynik w kroku.
+
+```markdown
+print(testuj_zmienne())
+200
+```
+
+Jeœli wywo³amy tê funkcje za pomoc¹ print, uzyskamy wynik 200. Jeœli jednak bêdziemy chcieli wyœwietliæ zawartoœæ `pierwsza_zmienna` poza blokiem kodu funkcji, zobaczymy b³¹d.
+
+Zmienna zdefiniowana poza funkcj¹ ma zupe³nie inny zasiêg.
+
+Aby siê o tym przekonaæ, zdefiniujemy zmienn¹ przed utworzeniem funkcji, a nastêpnie spróbujemy u¿yæ w niej tej zmiennej:
+
+```markdown
+kolejna_zmienna = 100
+def testuj_zmienne2():
+    zmienna_pierwsza = 10
+    zmienna_druga = 21
+    return zmienna_pierwsza * zmienna_druga * kolejna_zmienna
+```
+W tym kodzie zmienne `zmienna_pierwsza` i `zmienna_druga` nadal nie mog¹ byæ u¿ywane poa funkcj¹, natomiast zmienna `kolejna_zmienna` mo¿e byæ u¿ywana
+na wewn¹trz funkcji. Oto wynik dzia³ania tej funkcji:
+
+```markdown
+>>>print(testuj_zmienna2())
+2000
+```
 
 
+##U¿ywanie modu³ów
+
+Modu³y s³u¿¹ do organizowania funkcji, zmiennych i innych elementów kodu w wiêksze programy, które daj¹ wiêcej mo¿liwoœci. Niektóre z nich s¹ wbudowane w Pythona, inne z kolei s¹
+niezale¿ne i mo¿na je pobraæ. Istniej¹ modu³y pomagaj¹ce w pisaniu gier (np. zewn¹trzny PyGdame), modu³y u³atwiaj¹ce obróbkê obrazków( np. PIL czyli Python Imaging Library) i do rysowania trójwymiarowej grafiki (np. Panda3D).
+
+Modu³y mo¿na u¿ywaæ do ró¿nych zadañ. Przyk³adowo gdybyœmy chcieli zrobiæ jak¹œ symulacje gry, moglibyœmy obliczaæ bie¿¹c¹ date i czas, u¿ywaj¹c wbudowanego modu³u:
+
+```markdown
+>>> import time
+```
+W tym przypadku polecenie `import` informuje Pythona, ¿e chcemy u¿ywaæ modu³u `time`. Od tego momentu za pomoc¹ symbolu `.` (kropki) mo¿emy wywo³ywaæ dostêpne w danym module funkcje.
+Oto przyk³adowe wywo³anie funkcji `asctime` w module `time`.
+
+```markdown
+>>> print(time.asctime())
+Fri Mar  3 17:00:45 2017
+>>>
+```
+
+Funkcja `asctime` jest czêœci¹ modu³u `time` i zwraca bie¿¹c¹ date i czas pod postaci¹ ³añcuchu znaków.
+
+
+##Podsumowanie
+
+W tym rozdziale dowiedzieliœmy siê, jak tworzyæ w Pythonie bloki kodu wielokrotnego u¿ytku zwane funkcjami. WIesz, ¿e od zasiêgu zmiennych zale¿y to, czy mo¿na ich u¿ywaæ wewn¹trz funkcji czy na zewn¹trz i potrafisz tworzyæ funkcje od s³owa kluczowego `def`. Umiesz te¿ importowaæ modu³y, aby wykorzystywaæ to co siê w nich znajduje.
 
 
 

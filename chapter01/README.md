@@ -112,124 +112,6 @@ print()
 print("Papa.")
 ```
 
-Puste linie pozwalają oddzielić wizualnie różne części programu, tak aby ułatwić rozczytanie jego treści. Tutaj rozdzieliliśmy nagłówek wiadomości od jej treści i zakończenia.
-
-##Kalkulator BMI
-
-Teraz napiszemy prosty program do kalkulacji BMI (Body Mass Index). Formuła do jego obliczenia jest następująca:
-
->BMI = (masa w kg) / (wzrost w metrach) do kwadratu
-
-Umiemy dzielić, potęgować i wypisywać liczby. Stwórzmy więc nowy plik o nazwie bmi.py i spróbujmy napisać program obliczający nasze BMI:
-```markdown
-print("Twoje BMI wynosi:", 65.5 / (1.75 ** 2)
-```
-Po uruchomieniu:
-
-```markdown
-$ python bmi.py
-```
-W wyniku dostaniemy:
-
-```markdown
-Twoje BMI wynosi: 21.387755102040817
-```
-
-Jak widać, nasz program wymaga jeszcze nieco pracy:
-
-1. Jeśli ktoś inny chciałby skorzystać z tego programu, musi on zmienić jego treść. W dodatku musi się domyślić, które wartości ma zmienić.
-2. Osobie, która nie zna na pamięć tabelki BMI, wartość 21.387755102040817 nic nie powie.
-3. Wypisywanie tylu miejsc po przecinku jest zbędne. BMI mierzy się z dokładnością do dwóch miejsc po przecinku.
-
-Ale programowanie to w końcu sztuka rozwiązywania problemów, więc do dzieła. Przy okazji poznamy kilka nowych elementów Pythona.
-
-##Nazwy
-
-Spróbujmy więc rozwiązać pierwszy problem. Na początek chcielibyśmy, aby nasz program był bardziej czytelny, tj. aby dla czytającego było oczywiste, która wartość to waga, a która wzrost.
-
-Dlatego nadamy tym wartościom nazwy:
-```markdown
-waga = 65.5
-wzrost = 1.75
-
-bmi = waga / wzrost**2
-print("Twoje BMI wynosi:", bmi)
-```
-
-Wynik działania programu się nie zmienił:
-
-```markdown
-Twoje BMI wynosi: 21.387755102040817
-```
-
-Aby lepiej zrozumieć działanie nazw, wróćmy na chwilę do trybu interaktywnego i nadajmy kilka nazw:
-```markdown
->>> x = 42
->>> PI = 3.1415
->>> name = "Amelia"
->>> print("Rzeczy:", x, PI, name)
-Rzeczy: 42 3.1415 Amelia
-```
-Możemy nadać wiele nazw tej samej wartości:
-```markdown
->>> y = x
->>> print(x, y)
-42 42
-```
-Możemy też dowolnie zmieniać wartość przypisaną do nazwy. Nie musi ona być tego samego typu, co poprzednio:
-```markdown
->>> x = 13
->>> print(x)
-13
->>> x = "Skarabeusz"
->>> print(x)
-Skarabeusz
-```
-Nazwy są niezależne od siebie. Przed chwilą przypisaliśmy do x nową wartość, jednak wartość przypisana do y pozostaje bez zmian:
-```markdown
->>> print(y)
-42
-Note
-```
-
-
-Jak już widzieliśmy w naszym programie, nazwy możemy nadawać też wynikom obliczeń oraz używać nazw w obliczeniach:
-```markdown
->>> w = 65.5
->>> h = 175.0 / 100.0
->>> bmi = w / h**2
->>> print(w, h, bmi)
-65.5 1.75 21.387755102040817
-```
-Jednak raz wyliczona wartość się nie zmienia:
-
-```markdown
->>> w = 64
->>> print(w, h, bmi)
-64 1.75 21.387755102040817
-```
-dopóki nie każemy Pythonowi wyliczyć jej ponownie:
-
-```markdown
->>> bmi = w / h**2
->>> print(w, h, bmi)
-64 1.75 20.897959183673468
-```
-
-Na koniec tego rozdziału dodamy kilka komentarzy do naszego programu, aby użytkownik (włącznie z nami!) pamiętał, że wagę należy podać w kilogramach.
-
-Komentarze pozwalają umieścić w pliku dowolny tekst, który zostanie zignorowany przez interpreter Pythona.
-
-Komentarzem w Pythonie jest wszystko po znaku # aż do końca linii:
-```markdown
-# Waga w kilogramach
-weight = 65.5
-# Wzrost w metrach
-height = 1.75
-
-bmi = weight / height**2 # Obliczamy BMI
-print("Twoje BMI to:", bmi)
-```
 
 ##Wywoływanie funkcji
 
@@ -287,7 +169,7 @@ class int(object)
  |  numbers, this truncates towards zero.
  |
  |  ...
- 
+
  ```
 oraz
 
@@ -321,29 +203,7 @@ ValueError: invalid literal for int() with base 10: '60.5'
 >>> float("60.5")
 60.5
 ```
-Zanim skorzystamy z nowo poznanych funkcji w naszym programie, skonstruujmy oczekiwany plan jego działania:
 
-1. Poproś użytkownika o podanie wzrostu
-2. Wczytaj od użytkownika napis i zapamiętaj go pod nazwą height
-3. Zamień napis na liczbę z ułamkiem
-4. Poproś użytkownika o podanie wagi
-5. Wczytaj od użytkownika napis i zapamiętaj pod nazwą weight
-6. Zamień napis na liczbę z ułamkiem
-7. Korzystając z zapamiętanych wartości, oblicz BMI i zapamiętaj jako bmi
-8. Wypisz obliczone BMI
-9. Nie powinno nas zaskoczyć, że te osiem punktów można wprost przełożyć na osiem linii naszego programu (nie licząc odstępów):
-
-Powyższy program możesz zapisać do pliku `bmi.py` i uruchomić python bmi.py. W efekcie powinniśmy dostać:
-```markdown
-print("Podaj wzrost w metrach:")
-wzrost = input()
-wzrost = float(wzrost)
-
-print("Podaj wage w kilogramach:")
-waga = input()
-waga = float(waga)
-bmi = waga / wzrost**2 # obliczanie BMI
-print("Twoje BMI wynosi:", bmi)
 ```
 
 Podsumowując: aby wywołać funkcję, musimy znać jej nazwę (poznaliśmy dotąd część `print`,`help`,`input`, :func:`int`,`float` i `quit`), oraz wiedzieć, jakich danych ona od nas oczekuje (tzw. lista argumentów).
@@ -366,19 +226,8 @@ Wszystkie argumenty podajemy w nawiasach. Aby podać więcej niż jeden, rozdzie
 >>> int("FF", 16)
 255
 ```
-##Sprawdzanie warunków
 
-Przejdźmy do naszego następnego problemu. Chcemy, aby nasz program, korzystając z poniższej tabeli, wypisał odpowiednią dla obliczonego BMI klasyfikację:
-
-| BMI           | Klasyfikacja    | 
-| ------------- |:---------------:|
-|< 18,5         | niedowaga       | 
-| 18,5 – 24,99  | waga prawidłowa |  
-| ≥ 25,0        | nadwaga         |  
-
-Skorzystamy więc z tzw. instrukcji warunkowej `if`, która wykonuje dalszą część programu pod podanym warunkiem:
-
-Porównania: prawda czy fałsz?
+##Porównania: prawda czy fałsz?
 
 Kolejnym elementem, o którym jeszcze nie wspomnieliśmy, są porównania. Dla liczb działają one identycznie jak na lekcjach matematyki:
 ```markdown
@@ -557,7 +406,7 @@ Mogą też zawierać inne krotki, np. informację o punkcie na mapie możemy zgr
 gdzie x i y to jakieś liczby.
 ```
 Do zgrupowanych wartości możemy odwołać się używając ich pozycji w krotce (licząc od zera), np.:
-```markdown 
+```markdown
 >>> p = (10, 15)
 >>> p[0]  # pierwsza wartość
 10
@@ -572,7 +421,8 @@ W tym rozdziale poznaliśmy podstawy składni Pythona. Wiemy jak zapisać liczby
 
 Poznaliśmy funkcję `print`, która wypisuje informacje użytkownikowi oraz funkcję `input`, która je od niego wczytuje.
 
-Wiemy też, że wcięcia mogą mieć znaczenie, szczególnie gdy chcemy użyć instrukcji `if` (również w połączeniu z `else` i `elif`).
+Wiemy też, że wcięcia mogą mieć znaczenie, szczególnie gdy chcemy użyć instrukcji `if` (również w połączeniu z `else` i `elif`). Ale w kolejnym rozdziale
+wyjaśnimy sobie dokładniej działanie instrukcji `if`, `else` i `elif`.
 
 Umiemy stworzyć plik z programem i go uruchomić. Nasz program prosi użytkownika, aby odpowiedział na kilka prostych pytań, wykonuje obliczenia i prezentuje wynik w użytecznej dla niego formie.
 

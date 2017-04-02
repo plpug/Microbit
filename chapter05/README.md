@@ -1,13 +1,13 @@
 #Wprowadzenie do micro:bit
 
-BBC Micro:bit to małe, wszechstronne urządzenie, które ma dużą ilość sensorów, wejścia i wyjścia oraz co ciekawe ekranem LED 5x5 i można je programować w Pythonie! 
-Jak widzicie na poniższym obrazku wygląda bardzo przyjaźnie :) 
+BBC Micro:bit to małe, wszechstronne urządzenie, które ma dużą ilość sensorów, wejścia i wyjścia oraz co ciekawe ekranem LED 5x5 i można je programować w Pythonie!
+Jak widzicie na poniższym obrazku wygląda bardzo przyjaźnie :)
 
 
 Oczywiście Python nie jest jedynym językiem, stosowanym do programowania tego urządzenia.
 Więcej informacji na temat urządzenia znajdziecie [na stronie](http://www.microbit.org/hardware/).
 
-Poprzednie rozdziały przygotowane zostały w celu przygotowania Was do pracy z urządzeniem, teraz powinno być Wam łatwiej wykorzystać zdobytą wiedzę przy pracy z urządzeniem. 
+Poprzednie rozdziały przygotowane zostały w celu przygotowania Was do pracy z urządzeniem, teraz powinno być Wam łatwiej wykorzystać zdobytą wiedzę przy pracy z urządzeniem.
 
 Co nam będzie potrzebne:
 
@@ -40,10 +40,10 @@ display.scroll("Hello World")
 
 ```
 
-Odpowiada za przewijanie ciągu znaków na wyświetlaczu. Aby móc zobaczyć jakieś znaki na naszym wyświeltaczu musimy wpisać co chcemy, musimy określić to w cudzysłowiu `(")` oraz nawiasie `()`. 
+Odpowiada za przewijanie ciągu znaków na wyświetlaczu. Aby móc zobaczyć jakieś znaki na naszym wyświeltaczu musimy wpisać co chcemy, musimy określić to w cudzysłowiu `(")` oraz nawiasie `()`.
 Więc `display.scroll("Hello world")` dosłownie "Chce móc skorzystać z wyświetlacza aby móc przewinąć tekst "Hello world"". Skopiuj kod "Hello world" i wklej go w swoim edytorze i wgraj je do urządzenia.
 
-Chcesz zmienić tekst przewijania, tak aby urządzenie przywitało się z Tobą np. " Witaj Dominik"? Niech to będzie zadanie dla Ciebie, wykonaj je samodzielnie :) 
+Chcesz zmienić tekst przewijania, tak aby urządzenie przywitało się z Tobą np. " Witaj Dominik"? Niech to będzie zadanie dla Ciebie, wykonaj je samodzielnie :)
 
 
 ##Obrazki
@@ -55,7 +55,7 @@ from microbit import *
 
 display.show(Image.HAPPY)
 ```
-Pewnie pamiętacie co oznacza pierwsza linijka kodu, tak więc nie będę drugi raz przypominać. Druga linia wykorzystuje obiekt do wyświeltenia wbudowanego obrazu. Obraz, który chcemy wyświetlać jest częścią obiektu obrazu o nazwie HAPPY. 
+Pewnie pamiętacie co oznacza pierwsza linijka kodu, tak więc nie będę drugi raz przypominać. Druga linia wykorzystuje obiekt do wyświeltenia wbudowanego obrazu. Obraz, który chcemy wyświetlać jest częścią obiektu obrazu o nazwie HAPPY.
 
 Poniżej znajduje się lista wbudowanych obrazów:
 
@@ -207,7 +207,7 @@ display.show(all_boats, delay=200)
 
 Jak działa ten kod:
 
-* Tworzymy sześć obrazków łodzi `boat` w taki sam sposób jaki opisaliśmy wyżej. 
-* Umieszczamy je na liście o nazwie `all_boats`. 
+* Tworzymy sześć obrazków łodzi `boat` w taki sam sposób jaki opisaliśmy wyżej.
+* Umieszczamy je na liście o nazwie `all_boats`.
 * Wreszcie prosimy aby animować tą listę z opóźnieniem 200 milisekund.
 * Przez to, że nie została ustawiona pętla, animacja uruchamia się tylko raz.

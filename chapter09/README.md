@@ -76,7 +76,7 @@ while True:
         display.clear()
         sleep(1000)
         display.scroll(random.choice(answers))
-		
+
 ```
 
 Wiêkszoœæ programu to lista nazwana "answers" (odpowiedzi). W³aœciwa gra zawiera

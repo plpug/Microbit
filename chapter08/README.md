@@ -1,4 +1,4 @@
-# Muzyka 
+# Muzyka
 
 MicroPython na płytce BBC micro:bit przychodzi z potężnym modułem
 muzyczno-dźwiękowym.
@@ -113,7 +113,7 @@ while True:
     for freq in range(1760, 880, -16):
         music.pitch(freq, 6)
  ```
- 
+
 
 Zauważ jak w tym przykładzie użyta jest metoda "music.pitch". Oczekuje
 ona częstotliwości.

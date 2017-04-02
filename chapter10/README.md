@@ -1,6 +1,6 @@
 #Mowa
 
-Komputer i roboty, które mówią czują się bardziej ludzkie. Sprawienie aby micro:bit mówił jest tzw. formą przekazywania informacji w formie zabawy, 
+Komputer i roboty, które mówią czują się bardziej ludzkie. Sprawienie aby micro:bit mówił jest tzw. formą przekazywania informacji w formie zabawy,
 w skuteczny i użyteczny sposób. W zwiazku z tym w urządzeniu wbudowany jest syntezator mowy oparty na inżynierii wstecznej wersji syntezatora z 1980 roku.
 
 Brzmi to bardzo fajnie, mając to na uwagę zamierzamy wykorzystać syntezator mowy do stworzenia...
@@ -11,7 +11,7 @@ Brzmi to bardzo fajnie, mając to na uwagę zamierzamy wykorzystać syntezator m
 
 [logo1]: https://github.com/plpug/Microbit/blob/master/10/img/dalek.jpg "robot dalek"
 
-To bardzo mało znany fakt, że Dalekowie uwielbiają poezje - szczególnie limeryki. Kto by pomyślał, ale fakt jest faktem. 
+To bardzo mało znany fakt, że Dalekowie uwielbiają poezje - szczególnie limeryki. Kto by pomyślał, ale fakt jest faktem.
 W każdym razie chcielibyśmy aby Dalek nam recytował na żadanie.
 
 ##Powiedz coś
@@ -39,10 +39,10 @@ Aby przystosować syntezator mowy dla naszych potrzeb, syntezator mowy jest bard
 *`mouth` - jak wydawać dźwięki z zaciśniętymi lub otwartymi ustami (0 = manekin brzuchomówcy, 255 = Foghorn Leghorn)
 *`throat` - jak zrelaksowany lub napięty jest ton głosu(0 = rozstrzęsiony , 255 = totalnie wyluzowany)
 
-Łącznie, paramatry te kontrolują jakość dźwięku (barwa). Mówiąc szczerze to najlepszy sposób, aby uzyskać ton idealny ton głosu. Chcesz eksperytmentować, 
-śmiało działaj z dźwiękiem i osądzaj jego jakość. 
+Łącznie, paramatry te kontrolują jakość dźwięku (barwa). Mówiąc szczerze to najlepszy sposób, aby uzyskać ton idealny ton głosu. Chcesz eksperytmentować,
+śmiało działaj z dźwiękiem i osądzaj jego jakość.
 
-My również ekperymentowaliśmy, i oto nasz przykład: 
+My również ekperymentowaliśmy, i oto nasz przykład:
 
 ```markdown
 speech.say(" I am a Dalek, I'm deadly", speed=120, pitch=100, throat=100, mouth=200)
@@ -70,10 +70,36 @@ poem = [
 for line in poem:
     speech.say(line, speed=120, pitch=100, throat=100, mouth=200)
     sleep(500)
-	
+
 ```
 
 Python, dla każdego elementu listy wypełnionej strofami poetów, wywołuje w pętli “speech.say” z ustawieniami głosu robota DALEK, który recytuje poemat. Między każdą linią wstawiona jest pauza pół sekundowa, bo nawet DALEK potrzebuje czasu by wziąć oddech.
+
+Możemy również sprawić aby Dalek losowo wypowiadał słowa, które są dostępne w liście:
+
+`dalekWords = ["EXTERMINATE", "WHERE, IS, DOCTOR", "ALARM", "DALEK"]`
+
+Dzięki pętli `while` DALEK będzie wypowiadał w nieskończoność słowa z listy, po każdym słowie następuje pauza 20 sekundowa:
+
+
+```markdown
+# Dalek voice
+
+from microbit import *
+import speech
+import random
+
+
+dalekWords = ["EXTERMINATE", "WHERE, IS, DOCTOR", "ALARM", "DALEK"]
+numberOfDalekWords = len(dalekWords)
+
+display.show(Image.HAPPY)
+
+while True:
+    speech.say(dalekWords[random.randrange(numberOfDalekWords)], pitch=64, speed=192, mouth=200, throat=64)
+    sleep(2000)
+
+```
 
 
 ##Zaśpiewaj piosenke
@@ -98,18 +124,15 @@ Poniższy przykład demonstruje jak wszystkie trzy funkcje generujące (“say�
 import speech
 from microbit import sleep
 
-# The say method attempts to convert English into phonemes.
 speech.say("I can sing!")
 sleep(1000)
 speech.say("Listen to me!")
 sleep(1000)
 
-# Clearing the throat requires the use of phonemes. Changing
-# the pitch and speed also helps create the right effect.
+
 speech.pronounce("AEAE/HAEMM", pitch=200, speed=100)  # Ahem
 sleep(1000)
 
-# Singing requires a phoneme with an annotated pitch for each syllable.
 solfa = [
     "#115DOWWWWWW",   # Doh
     "#103REYYYYYY",   # Re
@@ -121,15 +144,26 @@ solfa = [
     "#58DOWWWWWW",    # Doh
 ]
 
-# Sing the scale ascending in pitch.
 song = ''.join(solfa)
 speech.sing(song, speed=100)
-# Reverse the list of syllables.
 solfa.reverse()
 song = ''.join(solfa)
-# Sing the scale descending in pitch.
 speech.sing(song, speed=100)
 ```
+
+Jak widzimy nasz DALEK jest bardzo uzdolniony, potrafi recytować oraz śpiewać.
+
+## Zadanie
+
+Chce abyście stworzyli swój limeryk i kazali dalkowi go przeczytać. Nie zapominajcie o tym,
+że dalek ma to robić z uśmiechem. Pamiętamy chyba jak wywołać uśmiech na urządzeniu :)
+Przed zakończeniem swojej pracy DALEK ma nam zaśpiewać na pożegnanie.
+
+
+
+
+
+
 
 
 

@@ -1,6 +1,6 @@
 # Instrukcje warunkowe IF i ELSE
 
-W poprzednim rozdziale, robiliśmy kalkulator BMI. Gdzie już używaliśmy IF i ELSE, pewnie pamiętacie. Chcielibyśmy abyście je bliżej poznali. 
+W poprzednim rozdziale, już używaliśmy IF i ELSE, pewnie pamiętacie. Chcielibyśmy abyście je bliżej poznali. 
 W programowaniu często zadajemy pytania rostrzygające (na tak lub nie) i na podstawie odpowiedzi, podejmujemy decyzji co robić. Możemy na przykład zapytać: "Czy masz więcej niż 15 lat?" i jeśli odpowiedź brzmi "tak", i odpowiedzieć "O jezu ale jesteś stary".
 Tego rodzaju pytania są nazywane `warunkami`, łączymy wraz z odpowiedziami w instrukcje `if`(jeżeli).
 
@@ -23,7 +23,7 @@ wiek = 23
 if wiek > 20:
     print("Jesteś za stary!")
     print("Pomóż ojcu w pracach domowych")
-	
+
 ```
 
 Powyższy blok składa się z dwóch instrukcji `print`, które są wykonywane tylko wtedy, gdy warunek `wiek > 20` okaże się prawdziwy. Każdy wiersz w bloku ma o cztery spacje więcej niż znajdująca się powyżej instrukcja `if`.
@@ -31,10 +31,10 @@ W Pythonie odstęp taki jak np. tabulacja (wstawiana przez naciśnięciu tabulat
 
 Symbole używane w instrukcjach warunkowych:
 
-| Symbol        | Definicja         | 
+| Symbol        | Definicja         |
 | ------------- |:-----------------:|
-|==             | równa się         | 
-|!=  	        | różny od          |  
+|==             | równa się         |
+|!=  	        | różny od          |
 |>              | większy niż       |
 |<		| mniejszy niż	    |
 |>=		| większy lub równy |
@@ -102,7 +102,7 @@ Ciiiii nie bo ktoś usłyszy!
 >>>
 ```
 
-Tym razem powinien być widoczny drugi komunikat. 
+Tym razem powinien być widoczny drugi komunikat.
 
 ##Instrukcje IF i ELSE
 

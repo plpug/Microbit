@@ -87,7 +87,7 @@ while True:
     sleep(20)
     pin0.write_digital(0)
     sleep(480)
-	
+
 ```
 
 Możesz domyślić się jak ten skrypt działa? Pamiętaj że "1" oznacza
