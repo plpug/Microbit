@@ -4,7 +4,7 @@ Do warsztatów będziemy potrzebować wersji Pythona 3.4. Poniżej znajdują si�
 
 ## Windows
 
-Możesz ściągnąć Pythona pod Windows [z tej strony](https://www.python.org/downloads/ ). Po pobraniu pliku *.msi, uruchom go (klikając dwukrotnie na niego) i postępuj według wyświetlanych instrukcji. Koniecznie zapamiętaj ścieżkę (katalog), w którym zainstalowałaś Pythona. Będzie Ci niebawem potrzebna!
+Możesz ściągnąć Pythona pod Windows [z tej strony](https://www.python.org/downloads/). Po pobraniu pliku `*.msi`, uruchom go (klikając dwukrotnie na niego) i postępuj według wyświetlanych instrukcji. Koniecznie zapamiętaj ścieżkę (katalog), w którym zainstalowałaś Pythona. Będzie Ci niebawem potrzebna!
 
 Należy zwrócić uwagę na jedno: na drugiej stronie instalatora nazwanej "Customize" ("Dostosuj do potrzeb") przewiń na sam dół i wybierz "Add python.exe to the Path" ("Dodaj python.exe do ścieżki systemowej"), tak jak na poniższym obrazku:
 
