@@ -1,49 +1,69 @@
-# Radio
+#Kierunek
 
-Wewnątrz każdego Micro:bita znajduje się bardzo przydatna funkcjonalności, a mianowicie Radio. Dzięki tej funkcjonalności możemy przesyłać i odbierać wiadomości.
-W każdym Micro:bicie znajduje się ciekawa oraz przydatna funkcjonalność, a mianowicie `Radio`. Moduł radio pozwala nam
-na przesyłanie oraz odbieranie wiadomości.
+W urządzeniu BBC micro:bit jest wbudowany kompas. Jeżeli kiedykolwiek zbudujesz stacje meteorologiczną użyj tego urządzenia do pracy nad kierunkiem wiatru.
 
-Po pierwsze musimy zaimportować moduł radia `import radio`, aby udostępnić funkcje naszemu programowi. Następnie musimy uruchomić radio, za pomocą `radio.on()`.
+##Kompas
 
-W tym momencie moduł radiowy jest skonfigurowany do rozsądnych wartość domyślnych, sprawiają one że jest kompatybilny z innymi platformami, które są zgodne z BBC micro:bit.
-Możliwe jest sterowanie z omówionymi powyżej funkcjami, jak również ilość wykorzystywana transmijsi wiadomości i ilości pamięci RAM. Zakładając, że jesteśmy zadowoleni z ustawień
-domyślnych, najprostszy sposób wysyłania wiadomości jest następujący:
+Tak można wskazać kierunek północy:
+``markdown
+from microbit import *
 
-`radio.send("wiadomość")`
+compass.calibrate()
 
-W przykładzie użyliśmy funkcji wysyłania, aby po prostu nadać ciąg znaków "wiadomość". Otrzymywanie wiadomości jest jeszcze prostsze:
-
-```markdown
-new_message = radio.receive()
-```
-
-Po otrzymaniu wiadomości są one umieszczane w kolejce wiadomości. Funkcja `receive` (odbierania) zwraca najstarszą wiadomość z kolejki jako ciąg znaków, co umożliwia utworzenie nowej wiadomości przychodzącej. Jeśli wypełni się kolejka komunikatów, nowe przychodzące wiadomości są ignorowane.
-
-Posiadając taką wiedzę, możemy stworzyć swój pierwszy projekt:
-
-```markdown
-from microbit import display, button_a, Image
-import radio
-radio.on()
 while True:
-    message = radio.receive()
-    if message:
-        display.show(Image.DUCK)
-    if button_a.was_pressed():
-        display.clear()
-        radio.send("hello")
-
+    needle = ((15 - compass.heading()) // 30) % 12
+    display.show(Image.ALL_CLOCKS[needle])
 ```
 
-Kluczowa część zawiera się w pętli zdarzeń. Po pierwsze, sprawdza ona czy przycisk A został wciśnięty, i jeśli tak - używa radia by by wysłać wiadomość "hello" (ang. cześć). Następnie czyta wszelkie wiadomości z kolejki wiadomości z użyciem radio.receive(). Po czym używa display.show() by pokazać obrazek kaczki.
 
-## Ćwiczenie
+# Ruch
 
-Dobieramy się w dwu osobowe zespoły. Staramy się przećwiczyć w parach działanie powyższego przykładu. Po przećwiczeniu, zadaniem Waszym jest
-na podstawie przykładu stworzyć własny program. Program musi działać, zgodnie z poniższymi instrukcjami:
+BBC Micro:bit ma wbudowany akcelerometr. Pomiar ruchu wobec trzech osi:
 
-* Zaimportować moduł radio
-* Włączyć radio
-* Wysyłać albo otrzymywać wiadomości
-* Wyświetlić animacje
+* X - przechylenie od lewej do prawej
+* Y - przechylenie od przodu do tyłu
+* Z - poruszanie się w góre i w dół
+
+Istnieje metoda każdej osi, która zwraca dodatnią lub ujemną liczbę wskazującą pomiar w mili-g. Gdy odczyt to 0 to jesteśmy na "poziomie" wzdłuż konretnej osi.
+Dla przykładu, tutaj mamy bardzo prosty poziom, który używa `get_x` do mierzenia jak poziom urządzenia leży wzdłóż osi X:
+```markdown
+from microbit import *
+
+while True:
+    reading = accelerometer.get_x()
+    if reading > 20:
+        display.show("R")
+    elif reading < -20:
+        display.show("L")
+    else:
+        display.show("-")
+```
+Jeżeli urządzenie jest płaskie to powinno się wyświetlać. Obróć go w lewo lub w prawo i pokaże L i R odpowiednio. Urządzenie nasze ma reagować na zmiane stale,
+więc używamy do tego pętle `while`. Pierwszą rzeczą, która się dzieje w ciale pętli to pomiar wzdłóż osi X, zwany czytaniem. Ponieważ akcelerometr jest wrażliwy
+osiągnięty został poziom +/-20 w zasięgu.
+To dlatego warunek `if` i `elif` sprawdza dla `>20` i `<-20`. Instrukcja `else` oznacza, że jeśli odczyt wynosi od -20 do 20, to uważamy go za poziom. Dla każdego
+z tych warunków używamy wyświetlacza, aby pokazać odpowiedni znak.
+Istnieje również metoda `get_y` dla osi Y oraz `get_z` dla osi Z.
+
+# Instrument muzyczny
+
+Jednym z świetnych apsektów MicrPythona BBC micro:bit jest to, jak łatwo pozwala połączyć różne możliwości urządzenia razem. Przykładowo zamieńmy się w instrument
+muzyczny. Podłączamy głośnik tak samo jak w rozdziale myzycznym. Użyjmy klipsów krokodylkowych aby przymocować pin 0 i GND do dodatnich i ujemnych wejść w głośniku - nie ma
+znaczenia, w jakim kierunku są połączone one do głośnika.
+
+![microbit][microbit]
+
+[microbit]: https://github.com/plpug/Microbit/raw/master/chapter08/img/pin0-gnd.png "microbit"
+
+Co się stanie gdy weźmiemy odczyty z akcelerometra i przy każdym zakręcie odtworzymy dżwięk? Przekonacie się sami:
+```markdown
+from microbit import *
+import music
+
+while True:
+    music.pitch(accelerometer.get_y(), 10)
+```
+Kluczowa linia jest niesłychanie prosta. Zagnieżdzamy odczyty z osi Y jako częstotliwość którą podajemy do metody `music.pitch`. Pozwalamy jej wybrzmiewać jedynie przez 10 milisekund, dlatego bo chcemy by wysokość tonu zmieniała się dynamicznie w czasie gdy urządzenie jest przechylane. Jako, że urządzenie wykonuje nieskończoną pętle `while`, reaguje ono ciągle na zmiany mierzone w osi Y.
+
+To wszystko!
+
