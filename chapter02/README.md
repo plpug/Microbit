@@ -68,7 +68,7 @@ if wiek == 10:
 
 Na ekranie powinien zostać wyświetlony tekst "Jesteś za stary na pieluchy".
 
-##Instrukcje IF-THEN-ELSE
+## Instrukcje IF-THEN-ELSE
 
 Instrukcji `if` możemy używać nie tylko do wykonywania kodu w przypadku spełnienia kryteriów warunku (`True`) ale również wtedy, gdy warunek nie jest zgodny z prawdą. Na przykład treść wyświetlanego komunikatu może zależeć od tego, czy zmienna `wiek` ma wartość 12 czy też jakąś inną (`False`). W przypadku tym używamy `if-then-else`, której sens można wyjaśnić tak: "Jeśli coś jest zgodne z prawdą, to zrób to, w przeciwnym przypadku, zrób tamto". 
 
@@ -104,7 +104,7 @@ Ciiiii nie bo ktoś usłyszy!
 
 Tym razem powinien być widoczny drugi komunikat.
 
-##Instrukcje IF i ELSE
+## Instrukcje IF i ELSE
 
 Instrukcje `if` można rozbudować jeszcze za pomocą słowa kluczowego `elif` ( co jest skrótem od `else-if`). Możemy na przykład sprawdzać, czy osoba ma np. 10, 11, czy 12 lat i nakazać programowi zróżnicowane działania w zależności od odpowiedzi.  Instrukcje te różnią się od `if-then-else` tym, że jedna instrukcja może zawierać więcej niż jedno słowo kluczowe `elif`. 
 
@@ -139,7 +139,7 @@ Co mówi programista na łożu śmierci?
     Bye world
 ```
 
-##Warunki łączone
+## Warunki łączone
 
 Warunki można łączyć za pomocą słów kluczowych and (i) i or (lub), a dzięki temu kod staje się krótszy i prostszy. Oto przykładowe użycie słowa kluczowego or:
 
@@ -157,7 +157,7 @@ Widzimy w tym kodzie, że jeśli kiedykolwiek z warunków w pierwszym wierszu je
 
 
 
-##Podsumowanie
+## Podsumowanie
 
 
 W tym rozdziale dowiedzieliśmy się, jak za pomocą instrukcji tworzyć bloki kodu, które są wykonywane tylko po spełnieniu zdefiniowanych warunków. Wiemy, jak rozbudować instrukcje `if` za pomocą `elif`, aby różne fragmenty kodu były wykorzystywane w zależności od spełnienia różnych warunków, oraz jak wykorzystywać `else`, aby wykonywać kod, jeśli żaden z warunków nie zostanie spełniony. 
