@@ -11,7 +11,7 @@ No to zaczynamy!
 Tworzyliśmy na zajęciach już swoje obrazki w tym, swoje serduszka. A co by się stało gdybyśmy zrobili odwrótność takiego serduszka?
 Wyszedł by nam ciekawy negatyw. I to jest Waszym celem :)
 
-Podwiedź:
+Podpowiedź:
 * Pamiętaj, aby użyć `Image()`
 * Rozpisz sobie wszystko na kartce (będzie Ci prościej)
 
