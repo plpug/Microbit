@@ -1,8 +1,8 @@
-#Kierunek
+# Kierunek
 
 W urządzeniu BBC micro:bit jest wbudowany kompas. Jeżeli kiedykolwiek zbudujesz stacje meteorologiczną użyj tego urządzenia do pracy nad kierunkiem wiatru.
 
-##Kompas
+## Kompas
 
 Tak można wskazać kierunek północy:
 ``markdown
