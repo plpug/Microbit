@@ -5,7 +5,7 @@ W urządzeniu BBC micro:bit jest wbudowany kompas. Jeżeli kiedykolwiek zbudujes
 ## Kompas
 
 Tak można wskazać kierunek północy:
-``markdown
+```markdown
 from microbit import *
 
 compass.calibrate()
