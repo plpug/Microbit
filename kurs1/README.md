@@ -85,8 +85,8 @@ Biblioteka microbit zawiera listę zdefiniowanych obrazków:
     Image.UMBRELLA
     Image.SNAKE
 
- Wyświetl jeden z nich:
- 
+Wyświetl jeden z nich:
+
 ```python
 display.show(Image.SMILE)
 ```
@@ -112,9 +112,9 @@ for image in my_images:
 Zaprojektuj obrazek flagi:
 
 ```python
-flag = Image("95555:"
-              "93335:"
-              "95555:"
+flag = Image("97777:"
+              "95557:"
+              "97777:"
               "90000:"
               "90000")
 ```
@@ -129,9 +129,9 @@ A teraz z dodaj drugą flagę i wyświetlaj je na przemian co sekundę.
 
 
 ```python
-flag2 = Image("93333:"
-              "90003:"
-              "93333:"
+flag2 = Image("97777:"
+              "90007:"
+              "97777:"
               "90000:"
               "90000")
 ```
@@ -154,3 +154,93 @@ all_flags = [flag, flag2]
 display.show(all_flags, delay=1000)
 ```
 
+## Zadanie 4
+
+Zasymuluj zegara. Przesuwaj jedną wskazówkę co 1 sekundę. Wykorzystaj strzałki z biblioteki Image:
+
+```python
+arrows = [Image.ARROW_N, Image.ARROW_NE, Image.ARROW_E,
+        Image.ARROW_SE, Image.ARROW_S, Image.ARROW_SW,
+        Image.ARROW_W, Image.ARROW_NW]
+
+display.show(arrows, delay=1000, loop=True)
+```
+
+## Zadanie 5
+
+Wykorzystaj przycisk do wyłaczenia symulacji zegara
+
+Najpierw tworzym sobie funkcję o nazwie rotate:
+
+```python
+def rotate():
+    while True:
+        display.show(Image.ALL_ARROWS, delay=100, loop=False)
+        if button_a.was_pressed():
+            display.show(Image.SMILE)
+            break
+```
+
+A teraz uruchamianie funkcji:
+
+```python
+while True:
+    if button_b.was_pressed():
+        rotate()
+    sleep(3000)
+```
+
+## Zadanie 6
+
+Utwórz kompas, wykorzystaj  bibliotekę compass
+
+```python
+# Start calibrating
+compass.calibrate()
+```
+
+```python
+# Try to keep the needle pointed in (roughly) the correct direction
+while True:
+    sleep(100)
+    needle = ((15 - compass.heading()) // 30) % 12
+    display.show(Image.ALL_CLOCKS[needle])
+
+```
+
+## Zadanie 7
+
+Powiedz "Hello, Python"
+
+```python
+import speech
+```
+
+```python
+speech.say("Hello, Python")
+
+```
+
+## Zadanie 8
+
+Wyślij wiadomość do innych uczniów. Niech Twoją wiadomością będzie pierwsza litera Twojego imienia.
+
+```python
+from microbit import display, button_a, Image
+import radio
+
+```
+
+Włączamy radio odbiornik, przyciśnięcie jednego przycisku czyści ekran z diodami i wysyła wiadomość do innych. Jeżeli wiadomość zostanie odebrana, to zostanie wyświetlona na ekranie z diodami.
+
+```python
+radio.on()
+while True:
+    message = radio.receive()
+    if message:
+        display.show(message)
+    if button_a.was_pressed():
+        display.clear()
+        radio.send("W")
+
+```
