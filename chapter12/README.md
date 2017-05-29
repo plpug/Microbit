@@ -1,6 +1,5 @@
 # Radio
 
-Wewnątrz każdego Micro:bita znajduje się bardzo przydatna funkcjonalności, a mianowicie Radio. Dzięki tej funkcjonalności możemy przesyłać i odbierać wiadomości.
 W każdym Micro:bicie znajduje się ciekawa oraz przydatna funkcjonalność, a mianowicie `Radio`. Moduł radio pozwala nam
 na przesyłanie oraz odbieranie wiadomości.
 
