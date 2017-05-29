@@ -14,6 +14,7 @@ Wyszedł by nam ciekawy negatyw. I to jest Waszym celem :)
 Podpowiedź:
 * Pamiętaj, aby użyć `Image()`
 * Rozpisz sobie wszystko na kartce (będzie Ci prościej)
+* Obiekt `Image` posiada metodę `invert()` która zwróci negatyw obrazka
 
 ## Ćwiczenie 2 - Wyświetl zająca
 
@@ -23,6 +24,8 @@ Podpowiedź:
 
 * Pamiętaj, aby użyć `Image()`
 * Zerknij sobie do rozdziału [piątego](../chapter05) do opisu obrazków DIY.
+* Obiekt `Image` posiada metody `shift_right()`, `shift_left()`, `shift_up()` oraz `shift_down()` do przesuwania obrazka w różnych kierunkach
+
 
 ## Ćwiczenie 3
 
