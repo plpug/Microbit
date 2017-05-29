@@ -165,11 +165,11 @@ wie tylko Mikołaj. Wynikowi wywołania pierwszej z nich nadajemy nazwę
 
 Nowym elementem jest sama pętla, która składa się z:
 
-* Słowa :keyword:`for`
+* Słowa`for`
 * Nazwy którą chcemy nadawać kolejnym elementom.
-* Słowa :keyword:`in`
+* Słowa`in`
 * Wartości będącej listą lub nazwy która się do takiej odwołuje.
-* Treści wciętej o jeden poziom (dokładnie tak samo jak to było w przypadku :keyword:`if`)
+* Treści wciętej o jeden poziom (dokładnie tak samo jak to było w przypadku`if`)
 
 No tak, ale jeszcze nic nie powiedzieliśmy o listach. To dlatego, że
 nie różnią się one zbytnio od ich intuicyjnego pojmowania w życiu
@@ -250,10 +250,9 @@ kilka przykładów:
 
 Funkcja `range` nie tworzy bezpośrednio listy, ale zwraca generator.
 Generatory pozwalają tworzyć sekwencje wartości, nie zajmując nipotrzebnie
-pamięci. Aby otrzymać listę z takiej sekwencji musimy użyć funkcji
-:func:`list`.
+pamięci. Aby otrzymać listę z takiej sekwencji musimy użyć funkcji`list`.
 
-Funkcja :func:`range` ma trzy formy. Najprostrza (i najczęściej używana),
+Funkcja`range` ma trzy formy. Najprostrza (i najczęściej używana),
 tworzy sekwencję od 0 do podanej liczby. Pozostałe formy pozwalają podać
 początek zakresu oraz krok. Utworzona sekwencja nigdy nie zawiera końca
 podanego zakresu.
