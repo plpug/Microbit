@@ -82,6 +82,257 @@ cześć 4
 ```
 W ten sposób użycie pętli uchroniło nas tak naprawdę przed pisaniem ośmiu dodatkowych wierszy kodu. Programiści nie cierpią się powtarzać, dlatego pętla for należy do najpopularniejszych instrukcji w językach programowania.
 
+## Choinka
+
+Zbliżają się Święta, czas na prezenty ;) A przynajmniej na drzweka iglaste
+w każdym centrum handlowym. W ramach ćwiczenia spróbujemy narysować
+takie drzewko w konsoli.
+
+Zaczniemy od najprostszej możliwej wersji zadania, aby później rozszerzyć
+je do bardziej funkcjonalnej. Tak więc na zachętę, pół choinki:
+
+
+    print("*")
+    print("**")
+    print("***")
+    print("*")
+    print("**")
+    print("***")
+    print("****")
+    print("*")
+    print("**")
+    print("***")
+    print("****")
+    print("*****")
+    print("******")
+
+Nasza choinka wygląda tak:
+
+    *
+    **
+    ***
+    *
+    **
+    ***
+    ****
+    *
+    **
+    ***
+    ****
+    *****
+    ******
+
+Nie wygląda to najgorzej, ale trochę pisania było. A co gdybyśmy chcieli
+mniejszą choinkę ? Albo większą, złożoną z setek elementów do wydrukowania
+na papierze A0 ? To stanowczo zbyt dużo pisania, nawet gdyby robić to
+przy użyciu mnożenia napisów (``"*" * 100``, itd.). Ewidentnie jest to
+czynność tak powtarzalna, że program może to zrobić za nas.
+
+
+## Listy i pętla ``for``
+
+
+Do wykonywania takich powtarzalnych czynności będą służyły nam pętle.
+Pozostając w konwencji świątecznej, wyobraźmy sobie na chwilę, że
+jesteśmy Świętym Mikołajem, który ma za zadanie dostarczyć wszystkim
+prezenty.
+
+Jak wiadomo, Mikołaj posiada listę osób, którym prezenty
+się należa. Najprostszym podejściem, które gwarantuję, że nikogo nie
+pominiemy będzie przechodzenie po kolei po liście i dostarczanie kolejnym
+osobom ich prezentów. Abstrahując od fizycznych aspektów zadania [#speed]_,
+procedura dostarczania prezentów mogłaby wygląć tak:
+
+    Niech ListaOsób zawiera osoby którym należy się prezent.
+
+    Dla każdej osoby (dalej znanej jako Osoba), będącej na ListaOsób:
+        Dostarcz prezent do Osoba
+
+Formatowanie powyższego tekstu nie jest przypadkowe. Właściwie jest
+to zamaskowany program w Pythonie:
+
+    gift_list = people_who_deserve_gifts()
+
+    for person in gift_list:
+        deliver_gift(person)
+        print("Dostarczono prezent dla:", person)
+    print("Dostarczono wszystkie prezenty")
+
+Większość rzeczy powinna już wyglądać znajomo. Wywołujemy tutaj dwie funkcje:
+`people_who_deserve_gifts` i `deliver_gift` - jak one działają,
+wie tylko Mikołaj. Wynikowi wywołania pierwszej z nich nadajemy nazwę
+`gift_list`, aby móc się później do tej wartości odwołać (tak samo jak w opisie powyżej).
+
+Nowym elementem jest sama pętla, która składa się z:
+
+* Słowa :keyword:`for`
+* Nazwy którą chcemy nadawać kolejnym elementom.
+* Słowa :keyword:`in`
+* Wartości będącej listą lub nazwy która się do takiej odwołuje.
+* Treści wciętej o jeden poziom (dokładnie tak samo jak to było w przypadku :keyword:`if`)
+
+No tak, ale jeszcze nic nie powiedzieliśmy o listach. To dlatego, że
+nie różnią się one zbytnio od ich intuicyjnego pojmowania w życiu
+codziennym. Spokojnie możemy myśleć o listach w Pythonie myśleć tak samo,
+jak o każdej innej liście (zakupów, gości na impreze, wyników z kolokwium, itd.)
+zapisanej na kartce i ponumerowanej.
+
+Tak więc zacznijmy od pustej kartki (włącz tryb interaktywny):
+
+    >>> L = []
+    >>> L
+    []
+
+W każdym momencie możemy sprawdzić ile mamy zapisanych elementów
+na naszej liście za pomocą funkcji:`len`.
+
+    >>> len(L)
+    0
+
+Stwórzmy inną listę (może być pod tą samą nazwą lub inną):
+
+    >>> L = ["Ala", "Ola", "Jacek"]
+    >>> len(L)
+    3
+
+Podobnie jak w przypadku krotek, kolejne elementy listy rozdzielamy
+przecinkami. W przeciwieństwie do krotek, nawiasy ``[`` i ``]`` są obowiązkowe.
+
+Aby podejrzeć jaki element znajduje się na konkretnej pozycji na
+liście (pamiętaj, że liczymy pozycje od 0):
+
+    >>> L[0]
+    'Ala'
+    >>> L[1]
+    'Ola'
+    >>> L[2]
+    'Jacek'
+    >>> L[3]
+    Traceback (most recent call last):
+     File "<stdin>", line 1, in <module>
+    IndexError: list index out of range
+
+Możemy też wykorzystać pętle `for`, aby wykonać jakieś
+instrukcje dla każdej jej elementu:
+
+    >>> for name in L:
+    ...     print("Imie:", name)
+    ...
+    Imie: Ala
+    Imie: Ola
+    Imie: Jacek
+
+W ten sam sposób możemy wydrukować pierwszą cześć naszej pół-choinki:
+
+    >>> lst = [1, 2, 3]
+    >>> for n in lst:
+    ...     print("*"*n)
+    ...
+    *
+    **
+    ***
+
+No tak, ale nadal musieliśmy ręcznie wypisać zawartość całej listy.
+Problem ten rozwiąże nam funkcja `range` (czyli zakres, przedział).
+Jeśli opis podany przez ``help(range)`` wyda ci się zbyt skomplikowany, oto
+kilka przykładów:
+
+    >>> list(range(2, 5, 1))
+    [2, 3, 4]
+    >>> list(range(1, 11, 2))
+    [1, 3, 5, 7, 9]
+    >>> list(range(1, 11))
+    [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    >>> list(range(1, 2))
+    [1]
+    >>> list(range(2))
+    [0, 1]
+
+Funkcja `range` nie tworzy bezpośrednio listy, ale zwraca generator.
+Generatory pozwalają tworzyć sekwencje wartości, nie zajmując nipotrzebnie
+pamięci. Aby otrzymać listę z takiej sekwencji musimy użyć funkcji
+:func:`list`.
+
+Funkcja :func:`range` ma trzy formy. Najprostrza (i najczęściej używana),
+tworzy sekwencję od 0 do podanej liczby. Pozostałe formy pozwalają podać
+początek zakresu oraz krok. Utworzona sekwencja nigdy nie zawiera końca
+podanego zakresu.
+
+Wydrukujmy więc większą choinkę:
+
+    >>> lst = list(range(1, 11))
+    >>> lst
+    [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    >>> for i in lst:
+    ...     print("*"*i)
+    *
+    **
+    ***
+    ****
+    *****
+    ******
+    *******
+    ********
+    *********
+    **********
+
+`range` zaoczszędziło nam sporo pisania. Możemy zaoszczędzić
+jeszcze więcej pomijając nazywanie samej listy:
+
+    >>> for i in list(range(1, 5)):
+    ...     print(i*"#")
+    #
+    ##
+    ###
+    ####
+
+Gdy używamy słowa kluczowego`for`, nie musimy używać funkcji
+`list`. `for` potrafi poradzić sobie z funkcją `range`, więc
+można nasz program jeszcze uprościć:
+
+    >>> for i in range(1, 5):
+    ...     print(i*"#")
+    #
+    ##
+    ###
+    ####
+
+
+Nic nie stoi na przeszkodzie aby pętla nie mogła się znajdować
+w innej pętli. Należy jedynie pamiętać o odpowiednich wcięciach i
+użyciu innych nazw, np. ``i`` i ``j`` (lub też bardziej adekwatnych do
+zawartości listy):
+
+    >>> for i in range(1, 3):
+    ...    for j in range(2, 4):
+    ...        print(i, j)
+    1 2
+    1 3
+    2 2
+    2 3
+
+Korzystając z tej techniki możemy powtarzać nasz kawałek choinki:
+
+    >>> for i in range(3): # powtórz 3 razy
+    ...    for size in range(1, 4):
+    ...        print(size*"*")
+    *
+    **
+    ***
+    *
+    **
+    ***
+    *
+    **
+    ***
+
+### Zadanie 
+Zanim przejdziesz do kolejnego punktu, stwórz plik ``xmas.py`` z
+tym programem i spróbuj go przerobić tak aby przy każdym z trzech powtórzeń
+pierwszej (zewnętrznej) pętli, druga wykonywała się raz więcej. W ten sposób
+powinniśmy otrzymać naszą pół-choinkę z początku rozdziału.
+
+
 ## Skoro już omawiamy pętle
 
 Pętla `for` nie jest jedyną pętlą dostępną w Pythonie, jest tu też `while`. Pętla `for` to pętla o określonej długości, natomiast pętli `while` używa się, gdy nie wiadomo zawczasu, kiedy trzeba będzie przestać wykonywać pętle.
