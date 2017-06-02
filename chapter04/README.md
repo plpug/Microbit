@@ -138,6 +138,176 @@ Fri Mar  3 17:00:45 2017
 
 Funkcja `asctime` jest częścią modułu `time` i zwraca bieżącą date i czas pod postacią łańcuchu znaków.
 
-## Podsumowanie
+# Obiekty i klasy
 
-W tym rozdziale dowiedzieliśmy się, jak tworzyć w Pythonie bloki kodu wielokrotnego użytku zwane funkcjami. Wiesz, że od zasięgu zmiennych zależy to, czy można ich używać wewnątrz funkcji czy na zewnątrz i potrafisz tworzyć funkcje od słowa kluczowego `def`. Umiesz też importować moduły, aby wykorzystywać to co się w nich znajduje.
+Właściwie ten rozdział mógłby być tematem całej serii zajęć, my jednak
+skupimy się na absolutnych podstawach.
+
+## Wartości to obiekty
+Wszystko co do tej pory nazywaliśmy wartością możemy nazwać też obiektem.
+Widzieliśmy to na przykładzie liczb całkowitych, gdy `help` wypisało
+nam dziesiątki linii dodatkowych informacji na temat `int`.
+
+## Każdy obiekt ma klasę
+Aby się dowiedzieć jaką wystarczy użyć funkcji`type`:
+
+    >>> type(2)
+    <type 'int'>
+    >>> type(2.0)
+    <type 'float'>
+    >>> type("Gżegżółka")
+    <type 'str'>
+    >>> x = 1, 2
+    >>> type(x)
+    <type 'tuple'>
+    >>> type([])
+    <type 'list'>
+
+Gdy używamy w naszym programie liczby, spodziewamy się, że będzie się
+ona zachowywać tak jak liczba - bazujemy na naszej intuicji.
+
+Jednak Python musi dokładnie wiedzieć co znaczy być liczbą całkowitą,
+np. co ma się stać gdy dodajemy dwie liczby, a co gdy je dzielimy.
+Klasa dostarcza tych wszystkich informacji i więcej.
+
+Sprawdź co oferuje nam klasa ``str`` za pomocą`help`.
+Zacytujemy tutaj jedynie kilka ciekawszych funkcji:
+
+    >>> help(str.lower)
+    Help on method_descriptor:
+    <BLANKLINE>
+    lower(...)
+        S.lower() -> str
+    <BLANKLINE>
+        Return a copy of the string S converted to lowercase.
+    <BLANKLINE>
+    >>> help(str.upper)
+    Help on method_descriptor:
+    <BLANKLINE>
+    upper(...)
+        S.upper() -> str
+    <BLANKLINE>
+        Return a copy of S converted to uppercase.
+    <BLANKLINE>
+    >>> help(str.ljust)
+    Help on method_descriptor:
+    <BLANKLINE>
+    ljust(...)
+        S.ljust(width[, fillchar]) -> int
+    <BLANKLINE>
+        Return S left-justified in a Unicode string of length width. Padding is
+        done using the specified fill character (default is a space).
+    <BLANKLINE>
+    >>> help(str.center)
+    Help on method_descriptor:
+    <BLANKLINE>
+    center(...)
+        S.center(width[, fillchar]) -> str
+    <BLANKLINE>
+        Return S centered in a Unicode string of length width. Padding is
+        done using the specified fill character (default is a space)
+    <BLANKLINE>
+
+Wszystko to są operacje, które każdy napis potrafi wykonać. Możemy
+się do nich dostać używając kropki i wywołując jak funkcję:
+
+    >>> x = "Ala"
+    >>> x.upper()
+    u'ALA'
+    >>> x.lower()
+    u'ala'
+    >>> x.center(9)
+    u'   Ala   '
+
+I jeszcze jedna istotna funkcjonalność każdej klasy - potrafi ona
+stworzyć obiekt mający jej cechy (tzw. swoją instancję):
+
+    >>> int()
+    0
+    >>> str()
+    ''
+    >>> list()
+    []
+    >>> tuple()
+    ()
+
+Podsumowując, poznaliśmy już klasy`int`,`str`,`tuple`,
+`list`. Aby sprawdzić jakiej klasy jest wartość (obiekt) używamy funkcji
+`type`. Aby stworzyć instancję klasy (czyli nowy obiekt) wywołujemy
+klasę podobnie jak wywoływaliśmy funkcję, dopisując nawiasy ``()``, na przykład
+``int()``.
+
+## Definiowanie klass
+
+Podobnie jak możemy tworzyć własne funkcje, tak i możemy tworzyć
+własne klasy. W gruncie rzeczy, klasa to nic innego jak zgrupowane
+funkcje:
+
+
+    class Dog(object):
+
+        def bark(self):
+            print(u"Woof! Woof!")
+
+::
+
+    class Dog(object):
+
+        def bark(self):
+            print(u"Woof! Woof!")
+
+Klasy rozpoczynają się od słowa`class`, po którym podajemy
+nazwę nowej klasy. Czym jest ``(object)`` wyjaśni się później, gdy
+będziemy chcieli stworzyć bardziej skomplikowane klasy.
+
+Warto natomiast zwrócić uwagę na fakt, że każda funkcja w klasie musi mieć
+conajmniej jeden argument. Jego wartością będzie obiekt z którego wywołaliśmy
+tą funkcję (czyli to co przed kropką):
+
+    burek = Dog()
+    burek.bark()
+
+Wynik:
+
+    Woof! Woof!
+
+Argument ten może nazywać się dowolnie, ale intuicyjne jest aby nazwać go ``self``.
+
+## Atrybuty obiektów
+Obiekty poza metodami (funckjami), mogą posiadać też atrybuty:
+
+    burek = Dog()
+    burek.name = "Burek"
+
+    print(burek.name)
+
+Wynik:
+
+    Burek
+
+Czasami chcemy aby każdy obiekt danej klasy miał jakiś atrybut, np. każdy
+pies powinien mieć imię. Możemy dodać takie wymaganie definiując funkcję
+o specjalnej nazwie ``__init__``:
+
+
+
+    class Dog(object):
+
+        def __init__(self, name):
+            self.name = name
+
+        def bark(self):
+            return "Woof! %s! Woof!" % (self.name,)
+
+    burek = Dog(u"Burek")
+    pluto = Dog(u"Pluto")
+    print(burek.bark())
+    print(pluto.bark())
+
+Wynik:
+
+    Woof! Burek! Woof!
+    Woof! Pluto! Woof!
+
+
+
