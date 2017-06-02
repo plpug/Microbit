@@ -363,6 +363,9 @@ Zacznamy od stworzenia zmiennej `stopień`, za pomocą instrukcji `stopień = 0`
 
 Za pomocą instrukcji `print(stopień)` wyświetlamy wartość zmiennej, a następnie za pomocą `if zmęczenie == True` sprawdzamy czy wartość zmiennej zmęczenie to true. Jeśli tak, to używając słowa kluczowego `break`, wychodzimy z pętli. Słowo kluczowe `break` jest sposobem na natychmiastowe przerwanie pętli.
 
+## Zadanie
+Napisz pętle, która wyświetla wszystkie liczby parzyste mniejsze i równe Twojemu wiekowi (jeśli Twój wiek to liczba nieparzysta, wszystkie liczby nieparzyste mniejsze niż Twój wiek).
+
 # Podsumowanie
 
 W tym rozdziale używaliśmy pętli, aby uniknąć znudzenia w trakci wykonywania monotonnych zadań: zapisaliśmy je w blokach i kazaliśmy Pythonowi je wykonywać wielokrotnie. Poznaliśmy dwa typy pętli `for` i `while`. Są one do siebie podobne, lecz można ich używać w różny sposób.
