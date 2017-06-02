@@ -412,6 +412,104 @@ Do zgrupowanych wartości możemy odwołać się używając ich pozycji w krotce
 >>> p[1]  # druga wartość
 15
 ```
+## Formatowanie
+Wracając do naszego programu: aktualnie jego wynik sprowadza się do
+jednej linijki. Teraz chcemy wypisać zarówno BMI jako
+liczbę oraz przedział, w którym się mieści, tj.::
+
+    Twoje BMI jest równe: 21.39 (waga prawidłowa)
+
+Zmodyfikuj aktualny program tak, aby obliczone BMI było dostępne pod
+nazwą ``bmi``, a nazwa przedziału pod nazwą ``category``. Wtedy aby
+uzyskać pożądany wynik możemy użyć :func:`print`:
+
+    bmi = 21.387755102
+    category = "waga prawidłowa"
+    print("Twoje BMI jest równe:", bmi, "(" + category + ")")
+
+Po uruchomieniu wygląda tak:
+
+    Twoje BMI jest równe: 21.387755102 (waga prawidłowa)
+
+No prawie, nadal mamy zbyt dużo cyfr. W dodatku mielibyśmy problem,
+gdybyśmy chcieli np. wygenerować taki napis i zapamiętać pod jakąś
+nazwą, bo korzystamy z`print` do rozdzielania elementów.
+Na szczęście jest lepszy sposób:
+
+    >>> bmi = 21.387755102
+    >>> category = "waga prawidłowa"
+    >>> wynik = "Twoje BMI: %f (%s)" % (bmi, category)
+    >>> wynik
+    'Twoje BMI: 21.387755 (waga prawid\u0142owa)'
+    >>> print(wynik)
+    Twoje BMI: 21.387755 (waga prawidłowa)
+
+Mamy tutaj napis i krotkę połączone znakiem ``%``. Napis jest szablonem,
+który będziemy wypełniać wartościami z krotki. Miejsca do wstawienia
+oznaczone są również procentem (``%``). Litera, która następuję po nim
+określa jakiego rodzaju wartość będziemy chcieli wstawić w to miejsce.
+I tak, liczbom całkowitym odpowiada ``i`` jak **integer** (zamiennie używa się
+też ``d`` jak **decimal**), napisom ``s`` jak **string**, a liczbom
+zmiennoprzecinkowym ``f`` jak **float**:
+
+    >>> "Napis: %s, Liczby: %d %f" % ("Ala", 10, 3.1415)
+    'Napis: Ala, Liczby: 10 3.141500'
+
+Co prawda teraz, zamiast dziewięciu miejsc po przecinku zawsze dostajemy
+sześć, jednak formatowanie ma tę zaletę, że pozwala nam na większą
+kontrolę poprzez wstawienie pomiędzy ``%`` a znak ``f`` dodatkowych
+informacji, np. jeśli chcemy wyświetlić tylko dwa miejsca po kropce:
+
+    >>> "%.2f" % 3.1415
+    '3.14'
+    >>> "%.2f" % 21.387755102
+    '21.39'
+
+Opcji formatowania jest mnóstwo, więc nie będziemy ich tu wszystkich
+pokazywać. Jedną z bardziej przydatnych jest wyrównanie do
+konkretnej liczby znaków:
+
+
+    WIDTH = 28
+
+    print("-" * WIDTH)
+    print("| Imię i Nazwisko |  Waga  |")
+    print("-" * WIDTH)
+    print("| %15s | %6.2f |" % ("Łukasz", 67.5))
+    print("| %15s | %6.2f |" % ("Pudzian", 123))
+    print("-" * WIDTH)
+    
+Tak wygląda uruchomieniu programu:
+
+    ----------------------------
+    | Imię i Nazwisko |  Waga  |
+    ----------------------------
+    |          Łukasz |  67.50 |
+    |         Pudzian | 123.00 |
+    ----------------------------
+
+Możemy też wyrównać napis do lewej dodając ``-`` przed liczbą znaków:
+
+
+    WIDTH = 28
+
+    print("-" * WIDTH)
+    print("| Imię i Nazwisko |  Waga  |")
+    print("-" * WIDTH)
+    print("| %-15s | %6.2f |" % ("Łukasz", 67.5))
+    print("| %-15s | %6.2f |" % ("Pudzian", 123))
+    print("-" * WIDTH)
+
+Po uruchomieniu programu:
+    ----------------------------
+    | Imię i Nazwisko |  Waga  |
+    ----------------------------
+    | Łukasz          |  67.50 |
+    | Pudzian         | 123.00 |
+    ----------------------------
+
+## Zadanie: Wyrównanie na środek, niech będzie ćwiczeniem dla kursanta.
+
 
 ## Podsumowanie
 
@@ -419,8 +517,7 @@ W tym rozdziale poznaliśmy podstawy składni Pythona. Wiemy jak zapisać liczby
 
 Poznaliśmy funkcję `print`, która wypisuje informacje użytkownikowi oraz funkcję `input`, która je od niego wczytuje.
 
-Wiemy też, że wcięcia mogą mieć znaczenie, szczególnie gdy chcemy użyć instrukcji `if` (również w połączeniu z `else` i `elif`). Ale w kolejnym rozdziale
-wyjaśnimy sobie dokładniej działanie instrukcji `if`, `else` i `elif`.
+Wiemy też, że wcięcia mogą mieć znaczenie, szczególnie gdy chcemy użyć instrukcji `if` (również w połączeniu z `else` i `elif`). Ale w kolejnym rozdziale wyjaśnimy sobie dokładniej działanie instrukcji `if`, `else` i `elif`.
 
 Umiemy stworzyć plik z programem i go uruchomić. Nasz program prosi użytkownika, aby odpowiedział na kilka prostych pytań, wykonuje obliczenia i prezentuje wynik w użytecznej dla niego formie.
 
