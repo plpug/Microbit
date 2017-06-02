@@ -152,10 +152,13 @@ else:
     print("Ale dlaczego?")
 ```
 
-Widzimy w tym kodzie, że jeśli kiedykolwiek z warunków w pierwszym wierszu jest spełniony ( jeśli wiek yo 10,11,12 lub 13) wykonany zostanie blok kodu w kolejnym wierszu, zaczynający się od print. Jeżeli nie jest spełniony żaden z warunków podanych w wierszy pierwszym ( `else`), Python przechodzi do bloku w ostatnim wierszu, wyświetlając na ekranie `Ale dlaczego?`
+Widzimy w tym kodzie, że jeśli kiedykolwiek z warunków w pierwszym wierszu jest spełniony ( jeśli wiek to 10,11,12 lub 13) wykonany zostanie blok kodu w kolejnym wierszu, zaczynający się od print. Jeżeli nie jest spełniony żaden z warunków podanych w wierszy pierwszym ( `else`), Python przechodzi do bloku w ostatnim wierszu, wyświetlając na ekranie `Ale dlaczego?`
 
 
+## Zadania
+1. Utwórz instrukcje, która sprawdza, czy liczba wafelków (zapisana w zmiennej `wafelki`) jest mniejsza niż 100 lub większa niż 500. Jeśli warunek jest spełniony, program powinien wyświetlać komunikaty: "za mało" lub "za dużo".
 
+2. Utwórz instrukcje `if`, która sprawdza, czy kwota pieniędzy zapisana w zmiennej 'kwota' mieści się w przedziale od 100 do 500 lub w przedziale od 1000 do 5000.
 
 ## Podsumowanie
 
