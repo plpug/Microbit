@@ -500,7 +500,6 @@ Możemy też wyrównać napis do lewej dodając ``-`` przed liczbą znaków:
     print("| %-15s | %6.2f |" % ("Pudzian", 123))
     print("-" * WIDTH)
 
-Po uruchomieniu programu:
     ----------------------------
     | Imię i Nazwisko |  Waga  |
     ----------------------------
@@ -508,7 +507,9 @@ Po uruchomieniu programu:
     | Pudzian         | 123.00 |
     ----------------------------
 
-## Zadanie: Wyrównanie na środek, niech będzie ćwiczeniem dla kursanta.
+## Zadanie:
+
+Wyrównanie na środek, niech będzie ćwiczeniem dla kursanta.
 
 
 ## Podsumowanie
