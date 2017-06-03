@@ -137,7 +137,7 @@ input(...)
 ```
 Właśnie `input` będziemy używać do wczytywania danych od użytkownika. Jak czytamy w opisie, wczytuje ona napis:
 ```markdown
->>> input()  # doctest: +SKIP
+>>> input() 
 ala ma kota
 'ala ma kota'
 ```
@@ -155,7 +155,7 @@ Poznajmy więc dwie kolejne funkcje:
 
 ```markdown
 
->>> help(int)  # doctest: +NORMALIZE_WHITESPACE
+>>> help(int)  
 Help on class int in module builtins:
 <BLANKLINE>
 class int(object)
@@ -172,7 +172,7 @@ class int(object)
 oraz
 
 ```markdown
->>> help(float)  # doctest: +NORMALIZE_WHITESPACE
+>>> help(float) 
 Help on class float in module builtins:
 <BLANKLINE>
 class float(object)
@@ -209,13 +209,13 @@ Podsumowując: aby wywołać funkcję, musimy znać jej nazwę (poznaliśmy dot�
 Podanie samej nazwy nie wywoła funkcji, powie nam jedynie, że to funkcja:
 
 ```markdown
->>> input  # doctest: +SKIP
+>>> input  
 <built-in function input>
 ```
 Aby wywołać funkcję, musimy dopisać nawiasy po jej nazwie:
 
 ```markdown
->>> input()  # doctest: +SKIP
+>>> input()  
 ```
 W tym momencie funkcja zostanie wykonana przez Pythona.
 
