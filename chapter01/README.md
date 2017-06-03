@@ -202,8 +202,6 @@ ValueError: invalid literal for int() with base 10: '60.5'
 60.5
 ```
 
-```
-
 Podsumowując: aby wywołać funkcję, musimy znać jej nazwę (poznaliśmy dotąd część `print`,`help`,`input`, :func:`int`,`float` i `quit`), oraz wiedzieć, jakich danych ona od nas oczekuje (tzw. lista argumentów).
 
 Podanie samej nazwy nie wywoła funkcji, powie nam jedynie, że to funkcja:
