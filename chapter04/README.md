@@ -310,4 +310,23 @@ Wynik:
     Woof! Pluto! Woof!
 
 
+## Zadania 
+
+1. Napisz prostą grę, w której przeciwnikiem jest komputer,  która pozwala wybrać numer z zakresu:
+a) od 1 do 100 w pięciu próbach,
+b) od 1 do 7000 w siedmiu próbach,
+c) użytkownik może wybrać podpunkt a) lub b) , kiedy zacznie grę. 
+Po zakończeniu gry powinna być informacja ile rozgrywek było rozegranych, ile wygranych, a ile przegranych.
+
+2. Napisz prosty program który pozwoli uczyć się prostych japońskich słów. Dostarczamy plik jap_dict.txt (plik dostaniecie od mentora). 
+Twoim zadaniem jest:
+
+a) użyć kopiuj+wklej na tekście z tego pliku, lub użyć funkcję open(file_name) aby pobrać dane, 
+b) przekształcić tekst na strukturę danych,
+c) zadać pytanie o tłumaczenie z angielskiego na japoński słowa lub frazy, 
+d) sprawdzić czy tłumaczenie zostało wykonane poprawnie, jeśli tak - nie pokazywać więcej już tego słowa, 
+e) poinformować ile słów jest odgadniętych i ile pozostało,
+f) opcjonalnie na końcu pogratulować, 
+g) wskazać różnice w pisowni.
+
 
