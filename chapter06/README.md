@@ -54,8 +54,8 @@ display.scroll("10")
 ## Pętle zdarzeń
 
 Często potrzebujesz by Twój program poczekał aż coś się wydarzy. Robi się to tworząc pętlę w koło kawałka kodu, który definiuje jak zareagować na różne spodziewane zdarzenia takie jak przyciśnięcie przycisku.
-By stworzyć pętlę w Pythonie, użyj słowa kluczowego "while" (oznaczającego "do kiedy"). Sprawdza ono czy coś zwraca wartość True (prawdę).
-Jeśli tak jest, wykonuje ono blok kodu zwany "ciałem pętli". Jeśli tak nie jest, przerywa ono pętlę (ignorując jej ciało) po czym przechodzi do kontynuacji wykonywania następującej po nim reszty programu.
+By stworzyć pętlę w Pythonie, użyj słowa kluczowego `while` (oznaczającego "do kiedy"). Sprawdza ono czy coś zwraca wartość `True` (prawdę).
+Jeśli tak jest, wykonuje ono blok kodu zwany `ciałem pętli`. Jeśli tak nie jest, przerywa ono pętlę (ignorując jej ciało) po czym przechodzi do kontynuacji wykonywania następującej po nim reszty programu.
 
 W Pythonie można prosto zdefiniować blok kodu. Powiedzmy, że mam do zrobienia rzeczy - zanotowałam to sobie na kartce papieru.Prawdopodobnie wygląda to tak:
 
@@ -111,7 +111,7 @@ czy przycisk jest naciskany.
 while True:
     # robić coś
 ```
-Zróbmy sobie bardzo prosty projekt - zwierzak. Jest to on zawsze smutny, aby go rozweselić naciskamy przycisk A, gdy naciskamy przycisk B nasz zwierzak umiera:
+Zróbmy sobie bardzo prosty projekt - zwierzak. Jest on zawsze smutny, aby go rozweselić naciskamy przycisk A, gdy naciskamy przycisk B nasz zwierzak umiera:
 
 ```markdown
 from microbit import *
