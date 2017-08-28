@@ -28,7 +28,7 @@ Najprostrzym przykładem użycia pinów jako wejść jest sprawdzanie czy
 są one dotykane.
 Tak więc możesz połaskotać płytkę by zaśmiała się w ten sposób:
 
-```markdown
+```python
 from microbit import *
 
 while True:
@@ -65,7 +65,7 @@ brzęczyka, a przewód od GND - do złącza oznaczonego minusem.
 
 Poniższy program spowoduje że brzęczyk wydobędzie z siebie dźwięk:
 
-```markdown
+```python
 from microbit import *
 
 pin0.write_digital(1)
@@ -75,7 +75,7 @@ To jest zabawne przez około 5 sekund, po których chcesz by ten
 przeraźliwy pisk zakończył się.
 Polepszmy nasz przykład by wydał inny dźwięk:
 
-```markdown
+```python
 from microbit import *
 
 while True:

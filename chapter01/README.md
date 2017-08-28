@@ -1,7 +1,7 @@
 # Wprowadzenie do Pythona
 
 Zacznijmy od uruchomienia interpretera, który zainstalowaliśmy w poprzednim rozdziale. Uruchom:
-```markdown
+```sh
 (warsztaty) ~$ python
 Python 3.4.0 (...)
 Type "copyright", "credits" or "license" for more information.
@@ -11,12 +11,12 @@ Type "copyright", "credits" or "license" for more information.
 Wcześniej pracowaliśmy w konsoli systemu operacyjnego i mogliśmy wydawać mu polecenia. Zachętą dla nas był ~$. Po uruchomieniu polecenia python zmienił się znak zachęty na >>>. To jest informacja dla nas, że teraz wydajemy wyłącznie polecenia w języku Python. Poprzednie polecenia (takie jak: cd, mkdir) nie będą działać. W tym momencie zaczynamy uczyć się nowego języka. Znaków >>> (podobnie jak ~$) nie wpisujemy sami.
 
 Teraz możemy coś policzyć, np. wpisując 2 + 2:
-```markdown
+```python
 >>> 2 + 2
 4
 ```
 Python świetnie sprawdza się jako kalkulator:
-```markdown
+```python
 >>> 6 * 7
 42
 >>> 1252 - 38 * 6
@@ -37,7 +37,7 @@ Należy zwrócić szczególną uwagę, że ułamki dziesiętne zapisujemy zgodni
 ### Napisy
 
 Same liczby to jednak trochę za mało do skutecznego porozumiewania się. Musimy więc nauczyć się posługiwać napisami (ang. string). Oto kilka przykładów:
-```markdown
+```python
 >>> "Hello World"
 'Hello World'
 >>> 'Foo Bar'
@@ -48,12 +48,12 @@ Same liczby to jednak trochę za mało do skutecznego porozumiewania się. Musim
 'My name is "James"'
 ```
 Napisy można również dodawać:
-```markdown
+```python
 >>> 'My name is ' + '"James"'
 'My name is "James"'
 ```
 oraz mnożyć przez liczby całkowite:
-```markdown
+```python
 >>> 'Robin' * 3
 'RobinRobinRobin'
 ```
@@ -62,17 +62,17 @@ Napis zawsze musi zaczynać się i kończyć tym samym znakiem. Może to być ap
 ### Drukowanie napisów
 
 Jak w takim razie przedstawić wartość w postaci czytelnej dla człowieka? Do tego posłuży nam funkcja `print`:
-```markdown
+```python
 >>> print("Witaj świecie")
 Witaj świecie
 ```
 Możemy w ten sposób wypisać kilka napisów w jednej linii, bez dodawania ich do siebie. Zostaną one oddzielone od siebie spacjami:
-```markdown
+```python
 >>> print("Cześć, mam na imię", "Łukasz")
 Cześć, mam na imię Łukasz
 ```
 Funkcja :func:`print` ma też dużo więcej zastosowań, bo potrafi wypisać niemalże wszystko. Na razie jedynym innym znanym nam rodzajem wartości są liczby:
-```markdown
+```python
 >>> print(1)
 1
 >>> print(1, 2, 3)
@@ -81,7 +81,7 @@ Funkcja :func:`print` ma też dużo więcej zastosowań, bo potrafi wypisać nie
 2 + 2 = 4
 ```
 Na razie na tym skończymy naszą pracę z konsolą interaktywną. Aby z niej wyjść, wpisz poprostu quit():
-```markdown
+```python
 >>> quit()
 ```
 Lub (szybciej) wciskając na klawiaturze Ctrl+D w przypadku Linuxa lub Ctrl+Z w przypadku Windowsa.
@@ -91,17 +91,17 @@ Lub (szybciej) wciskając na klawiaturze Ctrl+D w przypadku Linuxa lub Ctrl+Z w 
 Do tej pory cały nasz kod wykonywany był w tzw. trybie interaktywnym, w którym podajemy komendy pojedynczo i natychmiast dostajemy na nie odpowiedź. Jest to świetny sposób na eksperymentowanie i poznawanie nowych elementów języka, więc jeszcze do niego wrócimy.
 
 Nasz pierwszy program może wyglądać tak:
-```markdown
+```python
 print("Cześć, mam na imię Agata.")
 ```
 Zapisz ten program w pliku wizytowka.py, a następnie uruchom go z linii poleceń wykonując python wizytowka.py:
-```markdown
+```python
 (warsztaty) ~$ python wizytowka.py
 Cześć, mam na imię Agata.
 (warsztaty) ~$
 ```
 Pojedynczy program może zawierać więcej niż jedno polecenie. Każde powinno znajdować się w osobnej linii, np.:
-```markdown
+```python
 print("Cześć,")
 print()
 
@@ -116,12 +116,12 @@ print("Papa.")
 Nasz program wygląda już całkiem nieźle, ale użytkownik, chcąc policzyć swoje BMI, nadal musi zmieniać treść programu. Wygodniej byłoby, gdyby po uruchomieniu programu mógł wpisać wymagane wartości w konsoli i odczytać swoje BMI.
 
 Aby móc napisać taki program, musimy nauczyć się operowania funkcjami. Pierwszą, która poznamy, będzie `help`:
-```markdown
+```python
 >>> help
 Type help() for interactive help, or help(object) for help about object.
 ```
 `help` jest bardzo przyjazną funkcją, bo sama nam mówi, jak powinniśmy jej używać. Pomaga też w zrozumieniu innych funkcji:
-```markdown
+```python
 >>> help(input)
 Help on function input in module builtins:
 <BLANKLINE>
@@ -136,7 +136,7 @@ input(...)
 
 ```
 Właśnie `input` będziemy używać do wczytywania danych od użytkownika. Jak czytamy w opisie, wczytuje ona napis:
-```markdown
+```python
 >>> input() 
 ala ma kota
 'ala ma kota'
@@ -153,7 +153,7 @@ Jak widać, Python nie wie, o co nam chodzi i jakiego właściwie wyniku oczekuj
 
 Poznajmy więc dwie kolejne funkcje:
 
-```markdown
+```python
 
 >>> help(int)  
 Help on class int in module builtins:
@@ -171,7 +171,7 @@ class int(object)
  ```
 oraz
 
-```markdown
+```python
 >>> help(float) 
 Help on class float in module builtins:
 <BLANKLINE>
@@ -185,7 +185,7 @@ class float(object)
 Funkcja `help` nie omieszkała nas poinformować, iż w rzeczywistości `int` i `float` nie są funkcjami, lecz klasami (o czym będzie więcej później) - stąd też informacja na temat wszystkich innych rzeczy, do których można ich użyć. Nas na razie interesuje jedynie podstawowa funkcjonalność zamiany napisów na liczby odpowiedniego typu.
 
 Przetestujmy `int` i `float`:
-```markdown
+```python
 >>> int("0")
 0
 >>> int(" 63 ")
@@ -206,19 +206,19 @@ Podsumowując: aby wywołać funkcję, musimy znać jej nazwę (poznaliśmy dot�
 
 Podanie samej nazwy nie wywoła funkcji, powie nam jedynie, że to funkcja:
 
-```markdown
+```python
 >>> input  
 <built-in function input>
 ```
 Aby wywołać funkcję, musimy dopisać nawiasy po jej nazwie:
 
-```markdown
+```python
 >>> input()  
 ```
 W tym momencie funkcja zostanie wykonana przez Pythona.
 
 Wszystkie argumenty podajemy w nawiasach. Aby podać więcej niż jeden, rozdzielamy je przecinkiem:
-```markdown
+```python
 >>> int("FF", 16)
 255
 ```
@@ -226,7 +226,7 @@ Wszystkie argumenty podajemy w nawiasach. Aby podać więcej niż jeden, rozdzie
 ## Porównania: prawda czy fałsz?
 
 Kolejnym elementem, o którym jeszcze nie wspomnieliśmy, są porównania. Dla liczb działają one identycznie jak na lekcjach matematyki:
-```markdown
+```python
 >>> 2 > 1
 True
 >>> 1 == 2
@@ -242,7 +242,7 @@ True
 ```
 Wynikiem porównania jest zawsze True albo False. Porównania można łączyć w bardziej skomplikowane warunki za pomocą słów `and` oraz `or`:
 
-```markdown
+```python
 >>> x = 5
 >>> x < 10
 True
@@ -259,13 +259,13 @@ True
 ## Wcięcia
 
 Kolejna rzecz, na którą warto zwrócić uwagę, to wcięcia w kodzie. Otwórz tryb interaktywny i wpisz prosty warunek, np.:
-```markdown
+```python
 >>> if 2 > 1:
 ...
 ```
 Na razie nic się jeszcze nie wydarzyło, o czym świadczą kropki ... zamiast zachęty >>>, którą dotąd widzieliśmy. Python oczekuje od nas dalszych instrukcji, które mają być wykonane, jeśli warunek 2 > 1 okaże się prawdziwy. Sprawmy, żeby wypisał "OK":
 
-```markdown
+```python
 
 >>> if 2 > 1:
 ... print("OK")
@@ -276,14 +276,14 @@ IndentationError: expected an indented block
 ```
 Niestety, nie udało się nam. Python musi wiedzieć, czy instrukcja, którą wpisaliśmy, jest kontynuacją `if` czy kolejną instrukcją nieobjętą warunkiem. W tym celu musimy wciąć nasz kod:
 
-```markdown
+```python
 >>> if 2 > 1:
 ...  print("OK")
 ...
 OK
 ```
 Wystarczy do tego jedna spacja albo TAB. Jednak wszystkie linie, które mają się wykonywać po sobie, muszą być wcięte tak samo:
-```markdown
+```python
 >>> if -1 < 0:
 ...  print("A")
 ...   print("B")
@@ -309,7 +309,7 @@ B
 
 ```
 Aby uniknąć chaosu, większość programistów Pythona używa czterech spacji na każdy poziom wcięcia. My też będziemy tak robić:
-```markdown
+```python
 >>> if 2 > 1:
 ...     if 3 > 2:
 ...         print("OK")
@@ -322,7 +322,7 @@ DONE
 Co, jeśli nie?
 
 Samo `if` właściwie by nam wystarczyło do napisania naszego programu:
-```markdown
+```python
 
 if bmi < 18.5:
     print("niedowaga")
@@ -336,7 +336,7 @@ Jednak użyliśmy jeszcze `else` i `elif`, aby nie musieć powtarzać podobnych 
 
 Korzystając z `else` mamy gwarancję, że podane tam instrukcje zostaną wykonane tylko jeśli nie zostały wykonane instrukcje wpisane pod `if`:
 
-```markdown
+```python
 if bmi < 18.5:
     print("niedowaga")
 else:
@@ -350,7 +350,7 @@ else:
         print("nadwaga")
  ```
 Zwróć szczególną uwagę na wcięcia. ;) Każde użycie `else`, będzie powodować, że nasz kod będzie coraz bardziej wcięty. Jest to bardzo uciążliwe, gdy mamy do sprawdzenia kilka czy kilkanaście wykluczających się warunków. Dlatego autorzy języka dodali drobne "usprawnienie" w postaci instrukcji `elif`, która pozwala od razu sprawdzić kolejny warunek:
-```markdown
+```python
 if n < 1:
     print("jeden")
 elif n < 2:
@@ -375,7 +375,7 @@ Wiemy już, że napisy można dodawać do siebie oraz mnożyć przez liczby cał
 
 Na samym początku wspomnieliśmy już, że nie możemy używać przecinka w liczbach, bo będzie nam potrzebny później do krotek. A oto i one:
 
-```markdown
+```python
 >>> 1, 2, 3
 (1, 2, 3)
 >>> ("Ala", 15)
@@ -391,19 +391,19 @@ Krotka to nic innego jak kilka wartości zgrupowanych w jedną. Wartości, któr
 
 Krotki można ze sobą łączyć:
 
-```markdown
+```python
 >>> names = ("Paulina", "Kowalska")
 >>> details = (27, 1.70)
 >>> names + details
 ('Paulina', 'Kowalska', 27, 1.7)
 ```
 Mogą też zawierać inne krotki, np. informację o punkcie na mapie możemy zgrupować w następujący sposób:
-```markdown
+```python
 >>> point = ("Nazwa punktu", (x, y))
 gdzie x i y to jakieś liczby.
 ```
 Do zgrupowanych wartości możemy odwołać się używając ich pozycji w krotce (licząc od zera), np.:
-```markdown
+```python
 >>> p = (10, 15)
 >>> p[0]  # pierwsza wartość
 10
@@ -419,7 +419,7 @@ liczbę oraz przedział, w którym się mieści, tj.::
 
 Zmodyfikuj aktualny program tak, aby obliczone BMI było dostępne pod
 nazwą ``bmi``, a nazwa przedziału pod nazwą ``category``. Wtedy aby
-uzyskać pożądany wynik możemy użyć :func:`print`:
+uzyskać pożądany wynik możemy użyć `print`:
 
     bmi = 21.387755102
     category = "waga prawidłowa"

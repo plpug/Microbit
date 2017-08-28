@@ -20,14 +20,14 @@ No to zaczynamy!
 
 Zgodnie z tradycją w trakcie startu z nowym językiem programowania, najprotszą instrukcją jest wyświetlenie na ekranie komputera napisu "hello world". Zrób to na naszym urządzeniu, w MicroPythonie na pewno będzie to proste:
 
-```markdown
+```python
 from microbit import*
 display.scroll("Hello World")
 ```
 
 Zwróćmy uwagę na pierwszą linie kodu:
 
-```markdown
+```python
 from microbit import*
 ```
 
@@ -35,7 +35,7 @@ Po co nam ta linia? Czy jest bardzo potrzebna? Tak, nawet bardzo Wszystkie potrz
 
 Linia następna:
 
-```markdown
+```python
 display.scroll("Hello World")
 
 ```
@@ -49,7 +49,7 @@ Chcesz zmienić tekst przewijania, tak aby urządzenie przywitało się z Tobą 
 
 MicroPython jest znakomity w sztuce, jeśli jedyne czego nam potrzeba to siatka 5x5 diod LED. MicroPython daje nam dużo kontroli nad wyświelaczem, dzięki czemu możemy tworzyć różnego rodzaju ciekawe efekty.  Na przykład, żeby wywołać radość w naszym urządzeniu należy wpisać:
 
-```markdown
+```python
 from microbit import *
 
 display.show(Image.HAPPY)
@@ -58,7 +58,7 @@ Pewnie pamiętacie co oznacza pierwsza linijka kodu, tak więc nie będę drugi 
 
 Poniżej znajduje się lista wbudowanych obrazów:
 
-```markdown
+```python
 
 Image.HEART
 Image.HEART_SMALL
@@ -119,7 +119,7 @@ Każda dioda LED na urządzeniu może zostać ustawiona w jednym z 10 stanów. J
 
 Będąc uzbrojonym w te informacje, możliwe jest utworzenie obrazka jak ten:
 
-```markdown
+```python
 from microbit import *
 
 boat = Image("05050:"
@@ -135,7 +135,7 @@ display.show(boat)
 
 Takie obrazki są zabawne, ale jeszcze więcej zabawy mamy gdy chcemy aby się przesuwały. Jest to proste w MicroPythonie, po prostu musimy użyć listy obrazków. Tutaj jest lista zakupów:
 
-```markdown
+```python
 
 Jajka
 Becon
@@ -144,7 +144,7 @@ Pomidory
 
 Tak się tworzy listę w Pythonie:
 
-```markdown
+```python
 zakupy = ["jajka", "bekon", "pomidory"]
 ```
 Prosto tworzymy listę nazywając ja `zakupy` oraz tworzymy jej trzy elementy. Python wie, że jest to lista ponieważ jest ona umieszczona w nawiasie kwadratowym `[]`. Elementy są oddzielone przecinkami `,`,a w tym przypadku elementy listy są trzema ciągami znaków: `jajka`, `bekon`, `pomidory`.
@@ -152,7 +152,7 @@ Wiemy, że są to ciągi znaków ponieważ są one umieszczone w cudzysłowie `"
 
 Możemy nawet przechowywać w tej samej liście różne rodzaje rzeczy. Na szczeście mamy kilka list obrazków już wbudowanych są zwane `Image.ALL_CLOCKS` i `Image.ALL_ARROWS`:
 
-```markdown
+```python
 
 from microbit import *
 
@@ -162,7 +162,7 @@ display.show(Image.ALL_CLOCKS, loop=True, delay=100)
 Podobnie jak w przypadku pojedyńczego obrazu używamy `display.SHOW` aby wyświelić go na ekranie urządzenia. Jednak my daliśmy znać MicroPythonowi aby używał `Image.ALL_CLOCKS`	i on rozumie, że musi wyświetlić wszystkie obrazy z listy, jeden po drugim. Powiedzieliśmy również MicroPythonowi aby zachował zapętlenie nad listą obrazów (animacja trwa wiecznie) `loop=true`.
 Możemy również dać znać, że chcielibyśmy aby obrazki wyświetlały się z opóźnieniem 100 milisekund `delay=100`.
 
-```markdown
+```python
 from microbit import *
 
 boat1 = Image("05050:"

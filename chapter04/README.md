@@ -15,7 +15,7 @@ wielokrotnego użytku.
 
 Jeden ze sposobów na wielokrone używanie kody Pythona już znamy. W poprzednim rozdziale użyliśmy funkcji `range` i `list`, aby nakazać Pythonowi liczenie:
 
-```markdown
+```python
 >>> list(range(0,5))
 [0, 1, 2, 3, 4]
 >>>
@@ -25,7 +25,7 @@ Każdy, kto potrafi liczyć, poradzi sobie z napisaniem listy zawierającej kole
 lisy zawierającej tysiące pozycji nie jest niczym trudnym.
 Poniżej generujemy listę liczb za pomocą funkcji `list` i `range`:
 
-```markdown
+```python
 >>> list(range(0,1000))
 [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 3
 7, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105,
@@ -54,7 +54,7 @@ Przydatność funkcji widać już przy pisaniu prostych programów. Gdy zacznies
 
 Funkcja składa się trzech części: nazwy, parametrów i treści. Oto przykład prostej funkcji:
 
-```markdown
+```python
 >>>
 >>> def funkcjaTestowa(mojeImie):
 ...     print("Witaj %s" %mojeImie)
@@ -63,14 +63,14 @@ Funkcja składa się trzech części: nazwy, parametrów i treści. Oto przykła
 Nazwa funkcji to `funkcjaTestowa`. Ma ona jeden parametr, `mojeImie`, a jej treścią jest blok kodu znajdujący się bezpośrednio pod wierszem zaczynającym się od `def`.
 Aby wykonać funkcję, należy ją wywołać, podając kolejno jej nazwę i wartość parametru w nawiasach:
 
-```markdown
+```python
 >>> funkcjaTestowa("Marta")
 Witaj Marta
 ```
 
 Możemy też najpierw utworzyć kilka zmiennych, a następnie wywołać funkcje, podając ich nazwy jako parametry:
 
-```markdown
+```python
 >>> imie = "Robin"
 >>> nazwisko= "Hood"
 >>> funkcjaTestowa(imie, nazwisko)
@@ -82,7 +82,7 @@ Witaj Robin Hood
 Zmienna, która znajduje się w treści funkcji, występuje tylko w tej funkcji i nie może zostać użyta po zakończeniu wykonywania funkcji.
 W świecie programowania regułę taką nazywamy zasięgiem. Spójrzmy na funkcje, która nie ma żadnych parametrów, ale używa kilku zmiennych:
 
-```markdown
+```python
 def testuj_zmienne():
     zmienna_pierwsza = 10
     zmienna_druga = 21
@@ -91,7 +91,7 @@ def testuj_zmienne():
 
 W przykładzie tym tworzymy funkcje `testuj_zmienne`, która mnoży dwie zmienne ( zmienna_pierwsza i zmienna_druga) i zwraca wynik w kroku.
 
-```markdown
+```python
 print(testuj_zmienne())
 200
 ```
@@ -102,7 +102,7 @@ Zmienna zdefiniowana poza funkcją ma zupełnie inny zasięg.
 
 Aby się o tym przekonać, zdefiniujemy zmienną przed utworzeniem funkcji, a następnie spróbujemy użyć w niej tej zmiennej:
 
-```markdown
+```python
 kolejna_zmienna = 100
 def testuj_zmienne2():
     zmienna_pierwsza = 10
@@ -112,7 +112,7 @@ def testuj_zmienne2():
 W tym kodzie zmienne `zmienna_pierwsza` i `zmienna_druga` nadal nie mogą być używane poa funkcją, natomiast zmienna `kolejna_zmienna` może być używana
 na wewnątrz funkcji. Oto wynik działania tej funkcji:
 
-```markdown
+```python
 >>>print(testuj_zmienna2())
 2000
 ```
@@ -124,13 +124,13 @@ niezależne i można je pobrać. Istnieją moduły pomagające w pisaniu gier (n
 
 Moduły można używać do różnych zadań. Przykładowo gdybyśmy chcieli zrobić jakąś symulacje gry, moglibyśmy obliczać bieżącą date i czas, używając wbudowanego modułu:
 
-```markdown
+```python
 >>> import time
 ```
 W tym przypadku polecenie `import` informuje Pythona, że chcemy używać modułu `time`. Od tego momentu za pomocą symbolu `.` (kropki) możemy wywoływać dostępne w danym module funkcje.
 Oto przykładowe wywołanie funkcji `asctime` w module `time`.
 
-```markdown
+```python
 >>> print(time.asctime())
 Fri Mar  3 17:00:45 2017
 >>>

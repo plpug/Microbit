@@ -24,7 +24,7 @@ Przed umożliwieniem mówienia urządzeniu musimy podłączyć przewody, tak jak
 
 Najprostszym sposobem na uzyskanie możliwości mówienia jest zaimportowanie `speech` czyli modułu mowy. Użyj tej funkcji np. tak:
 
-```markdown
+```python
 
 import speech
 
@@ -44,7 +44,7 @@ Aby przystosować syntezator mowy dla naszych potrzeb, syntezator mowy jest bard
 
 My również ekperymentowaliśmy, i oto nasz przykład:
 
-```markdown
+```python
 speech.say("I am a Dalek, I'm deadly", speed=120, pitch=100, throat=100, mouth=200)
 ```
 
@@ -52,7 +52,7 @@ speech.say("I am a Dalek, I'm deadly", speed=120, pitch=100, throat=100, mouth=2
 
 Można również kazać naszemu urządzeniu aby mówił nam limeryki:
 
-```markdown
+```python
 # DALEK poetry generator, by The Doctor
 import speech
 from microbit import sleep
@@ -82,7 +82,7 @@ Możemy również sprawić aby Dalek losowo wypowiadał słowa, które są dost�
 Dzięki pętli `while` DALEK będzie wypowiadał w nieskończoność słowa z listy, po każdym słowie następuje pauza 20 sekundowa:
 
 
-```markdown
+```python
 # Dalek voice
 
 from microbit import *
@@ -110,7 +110,7 @@ Mapowanie numerów tonu do nut znajduje się poniżej:
 
 [nuty]: https://github.com/plpug/Microbit/raw/master/chapter10/img/speech.png "obraz nut"
 
-```markdown
+```python
 speech.sing("#115DOWWWW")
 ```
 
@@ -118,7 +118,7 @@ Zauważ jak wysokość tonu odwzorowującego śpiew jest dołączana przed fonem
 
 Poniższy przykład demonstruje jak wszystkie trzy funkcje generujące (“say”, “pronounce” i “sing”) mogą zostać użyte by uzyskać w efekt zbliżony do mowy:
 
-```markdown
+```python
 import speech
 from microbit import sleep
 

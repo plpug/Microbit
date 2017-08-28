@@ -14,7 +14,7 @@ Należy zwrócić uwagę na jedno: na drugiej stronie instalatora nazwanej "Cust
 
 ## Linux
 Jest bardzo prawdopodobne, że masz już zainstalowanego Pythona wraz z systemem. Aby się upewnić (a także sprawdzić jego wersję) otwórz konsolę i wpisz następujące polecenie:
-```markdown
+```sh
 $ python3 --version
 Python 3.4.3
 ```
@@ -23,26 +23,26 @@ Nie masz Pythona? A może chciałbyś zainstalować inną jego wersje, w tej syt
 ### Debian lub Ubuntu
 
 Wpisz w konsoli poniższe polecenie:
-```markdown
+```sh
 $ sudo apt-get install python3.4
 ```
 
 ### Fedora (do 21)
 
 Użyj następującego polecenia w konsoli:
-```markdown
+```sh
 $ sudo yum install python3.4
 ```
 ### Fedora (22+)
 
 Użyj następującego polecenia w konsoli:
-```markdown
+```sh
 $ sudo dnf install python3.4
 ```
 ### openSUSE
 
 Użyj następującego polecenia w konsoli:
-```markdown
+```sh
 $ sudo zypper install python3
 ```
 ### OS X
@@ -53,7 +53,7 @@ Przejdź na stronę https://www.python.org/downloads/release/python-343/ i pobie
 2. Kliknij dwukrotnie na python-3.4.3-macosx10.6.pkg, by uruchomić instalator.
 
 Sprawdź, czy instalacja zakończyła się pomyślnie - otwórz aplikację Terminal i uruchom polecenie python3:
-```markdown
+```sh
 $ python3 --version
 Python 3.4.3
 ```
