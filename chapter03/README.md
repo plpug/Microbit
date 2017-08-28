@@ -10,7 +10,7 @@ W tym rozdziale przyjrzymy się pętlom for, jak również innemu typowi pętli 
 
 Aby pięciokrotnie wyświetlić słowo cześć w Pythonie, możemy napisać:
 
-```markdown
+```python
 >>>print("cześć")
 cześć
 >>>print("cześć")
@@ -24,7 +24,7 @@ cześć
 ```
 
 Ale jest to raczej męczące. Aby się nie męczyć, możemy użyć pętli for, aby zmniejszyć ilość pisania oraz powtarzania:
-```markdown
+```python
 >>> for x in range (0,5):
 ...     print("cześć")
 ...
@@ -49,7 +49,7 @@ W przypadki pętli for, kod tak naprawdę nakazuje Pythonowi wykonać pewne zada
 Następnie Python wykonuje blok kodu. Zwróc uwagę, że na początku tego wiersza znajdują się cztery dodatkowe spacje. Gdybyśmy wpisali kod w środowisku programistycznym (IDLE), wcięcia wykonywane byłyby automatycznie.
 
 Gdy wciśniemy ENTER po wpisaniu drugiego wiersza, program pięć razy wyświetli nam "cześć". Możemy nawet zliczyć, używając x w naszej instrukcji print:
-```markdown
+```python
 >>> for x in range(0,5):
 ...     print("cześć %s" %x)
 ...
@@ -62,7 +62,7 @@ cześć 4
 
 Dla porównania zauważmy, jeżeli znów pozbędziemy się pętli for, nasz kod może wyglądać mniej więcej tak:
 
-```markdown
+```python
 >>> x=0
 >>> print("cześć %s" %x)
 cześć 0
@@ -337,14 +337,14 @@ powinniśmy otrzymać naszą pół-choinkę z początku rozdziału.
 Pętla `for` nie jest jedyną pętlą dostępną w Pythonie, jest tu też `while`. Pętla `for` to pętla o określonej długości, natomiast pętli `while` używa się, gdy nie wiadomo zawczasu, kiedy trzeba będzie przestać wykonywać pętle.
 
 Wyobraźcie sobie schody z 20 stopniami. Schody znajdują się wewnątrz budynku, Ty wiesz że na nie się wespniesz. Tak właśnie działa pętla for:
-```markdown
+```python
 >>> for stopien in range (0,20):
 ...     print(stopien)
 ```
 
 A teraz wyobraź sobie schody prowadzące zboczem jakiejś wielkiej góry, wiesz, że w trakcie wspinania się możesz opaść z sił lub pogoda się nagle popsuje. Tak właśnie wygląda pętla `while`.
 
-``` markdown
+``` python
 stopień = 0
 while stopień <10000:
     print(stopień)

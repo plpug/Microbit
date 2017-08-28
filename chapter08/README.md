@@ -16,7 +16,7 @@ brzęczyki są przystosowane
 do grania jedynie pojedyńczego tonu.
 
 Przystąpmy zatem do grania jakiejś muzyki:
-```markdown
+```python
 import music
 
 music.play(music.FUNK)
@@ -26,7 +26,7 @@ Zauważ, że zaimportowaliśmy moduł "music". Zawiera on metody użyte do
 wytworzenia i kontrolowania dźwięku.
 
 MikroPython ma całkiem sporo wbudowanych melodii. Ich kompletna lista to:
-```markdown
+```python
 music.DADADADUM
 music.ENTERTAINER
 music.PRELUDE
@@ -80,7 +80,7 @@ przez czas o długości 4 jednostek.
 Zrób listę nut by zapisać melodię (jest to odpowiednikiem tworzenia animacji
 z listy obrazków). Przykładowo, w ten sposób MicroPython może zagrać
 otwarcie "Frere Jaques":
-```markdown
+```python
 import music
 
 tune = ["C4:4", "D4:4", "E4:4", "C4:4", "C4:4", "D4:4", "E4:4", "C4:4",
@@ -100,7 +100,7 @@ Zaoszczędza to sporo pisania jak i ułatwia czytanie.
 MicroPython pozwala Ci wytwarzać tony który nie są muzycznymi nutami.
 Dla przykładu,
 w ten sposób możesz wytworzyć sygnał policyjnej syreny:
-```markdown
+```python
 import music
 
 while True:
