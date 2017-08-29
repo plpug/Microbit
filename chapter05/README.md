@@ -31,7 +31,7 @@ Zwróćmy uwagę na pierwszą linie kodu:
 from microbit import*
 ```
 
-Po co nam ta linia? Czy jest bardzo potrzebna? Tak, nawet bardzo Wszystkie potrzebne rzeczy do naszej pracy znajdują się w module o nazwie microbit (moduł jest biliteką wcześniej istniejącego kodu). Tak więc ten fragment oznacza dosłownie "chcę móc korzystać z wszystkiego od kodu bilioteki microbit).
+Po co nam ta linia? Czy jest bardzo potrzebna? Tak, nawet bardzo. Wszystkie potrzebne rzeczy do naszej pracy znajdują się w module o nazwie microbit (moduł jest biliteką wcześniej istniejącego kodu). Tak więc ten fragment oznacza dosłownie "chcę móc korzystać z wszystkiego od kodu bilioteki microbit).
 
 Linia następna:
 
