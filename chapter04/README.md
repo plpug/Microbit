@@ -243,14 +243,6 @@ Podobnie jak możemy tworzyć własne funkcje, tak i możemy tworzyć
 własne klasy. W gruncie rzeczy, klasa to nic innego jak zgrupowane
 funkcje:
 
-
-    class Dog(object):
-
-        def bark(self):
-            print(u"Woof! Woof!")
-
-::
-
     class Dog(object):
 
         def bark(self):
