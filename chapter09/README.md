@@ -16,7 +16,7 @@ wynikiem będzie nazwa jednego z wyżej wymienionych gestów. Przykładowo, ten
 program będzie czynił twoją płytkę szczęśliwą jedynie gdy zwrócona będzie ona
 wierzchem do góry.
 
-```markdown
+```python
 from microbit import *
 
 while True:
@@ -42,7 +42,7 @@ polega na tym by zadać pytanie na które można odpowiedzieć tak/nie, potrząs
 nią i poczekać aż ujawni się prawda. To raczej proste przekształcić ją
 w program:
 
-```markdown
+```python
 from microbit import *
 import random
 

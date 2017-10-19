@@ -1,6 +1,5 @@
 # Radio
 
-Wewnątrz każdego Micro:bita znajduje się bardzo przydatna funkcjonalności, a mianowicie Radio. Dzięki tej funkcjonalności możemy przesyłać i odbierać wiadomości.
 W każdym Micro:bicie znajduje się ciekawa oraz przydatna funkcjonalność, a mianowicie `Radio`. Moduł radio pozwala nam
 na przesyłanie oraz odbieranie wiadomości.
 
@@ -14,7 +13,7 @@ domyślnych, najprostszy sposób wysyłania wiadomości jest następujący:
 
 W przykładzie użyliśmy funkcji wysyłania, aby po prostu nadać ciąg znaków "wiadomość". Otrzymywanie wiadomości jest jeszcze prostsze:
 
-```markdown
+```python
 new_message = radio.receive()
 ```
 
@@ -22,7 +21,7 @@ Po otrzymaniu wiadomości są one umieszczane w kolejce wiadomości. Funkcja `re
 
 Posiadając taką wiedzę, możemy stworzyć swój pierwszy projekt:
 
-```markdown
+```python
 from microbit import display, button_a, Image
 import radio
 radio.on()

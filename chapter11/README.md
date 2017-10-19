@@ -5,7 +5,7 @@ W urządzeniu BBC micro:bit jest wbudowany kompas. Jeżeli kiedykolwiek zbudujes
 ## Kompas
 
 Tak można wskazać kierunek północy:
-```markdown
+```python
 from microbit import *
 
 compass.calibrate()
@@ -26,7 +26,7 @@ BBC Micro:bit ma wbudowany akcelerometr. Pomiar ruchu wobec trzech osi:
 
 Istnieje metoda każdej osi, która zwraca dodatnią lub ujemną liczbę wskazującą pomiar w mili-g. Gdy odczyt to 0 to jesteśmy na "poziomie" wzdłuż konretnej osi.
 Dla przykładu, tutaj mamy bardzo prosty poziom, który używa `get_x` do mierzenia jak poziom urządzenia leży wzdłóż osi X:
-```markdown
+```python
 from microbit import *
 
 while True:
@@ -56,7 +56,7 @@ znaczenia, w jakim kierunku są połączone one do głośnika.
 [microbit]: https://github.com/plpug/Microbit/raw/master/chapter08/img/pin0-gnd.png "microbit"
 
 Co się stanie gdy weźmiemy odczyty z akcelerometra i przy każdym zakręcie odtworzymy dżwięk? Przekonacie się sami:
-```markdown
+```python
 from microbit import *
 import music
 

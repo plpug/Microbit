@@ -8,7 +8,7 @@ Warunki mogą składać się z wielu pytań, a instrukcje `if` można konstruowa
 
 ## Instrukcje IF
 
-```markdown
+```python
 wiek = 23
 if wiek >20:
     print("Jesteś za stary!")
@@ -18,7 +18,7 @@ Instrukcja if składa się ze słowa kluczowego `if`, po którym podajemy warune
 
 Blok kodu to w programowaniu celowo oddzielny zbiór instrukcji. Jeśli przykładowo warunek `if wiek >10: jest prawdziwy, możemy wyświetlić informacje ale i nawet kilka innych zdań:
 
-```markdown
+```python
 wiek = 23
 if wiek > 20:
     print("Jesteś za stary!")
@@ -44,7 +44,7 @@ Jeżeli na przykład masz 10 lat, warunek `wiek == 10 ` zwróci `True`. Jeśli j
 
 Wykonajmy kilka prostych przykładów. Ustawimy tutaj zmienną, następnie zapisujemy instrukcje warunkową, która wyświetla tekst "Jesteś za stary na breakdance!", jeśli zmienna wiek ma wartość większą niż 10: 
 
-```markdown
+```python
 wiek = 10
 if wiek >10:
     print("Jesteś za stary na moje żarty")
@@ -53,14 +53,14 @@ if wiek >10:
 Co się stanie, gdy to wpiszemy i uruchomimy? Jest większa niż 10, Python nie uruchamia bloku `print`. Jeżeli zmienimy to ustawiając wartość wieku na 20, komunikat zostanie zwrócony.
 
 Zmieńmy teraz powyższy przykład, aby użyć warunku "większy lub równy" (>=):
-```markdown
+```python
 wiek = 10
 if wiek >= 10:
     print("Jesteś za stary na moje żarty")
 ```
 Ponieważ nasza zmienna wiek ma wartość 10, na ekranie powinniśmy zobaczyć tekst "Jesteś za stary na moje żarty". Spróbujmy użyć teraz warunku "równa się" (==):
 
-```markdown
+```python
 wiek = 10
 if wiek == 10:
     print("Jestes za stary na pieluchy")
@@ -74,7 +74,7 @@ Instrukcji `if` możemy używać nie tylko do wykonywania kodu w przypadku speł
 
 No to napiszmy sobie instrukcje `if-then-else`:
 
-```markdown
+```python
 >>> print ("Powiedzieć Ci coś śmiesznego")
 Powiedzieć Ci coś śmiesznego
 >>> wiek = 12
@@ -89,7 +89,7 @@ Głupi kawał
 
 Ponieważ ustawiliśmy zmienną `wiek` na 12, a warunek sprawdza, czy wartość zmiennej `wiek` to 12, powinien się pojawić na ekranie pierwszy komunikat. Teraz zmieńmy wartość na jakąś inną:
 
-```markdown
+```python
 >>> print("Powiedzieć Ci coś śmiesznego")
 Powiedzieć Ci coś śmiesznego
 >>> wiek = 7
@@ -108,7 +108,7 @@ Tym razem powinien być widoczny drugi komunikat.
 
 Instrukcje `if` można rozbudować jeszcze za pomocą słowa kluczowego `elif` ( co jest skrótem od `else-if`). Możemy na przykład sprawdzać, czy osoba ma np. 10, 11, czy 12 lat i nakazać programowi zróżnicowane działania w zależności od odpowiedzi.  Instrukcje te różnią się od `if-then-else` tym, że jedna instrukcja może zawierać więcej niż jedno słowo kluczowe `elif`. 
 
-```markdown
+```python
 wiek = 12
 if wiek == 10:
     print("Co robi worek, gdy jest zmęczony?")
@@ -134,7 +134,7 @@ W tym przykładzie istrukcja `if` w drugim wierszu sprawdza czy wartość zmienn
 
 Na ekranie powinnien zostać wyświetlony tekst:
 
-```markdown
+```python
 Co mówi programista na łożu śmierci?
     Bye world
 ```
@@ -143,7 +143,7 @@ Co mówi programista na łożu śmierci?
 
 Warunki można łączyć za pomocą słów kluczowych and (i) i or (lub), a dzięki temu kod staje się krótszy i prostszy. Oto przykładowe użycie słowa kluczowego or:
 
-```markdown
+```python
 
 if wiek == 10 or wiek == 11 or wiek == 12 or wiek == 13:
     print ("Mamo piszę do Ciebie wiersz")
@@ -152,10 +152,13 @@ else:
     print("Ale dlaczego?")
 ```
 
-Widzimy w tym kodzie, że jeśli kiedykolwiek z warunków w pierwszym wierszu jest spełniony ( jeśli wiek yo 10,11,12 lub 13) wykonany zostanie blok kodu w kolejnym wierszu, zaczynający się od print. Jeżeli nie jest spełniony żaden z warunków podanych w wierszy pierwszym ( `else`), Python przechodzi do bloku w ostatnim wierszu, wyświetlając na ekranie `Ale dlaczego?`
+Widzimy w tym kodzie, że jeśli kiedykolwiek z warunków w pierwszym wierszu jest spełniony ( jeśli wiek to 10,11,12 lub 13) wykonany zostanie blok kodu w kolejnym wierszu, zaczynający się od print. Jeżeli nie jest spełniony żaden z warunków podanych w wierszy pierwszym ( `else`), Python przechodzi do bloku w ostatnim wierszu, wyświetlając na ekranie `Ale dlaczego?`
 
 
+## Zadania
+1. Utwórz instrukcje, która sprawdza, czy liczba wafelków (zapisana w zmiennej `wafelki`) jest mniejsza niż 100 lub większa niż 500. Jeśli warunek jest spełniony, program powinien wyświetlać komunikaty: "za mało" lub "za dużo".
 
+2. Utwórz instrukcje `if`, która sprawdza, czy kwota pieniędzy zapisana w zmiennej 'kwota' mieści się w przedziale od 100 do 500 lub w przedziale od 1000 do 5000.
 
 ## Podsumowanie
 

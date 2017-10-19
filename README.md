@@ -6,6 +6,6 @@
 Ten scenariusz został napisany w oparciu o materiały warsztatów: [Django Girls](https://djangogirls.org/) oraz [Geek Girls Carrots]( http://geekgirlscarrots.org/). 
 Inspiracji szukaliśmy również w literaturze, a mianowicie: [Python for kids](http://jasonrbriggs.com/python-for-kids/) jak i w dokumentacji http://microbit-micropython.readthedocs.io/en/latest/
 ## Czego Cię nauczy ten tutorial
-W przeprowadzania ćwiczeń nauczysz się podstaw programowania w języku Python oraz poznasz urządzenie Micro:bit. 
+W czasie przeprowadzania ćwiczeń nauczysz się podstaw programowania w języku Python oraz poznasz urządzenie Micro:bit. 
 ## Scenariusz
-Na podstawie materiałów, stwórzcie swój indywidualny scenariusz zajęć dostosowany do swojej grupy.
+Na podstawie materiałów, stworzysz swój indywidualny scenariusz zajęć dostosowany do swojej grupy.

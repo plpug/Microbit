@@ -36,30 +36,30 @@ Załóżmy, że masz wciśnięty przycisk 10 razy, oto jak Python działa. Co si
 
 Python widzi kompletną linie i pobiera wartość `get_presses`:
 
-```markdown
+```python
 display.scroll(str(button_a.get_presses()))
 ```
 
 Teraz gdy wie ile razy został naciśnięty przycisk, to konwertuje wartość liczbową w ciąg znaków:
 
-``` markdown
+``` python
 display.scroll(str(10))
 ```
 Wreszcie Python wie co jest przewijane w wyświetlaczu:
 
-```markdown
+```python
 display.scroll("10")
 ```
 
 ## Pętle zdarzeń
 
 Często potrzebujesz by Twój program poczekał aż coś się wydarzy. Robi się to tworząc pętlę w koło kawałka kodu, który definiuje jak zareagować na różne spodziewane zdarzenia takie jak przyciśnięcie przycisku.
-By stworzyć pętlę w Pythonie, użyj słowa kluczowego "while" (oznaczającego "do kiedy"). Sprawdza ono czy coś zwraca wartość True (prawdę).
-Jeśli tak jest, wykonuje ono blok kodu zwany "ciałem pętli". Jeśli tak nie jest, przerywa ono pętlę (ignorując jej ciało) po czym przechodzi do kontynuacji wykonywania następującej po nim reszty programu.
+By stworzyć pętlę w Pythonie, użyj słowa kluczowego `while` (oznaczającego "do kiedy"). Sprawdza ono czy coś zwraca wartość `True` (prawdę).
+Jeśli tak jest, wykonuje ono blok kodu zwany `ciałem pętli`. Jeśli tak nie jest, przerywa ono pętlę (ignorując jej ciało) po czym przechodzi do kontynuacji wykonywania następującej po nim reszty programu.
 
 W Pythonie można prosto zdefiniować blok kodu. Powiedzmy, że mam do zrobienia rzeczy - zanotowałam to sobie na kartce papieru.Prawdopodobnie wygląda to tak:
 
-```markdown
+```python
 Zakupy
 Wyczyścić lodówkę
 Skosić trawnik
@@ -67,7 +67,7 @@ Skosić trawnik
 
 Jeżeli potrzebowałabym dokładniejszej listy, zrobiłabym tak:
 
-```markdown
+```python
 Zakupy
 	Jajka
 	Bekon
@@ -87,7 +87,7 @@ Oczywiste jest, że główne zadania są podzielone na podzadania, które są wc
 
 Przez wcięcia widać, że zadania są ze sobą powiązane. Nazywa się to zagnieżdżeniem, użyjemy go do zdefiniowania bloku kodu, jak w przykładzie poniżej:
 
-```markdown
+```python
 from microbit import *
 
 while running_time() < 10000:
@@ -107,13 +107,13 @@ Spróbuj!
 Jeśli chcemy aby MicroPython reagował na zdarzenia związane z naciśnięciem przycisku, powinniśmy umieścić kod w pętli `while` (pętla nieskończona) i sprawdzić
 czy przycisk jest naciskany.
 
-```markdown
+```python
 while True:
     # robić coś
 ```
-Zróbmy sobie bardzo prosty projekt - zwierzak. Jest to on zawsze smutny, aby go rozweselić naciskamy przycisk A, gdy naciskamy przycisk B nasz zwierzak umiera:
+Zróbmy sobie bardzo prosty projekt - zwierzak. Jest on zawsze smutny, aby go rozweselić naciskamy przycisk A, gdy naciskamy przycisk B nasz zwierzak umiera:
 
-```markdown
+```python
 from microbit import *
 
 while True:

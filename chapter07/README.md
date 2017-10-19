@@ -28,7 +28,7 @@ Najprostrzym przykładem użycia pinów jako wejść jest sprawdzanie czy
 są one dotykane.
 Tak więc możesz połaskotać płytkę by zaśmiała się w ten sposób:
 
-```markdown
+```python
 from microbit import *
 
 while True:
@@ -51,21 +51,21 @@ do płytki innych układów z użyciem pinów.
 Najprostrzym elementem jakie możemy podpiąć pod płytkę jest piezo
 elektryczny brzęczyk.  Użyjemy go jako wyjście.
 
-...
-
 Ten malutki element wytwarza wysokiej częstotliwości pisk, po
 podłączeniu do układu.
 By podpiąć go pod twoją płytkę BBC micro:bit powinieneś podpiąć
 krokodylki do pinów 0 i GND (jak pokazane poniżej).
 
-...
+![microbit][microbit]
+
+[microbit]: https://github.com/plpug/Microbit/raw/master/chapter08/img/pin0-gnd.png "microbit"
 
 Przewód od pina 0 powinien być podpięty do oznaczonego plusem złącza
 brzęczyka, a przewód od GND - do złącza oznaczonego minusem.
 
 Poniższy program spowoduje że brzęczyk wydobędzie z siebie dźwięk:
 
-```markdown
+```python
 from microbit import *
 
 pin0.write_digital(1)
@@ -75,7 +75,7 @@ To jest zabawne przez około 5 sekund, po których chcesz by ten
 przeraźliwy pisk zakończył się.
 Polepszmy nasz przykład by wydał inny dźwięk:
 
-```markdown
+```python
 from microbit import *
 
 while True:
