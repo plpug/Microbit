@@ -244,3 +244,119 @@ while True:
         radio.send("W")
 
 ```
+
+## Zadanie 9
+
+Obracaj strzałki, a gdy naciśniesz przycisk, to wskaż który:
+
+```python
+arrows = [Image.ARROW_N, Image.ARROW_NE, Image.ARROW_E,
+        Image.ARROW_SE, Image.ARROW_S, Image.ARROW_SW,
+        Image.ARROW_W, Image.ARROW_NW]
+
+def check_status():
+    if button_b.was_pressed():
+        display.show(Image.ARROW_E)
+        sleep(3000)
+    if button_a.was_pressed():
+        display.show(Image.ARROW_W)
+        sleep(3000)
+    if pin2.is_touched():
+        display.show(Image.ARROW_S)
+        sleep(3000)
+
+while True:
+    for arrow in arrows:
+        display.show(arrow)
+        sleep(500)
+        check_status()
+
+```
+
+## Zadanie 10
+
+Wróżka - Gdy potrząśniesz urządzeniem losuje się jeden obrazek z listy
+
+Potrzebujesz dodać bibliotekę do losowania
+
+```python
+import random
+```
+
+Lista obrazków oraz losowanie:
+
+```python
+images = [Image.SKULL, Image.SMAIL, Image.HAPPY, Image.CONFUSED, Image.ASLEEP]
+
+while True:
+    display.show('?')
+    if accelerometer.was_gesture('shake'):
+        display.clear()
+        sleep(1000)
+        display.show(random.choice(images))
+        sleep(5000)
+    sleep(10)
+
+```
+
+## Zadanie 11
+
+Zdefiniuj 3 listy i zmieniaj ich wyświetlanie po naciśnięciu przycisku A, B lub pin 2. 
+
+```python
+from microbit import *
+import random
+
+my_images = [Image.HEART, Image.HEART_SMALL, Image.HAPPY, Image.SMILE,
+            Image.SAD, Image.CONFUSED, Image.ANGRY, Image.ASLEEP, 
+            Image.SURPRISED, Image.SILLY, Image.FABULOUS, Image.MEH, 
+            Image.YES, Image.NO]
+
+my_letters = list('abcdefghijklmnopqrstuvwxyz')
+
+to_show = Image.ALL_ARROWS
+
+while True:
+    display.show(random.choice(to_show))
+    sleep(300)
+    if button_a.is_pressed():
+        to_show = my_letters
+    if button_b.is_pressed():
+        to_show = my_images
+    if pin2.is_touched():
+        to_show = Image.ALL_ARROWS
+
+```
+
+## Zadanie 12
+
+Wysyłanie wiadomości do innego microbita. Przycisk A zmienia obrazki, przycisk B wysyła numer
+wybranego obrazka. Drugie urządzenie po otrzymaniu numeru wyświetla przypisany do niego obrazek
+
+```python
+from microbit import *
+import radio
+
+my_images = [Image.HEART, Image.HEART_SMALL, Image.HAPPY, Image.SMILE,
+            Image.SAD, Image.CONFUSED, Image.ANGRY, Image.ASLEEP, 
+            Image.SURPRISED, Image.SILLY, Image.FABULOUS, Image.MEH, 
+            Image.YES, Image.NO]
+
+nr = 0
+radio.on()
+
+while True:
+    nr_str = radio.receive()
+    if nr_str:
+        nr = int(nr_str)
+        display.show(my_images[nr])
+    if button_a.is_pressed():
+        nr += 1
+        nr = nr % 10
+        display.show(my_images[nr])
+    sleep(200)
+    if button_b.is_pressed():
+        radio.send(str(nr))
+    sleep(200)
+
+```
