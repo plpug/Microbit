@@ -345,18 +345,23 @@ my_images = [Image.HEART, Image.HEART_SMALL, Image.HAPPY, Image.SMILE,
 nr = 0
 radio.on()
 
+display.show(Image.YES)
+
 while True:
     nr_str = radio.receive()
     if nr_str:
-        nr = int(nr_str)
+        try:
+            nr = int(nr_str)
+        except:
+            pass
         display.show(my_images[nr])
     if button_a.is_pressed():
         nr += 1
-        nr = nr % 10
+        nr = nr % 14
         display.show(my_images[nr])
-    sleep(200)
+        sleep(500)
     if button_b.is_pressed():
         radio.send(str(nr))
-    sleep(200)
+        sleep(500)
 
 ```
