@@ -352,9 +352,11 @@ while True:
     if nr_str:
         try:
             nr = int(nr_str)
+            display.show(my_images[nr])
+        except ValueError:
+            display.scroll(nr_str)
         except:
             pass
-        display.show(my_images[nr])
     if button_a.is_pressed():
         nr += 1
         nr = nr % 14
