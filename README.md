@@ -9,3 +9,5 @@ Inspiracji szukaliśmy również w literaturze, a mianowicie: [Python for kids](
 W czasie przeprowadzania ćwiczeń nauczysz się podstaw programowania w języku Python oraz poznasz urządzenie Micro:bit. 
 ## Scenariusz
 Na podstawie materiałów, stworzysz swój indywidualny scenariusz zajęć dostosowany do swojej grupy.
+## Tłumaczenie
+Oryginalne tłumaczenie części materiału zostało wykonanane przez Agatę Skamruk.
