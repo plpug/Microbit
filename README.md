@@ -10,4 +10,4 @@ W czasie przeprowadzania ćwiczeń nauczysz się podstaw programowania w języku
 ## Scenariusz
 Na podstawie materiałów, stworzysz swój indywidualny scenariusz zajęć dostosowany do swojej grupy.
 ## Tłumaczenie
-Oryginalne tłumaczenie części materiału zostało wykonanane przez Agatę Skamruk.
+Oryginalne tłumaczenie części materiału zostało wykonanane przez Agate Skamruk.
