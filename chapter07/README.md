@@ -48,7 +48,7 @@ do płytki innych układów z użyciem pinów.
 
 ## Brzdęk i Brzdąk
 
-Najprostrzym elementem jakie możemy podpiąć pod płytkę jest piezo
+Najprostszym elementem jakie możemy podpiąć pod płytkę jest piezo
 elektryczny brzęczyk.  Użyjemy go jako wyjście.
 
 Ten malutki element wytwarza wysokiej częstotliwości pisk, po
