@@ -1,16 +1,18 @@
 # Instalacja
 
-Do warsztatów będziemy potrzebować wersji Pythona 3.4. Poniżej znajdują się wskazówki do tego, jak zainstalować środowisko oraz inne potrzebne narzędzia.
+Do warsztatów będziemy potrzebować wersji Pythona 3. Poniżej znajdują się wskazówki do tego, jak zainstalować środowisko oraz inne potrzebne narzędzia.
 
 ## Windows
 
-Możesz ściągnąć Pythona pod Windows [z tej strony](https://www.python.org/downloads/). Po pobraniu pliku `*.msi`, uruchom go (klikając dwukrotnie na niego) i postępuj według wyświetlanych instrukcji. Koniecznie zapamiętaj ścieżkę (katalog), w którym zainstalowałaś Pythona. Będzie Ci niebawem potrzebna!
+Możesz ściągnąć Pythona pod Windows [z tej strony](https://www.python.org/downloads/). Po pobraniu pliku, uruchom go (klikając dwukrotnie na niego) i postępuj według wyświetlanych instrukcji.
 
-Należy zwrócić uwagę na jedno: na drugiej stronie instalatora nazwanej "Customize" ("Dostosuj do potrzeb") przewiń na sam dół i wybierz "Add python.exe to the Path" ("Dodaj python.exe do ścieżki systemowej"), tak jak na poniższym obrazku:
+Należy zwrócić uwagę żeby zaznaczyć opcję "Add python.exe to PATH" ("Dodaj python.exe do ścieżki systemowej"), tak jak na poniższym obrazku:
 
 ![zrzut ekranu][zrzut]
 
 [zrzut]: https://github.com/plpug/Microbit/raw/master/chapter00/img/1.png "zrzut ekranu"
+
+Następnie należy pobrać sterownik do portu szeregowego z https://os.mbed.com/handbook/Windows-serial-configuration klikając w link "Download latest driver" 
 
 ## Linux
 Jest bardzo prawdopodobne, że masz już zainstalowanego Pythona wraz z systemem. Aby się upewnić (a także sprawdzić jego wersję) otwórz konsolę i wpisz następujące polecenie:
@@ -18,6 +20,8 @@ Jest bardzo prawdopodobne, że masz już zainstalowanego Pythona wraz z systemem
 $ python3 --version
 Python 3.4.3
 ```
+
+Każda wersja większa lub równa 3.4 jest akceptowana.
 Nie masz Pythona? A może chciałbyś zainstalować inną jego wersje, w tej sytuacji skorzstaj z poniższych sposobów:
 
 ### Debian lub Ubuntu
@@ -58,3 +62,20 @@ $ python3 --version
 Python 3.4.3
 ```
 W razie jakichkolwiek wątpliwości albo jeśli coś poszło nie tak i nie wiesz, co dalej robić - po prostu zapytaj osobę prowadzącą kurs. Czasami nie wszystko idzie tak, jak powinno i najlepszym wyjściem z sytuacji jest poprosić o pomoc kogoś bardziej doświadczonego.
+
+# Instalacja jupyter'a
+
+Uruchum konsolę i wykonaj następujące komendy(na Linuksie w zależności od dystrybucji komenda python może być zastąpiona komendą python3)
+```sh
+python -m venv lab
+pip install jupyterlab
+pip install ubit_kernel
+python -m ubit_kernel.install
+```
+
+## Uruchomienie
+
+Przejdź do głównego katalogu kursu i uruchom środowisko.
+```sh
+jupyter lab
+```
