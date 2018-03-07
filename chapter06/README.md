@@ -15,7 +15,7 @@ sleep(10000)
 display.scroll(str(button_a.get_presses()))
 ```
 
-Powyższy skrypt pokazuje: urządzenie jest uśpione przez dziesięć tysięcznych sekundy (czyli 10 s.), po czym przewija tyle razy ile razy został naciśnięty przycisk.
+Powyższy skrypt pokazuje: urządzenie jest uśpione przez dziesięć tysięcy milisekund (czyli 10 s.), po czym przewija tyle razy ile razy został naciśnięty przycisk.
 
 Choć jest dość bezużyteczny skrypt, wprowadza kilka ciekawych pomysłów:
 
