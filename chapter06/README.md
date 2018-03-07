@@ -20,7 +20,7 @@ Powyższy skrypt pokazuje: urządzenie jest uśpione przez dziesięć tysięczny
 Choć jest dość bezużyteczny skrypt, wprowadza kilka ciekawych pomysłów:
 
 1. Funkcja `sleep` sprawia, że micro:bit jest uśpiony na pewną liczbę milisekund. Jeśli chcesz pauze w swoim programie, właśnie w taki sposób się to robi. Funkcja jest wywoływana jak metoda, ale nie jest z konkretnym obiektem.
-1. Jest obiekt nazwany `button_a` i pozwala uzyskać ile razy został naciśnięty metodą `get_presses`.
+1. Obiekt nazwany `button_a` pozwala uzyskać ile razy został naciśnięty metodą `get_presses`.
 
 Ponieważ `get_presses` daje wartość liczbową i `display.scroll` wyświetla tylko znaki, musimy przekonwertować wartość numeryczną na łańcuch znaków. Robimy to za pomocą funkcji str ( skrót od string ~ konwertuje rzeczy na ciągi znaków).
 
