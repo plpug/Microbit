@@ -15,12 +15,12 @@ sleep(10000)
 display.scroll(str(button_a.get_presses()))
 ```
 
-Powyższy skrypt pokazuje: urządzenie jest uśpione przez dziesięć tysięcy sekund, po czym przewija tyle razy ile razy został naciśnięty przycisk.
+Powyższy skrypt pokazuje: urządzenie jest uśpione przez dziesięć tysięcy milisekund (czyli 10 s.), po czym przewija tyle razy ile razy został naciśnięty przycisk.
 
 Choć jest dość bezużyteczny skrypt, wprowadza kilka ciekawych pomysłów:
 
-1. Funkcja `sleep` sprawia, że micro:bit jest uśpiony dla pewnej liczby milisekund. Jeśli chcesz pauze w swoim programie, właśnie w taki sposób się robi. Funkcja jest jak metoda, ale nie jest zamocowana do punktu obiektu.
-1. Jest to obiekt nazwany `button_a` i pozwala uzyskać ile razy został naciśnięty metodą `get_presses`.
+1. Funkcja `sleep` sprawia, że micro:bit jest uśpiony na pewną liczbę milisekund. Jeśli chcesz pauze w swoim programie, właśnie w taki sposób się to robi. Funkcja jest wywoływana jak metoda, ale nie jest powiązany z konkretnym obiektem.
+1. Obiekt nazwany `button_a` pozwala uzyskać ile razy został naciśnięty metodą `get_presses`.
 
 Ponieważ `get_presses` daje wartość liczbową i `display.scroll` wyświetla tylko znaki, musimy przekonwertować wartość numeryczną na łańcuch znaków. Robimy to za pomocą funkcji str ( skrót od string ~ konwertuje rzeczy na ciągi znaków).
 
