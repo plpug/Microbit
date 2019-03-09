@@ -87,7 +87,7 @@ Na razie na tym skończymy naszą pracę z konsolą interaktywną. Aby z niej wy
 Lub (szybciej) wciskając na klawiaturze Ctrl+D w przypadku Linuxa lub Ctrl+Z w przypadku Windowsa.
 
 ### Funkcja input
- Funkcja :func:`input()` służy do wprowadzania zmiennych przez użytkownika programu. Wartość wprowadzona przy użyciu funkcji input() traktowane jest przez kod, jako tekst (typ danych: `str`). 
+ Funkcja `input()` służy do wprowadzania zmiennych przez użytkownika programu. Wartość wprowadzona przy użyciu funkcji `input()` traktowane jest przez kod, jako tekst (typ danych: `str`). 
  
  ## Konwerterowanie danych tekstowych na liczbowe
  Aby konwertować daną tekstową na liczbę należy skorzystać z  funkcji :func:`int()`. Funkcja ta przekształca argument tekstowy na liczbę całkowitą. Można również posłużyć się funkcją :func:`float()`, wtedy argument zostanie przekształcony na wartość zmiennoprzecinkową. 
@@ -101,8 +101,6 @@ print(type(a))
 print(a*2/4)
 ```
 Gdy wpiszemy wartość 5 kod daje w wyniku: 2,5
-
-
 
 
 ## Pliki źródłowe
