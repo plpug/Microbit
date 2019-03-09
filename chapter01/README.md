@@ -89,7 +89,7 @@ Lub (szybciej) wciskając na klawiaturze Ctrl+D w przypadku Linuxa lub Ctrl+Z w 
 ### Funkcja input
  Funkcja `input()` służy do wprowadzania zmiennych przez użytkownika programu. Wartość wprowadzona przy użyciu funkcji `input()` traktowane jest przez kod, jako tekst (typ danych: `str`). 
  
- ## Konwerterowanie danych tekstowych na liczbowe
+ ### Konwerterowanie danych tekstowych na liczbowe
  Aby konwertować daną tekstową na liczbę należy skorzystać z  funkcji :func:`int()`. Funkcja ta przekształca argument tekstowy na liczbę całkowitą. Można również posłużyć się funkcją :func:`float()`, wtedy argument zostanie przekształcony na wartość zmiennoprzecinkową. 
 
 ```python
