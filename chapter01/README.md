@@ -59,7 +59,7 @@ oraz mnożyć przez liczby całkowite:
 ```
 Napis zawsze musi zaczynać się i kończyć tym samym znakiem. Może to być apostrof (') albo cudzysłów ("). Nie ma to wpływu na wartość napisu, tzn. wpisując "Batman" tworzymy napis Batman - cudzysłowowy nie są jego częścią, służą jedynie wskazaniu, że jest to napis (niestety, Python nie jest aż tak sprytny, aby się tego domyślić).
 
-### Drukowanie napisów
+### Funkcja print
 
 Jak w takim razie przedstawić wartość w postaci czytelnej dla człowieka? Do tego posłuży nam funkcja `print`:
 ```python
@@ -85,6 +85,25 @@ Na razie na tym skończymy naszą pracę z konsolą interaktywną. Aby z niej wy
 >>> quit()
 ```
 Lub (szybciej) wciskając na klawiaturze Ctrl+D w przypadku Linuxa lub Ctrl+Z w przypadku Windowsa.
+
+### Funkcja input
+ Funkcja :func:`input()` służy do wprowadzania zmiennych przez użytkownika programu. Wartość wprowadzona przy użyciu funkcji input() traktowane jest przez kod, jako tekst (typ danych: `str`). 
+ 
+ ## Konwerterowanie danych tekstowych na liczbowe
+ Aby konwertować daną tekstową na liczbę należy skorzystać z  funkcji :func:`int()`. Funkcja ta przekształca argument tekstowy na liczbę całkowitą. Można również posłużyć się funkcją :func:`float()`, wtedy argument zostanie przekształcony na wartość zmiennoprzecinkową. 
+
+```python
+print('proszę wpisać liczbę')
+
+a = input()
+a = int(a)
+print(type(a))
+print(a*2/4)
+```
+Gdy wpiszemy wartość 5 kod daje w wyniku: 2,5
+
+
+
 
 ## Pliki źródłowe
 
